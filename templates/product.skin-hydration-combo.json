@@ -1,0 +1,365 @@
+{
+  "sections": {
+    "product-meta-kit": {
+      "type": "product-meta-rfss-kit",
+      "blocks": {
+        "6955a772-5e14-4efd-ae57-92382d153f27": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Gives Soft, Smooth And Supple Skin.",
+            "product_contains_price": ""
+          }
+        },
+        "9d398261-3155-443e-b08b-8b61e97aef28": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "1000x Better Hydration Than Moisturiser.",
+            "product_contains_price": ""
+          }
+        },
+        "787f83a0-8a20-4ab4-80b1-3e7a20b6a210": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Improves Dry Areas On The Face.",
+            "product_contains_price": ""
+          }
+        },
+        "5203f675-fc4d-4d3b-9de5-55fb58880e57": {
+          "type": "today-offer-for-kit",
+          "settings": {
+            "today-offer-title": "Today’s Offers",
+            "whats_the_offer-one": "FLAT 25% OFF + FREE HYALURONIC ACID SERUM ON ORDERS ABOVE RS.599\/-",
+            "whats_the_offer-two": "FREE SHIPPING ON ALL PREPAID ORDERS",
+            "whats_the_offer-three": "Get Flat 25% Off On Gift Sets"
+          }
+        }
+      },
+      "block_order": [
+        "6955a772-5e14-4efd-ae57-92382d153f27",
+        "9d398261-3155-443e-b08b-8b61e97aef28",
+        "787f83a0-8a20-4ab4-80b1-3e7a20b6a210",
+        "5203f675-fc4d-4d3b-9de5-55fb58880e57"
+      ],
+      "settings": {
+        "product_title": "",
+        "product_subtitle": "Foaming Cleanser + Hyaluronic Acid Face Serum",
+        "product_det": ""
+      }
+    },
+    "product-kit-ingredients-featured-in": {
+      "type": "product-kit-ingredients-featured-in",
+      "blocks": {
+        "22472461-eac4-48ea-adb9-d389495cbd68": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/vogue.png",
+            "featured_in_detail": "Potato extract is rich in Vitamin C, and can combat dark spots, blemishes or acne scars. Its skin-tightening properties are perfect to diminish puffiness and dark circles."
+          }
+        },
+        "27cd7032-2963-4535-af45-c5ee35183c3f": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/healthline.png",
+            "featured_in_detail": "Hyaluronic acid can help your skin look and feel more supple. When applied to the surface of the skin, hyaluronic acid serums can reduce wrinkles, redness and dermatitis."
+          }
+        },
+        "b281e279-959f-499e-b8ac-f5d5601c4e1a": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/webmd.png",
+            "featured_in_detail": "As we age, the production of key substances in the skin decreases. As a result, our skin loses volume, hydration, and plumpness. HA is a humectant that is capable of binding over one thousand times its weight in water"
+          }
+        }
+      },
+      "block_order": [
+        "22472461-eac4-48ea-adb9-d389495cbd68",
+        "27cd7032-2963-4535-af45-c5ee35183c3f",
+        "b281e279-959f-499e-b8ac-f5d5601c4e1a"
+      ],
+      "settings": {
+        "Title_featured": "Ingredients Featured In"
+      }
+    },
+    "kit-complete-skincare-regime": {
+      "type": "kit-complete-skincare-regime",
+      "settings": {
+      }
+    },
+    "kit-whats-inside": {
+      "type": "kit-whats-inside",
+      "blocks": {
+        "19245c7f-b3b1-4d99-8799-0c0750892fac": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Foaming Cleanser With Purslane Extract",
+            "product_image": "shopify:\/\/shop_images\/skin-brigting-kit-sec.jpg",
+            "item_dec": "Introducing India’s 1st Foaming cleanser with Purslane extract. Remove even the hardest to remove makeup, mildly exfoliate your skin and get the rejuvenation your skin needs with our foaming cleanser.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_one": "Minimises  dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/even-skin-tone.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/reduce-scares.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        },
+        "c5889fdf-a177-4807-bc4f-3e9502792df5": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Hyaluronic Acid Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Hyaluronic.png",
+            "item_dec": "Get ready for soft, plump and & moisture-rich skin from Refresh’s 2% Hyaluronic acid serum! With the combination of D-Panthenol, the two powerful humectants help give your skin an instant plump look and let your face stay fresh all day long!",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/hyalra-icon1.png",
+            "what_it_does_text_one": "Hydrates rejuvenates the skin",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/hyalra-icon2.png",
+            "what_it_does_text_two": "Restores the skins pH level",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/hyalra-icon3.png",
+            "what_it_does_text_three": "Minimises pore size unclogs them"
+          }
+        }
+      },
+      "block_order": [
+        "19245c7f-b3b1-4d99-8799-0c0750892fac",
+        "c5889fdf-a177-4807-bc4f-3e9502792df5"
+      ],
+      "settings": {
+        "whats_inside_title": ""
+      }
+    },
+    "kit-key-ingredients": {
+      "type": "kit-key-ingredients",
+      "blocks": {
+        "91001cfc-011c-4306-9715-caddb0ccb7a5": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Berry",
+            "ki_image": "shopify:\/\/shop_images\/cranberry.png"
+          }
+        },
+        "3c0c0192-89df-4951-9166-986d12091520": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Orange",
+            "ki_image": "shopify:\/\/shop_images\/orange.png"
+          }
+        },
+        "72bd1a59-7999-4df9-81f0-90cf185c6ad9": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Avocado",
+            "ki_image": "shopify:\/\/shop_images\/avocado.png"
+          }
+        },
+        "c6317f9f-2699-4e81-a296-dc2cba42a051": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Strawberry",
+            "ki_image": "shopify:\/\/shop_images\/strawberry.png"
+          }
+        },
+        "6916273b-2eb8-49aa-ad3c-0b3d50599b8a": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Olive Squalane",
+            "ki_image": "shopify:\/\/shop_images\/olive.png"
+          }
+        },
+        "22a14581-c7dc-4eb0-b4dc-2512ea8ba95c": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Potato",
+            "ki_image": "shopify:\/\/shop_images\/potato.png"
+          }
+        }
+      },
+      "block_order": [
+        "91001cfc-011c-4306-9715-caddb0ccb7a5",
+        "3c0c0192-89df-4951-9166-986d12091520",
+        "72bd1a59-7999-4df9-81f0-90cf185c6ad9",
+        "c6317f9f-2699-4e81-a296-dc2cba42a051",
+        "6916273b-2eb8-49aa-ad3c-0b3d50599b8a",
+        "22a14581-c7dc-4eb0-b4dc-2512ea8ba95c"
+      ],
+      "settings": {
+        "ki_title": "Key Ingredients"
+      }
+    },
+    "kit-what-to-expect": {
+      "type": "kit-what-to-expect",
+      "blocks": {
+        "3d518869-a23d-43d4-ab27-96a46c47d1f8": {
+          "type": "routine_blocks",
+          "settings": {
+            "Am_routine": "<ul>\n<li>Foaming Cleanser<\/li>\n<li>Hyaluronic Acid Serum<\/li>\n<\/ul>",
+            "Pm_rountine": "<ul>\n<li>Foaming Cleanser<\/li>\n<li>Hyaluronic Acid Serum<\/li>\n<\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "3d518869-a23d-43d4-ab27-96a46c47d1f8"
+      ],
+      "settings": {
+        "title_what_expect": "What to expect?",
+        "subtitle_what_expect": "Makes the skin – Radiant, Soft, Dewey, Naturally Glowing"
+      }
+    },
+    "collapsible-section": {
+      "type": "collapsible-section",
+      "settings": {
+      }
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "82f2d9d4-03b0-4abc-b380-1328fe78b086": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Will the cleanser help me with removing makeup?",
+            "faq_answers": "We recommend using a makeup remover to remove makeup and using the cleanser to remove any makeup residue left on the skin."
+          }
+        },
+        "ed9c6dd8-ef65-4ef0-b156-63c3d681a47d": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Is it necessary to do a patch test before applying?",
+            "faq_answers": "Yes, it is recommended to do a patch test before applying serum, irrespective of the skin type."
+          }
+        },
+        "4fed783a-d839-4034-811f-288b25b86fa5": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Will my skin feel Oily after application?",
+            "faq_answers": "Our lightweight, oil-free formula ensures your skin feels light and supple post-application without leaving a sticky residue on the face."
+          }
+        },
+        "367ffe1f-f6ee-4686-9e1e-91bf04a6ca8e": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Can Hyaluronic Acid be used for all skin types?",
+            "faq_answers": "Hyaluronic acid is great for all skin types! While it is specifically recommended for people with dry, mature skin, everyone can reap the benefits by indulging their skin in some hydration!"
+          }
+        },
+        "5767c3d2-d07f-48d4-afa9-e3cd5c66fc88": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Can I pair HA with other acids?",
+            "faq_answers": "Hyaluronic acids go well with most ingredients and is perfect for layering as it acts as a deep moisturiser."
+          }
+        }
+      },
+      "block_order": [
+        "82f2d9d4-03b0-4abc-b380-1328fe78b086",
+        "ed9c6dd8-ef65-4ef0-b156-63c3d681a47d",
+        "4fed783a-d839-4034-811f-288b25b86fa5",
+        "367ffe1f-f6ee-4686-9e1e-91bf04a6ca8e",
+        "5767c3d2-d07f-48d4-afa9-e3cd5c66fc88"
+      ],
+      "settings": {
+        "FAQ_title": "FAQs",
+        "Faq_image": "shopify:\/\/shop_images\/faq_sec_image.jpg"
+      }
+    },
+    "rfss-promise": {
+      "type": "rfss-promise",
+      "settings": {
+      }
+    },
+    "product-similar": {
+      "type": "product-similar",
+      "blocks": {
+        "73d86aad-785c-4aca-93c4-4f3e1e774888": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-niacinamide"
+          }
+        },
+        "950c2f4a-cda2-4419-9d35-a31054681921": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-vitamin-c"
+          }
+        },
+        "525c201c-013e-40e8-bf8a-b6032bfa3a9d": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-granactive-retinoid"
+          }
+        }
+      },
+      "block_order": [
+        "73d86aad-785c-4aca-93c4-4f3e1e774888",
+        "950c2f4a-cda2-4419-9d35-a31054681921",
+        "525c201c-013e-40e8-bf8a-b6032bfa3a9d"
+      ],
+      "settings": {
+        "show_related_products": true,
+        "related_title": "Other fine products"
+      }
+    },
+    "product-our-heros": {
+      "type": "product-our-heros",
+      "blocks": {
+        "18a18abd-ac73-4af0-914a-adb7050737e6": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d7fbaa3c56564d57b0484ef19bee1591.mp4"
+          }
+        },
+        "24fd6ca7-323c-4cfb-addf-e00f125fc91d": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b66b8cc98add489ca6664d97b81864d0.mp4"
+          }
+        },
+        "e3e6410e-caee-4951-bb6e-aacc5ce2f2fb": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2286c78b5761411ca8014520330bd8ac.mp4"
+          }
+        },
+        "eefa83f3-f2ef-4554-a5d0-87c03bc3ca11": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/114babfbcdcd452792515230538bb7d3.mp4"
+          }
+        },
+        "5d7389cf-03bd-4874-ae6a-c22e66ef1d7b": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e43ac7d77e4a421ebc90b4205c42cf26.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "18a18abd-ac73-4af0-914a-adb7050737e6",
+        "24fd6ca7-323c-4cfb-addf-e00f125fc91d",
+        "e3e6410e-caee-4951-bb6e-aacc5ce2f2fb",
+        "eefa83f3-f2ef-4554-a5d0-87c03bc3ca11",
+        "5d7389cf-03bd-4874-ae6a-c22e66ef1d7b"
+      ],
+      "settings": {
+        "influncer_video_text": "Influncer Video"
+      }
+    }
+  },
+  "order": [
+    "product-meta-kit",
+    "product-kit-ingredients-featured-in",
+    "kit-complete-skincare-regime",
+    "kit-whats-inside",
+    "kit-key-ingredients",
+    "kit-what-to-expect",
+    "collapsible-section",
+    "product-review",
+    "product-faq",
+    "rfss-promise",
+    "product-similar",
+    "product-our-heros"
+  ]
+}

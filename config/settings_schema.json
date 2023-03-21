@@ -1,0 +1,76 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Themekit template theme",
+    "theme_version": "1.0.0",
+    "theme_author": "Shopify",
+    "theme_documentation_url": "https:\/\/github.com\/Shopify\/themekit",
+    "theme_support_url": "https:\/\/github.com\/Shopify\/themekit\/issues"
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "rfss_logo",
+        "label": "Choose Logo"
+      },
+      {
+        "type": "url",
+        "id": "logo_link",
+        "label": "Logo Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "fav_icon",
+        "label": "Choose favicon"
+      }
+    ]
+  },
+  {
+    "name": "announcement",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "announcement",
+        "label": "Enter text",
+        "default": "Buy More! Save More! Get Extra 20% OFF On All Orders Above INR 999\/- Use Code- GLOW"
+      },
+      {
+        "type": "textarea",
+        "id": "Offer_all_products",
+        "label": "Enter The Offer"
+      },
+      {
+        "type": "textarea",
+        "id": "Offer_combo_products",
+        "label": "Enter The Combo Products Offer"
+      },
+      {
+        "type": "textarea",
+        "id": "Offer_gift_products",
+        "label": "Enter The Gift Products Offer"
+      }
+    ]
+  },
+  {
+    "name": "recommended_products_cart",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product_one",
+        "label": "Choose Recommended Products"
+      },
+      {
+        "type": "product",
+        "id": "product_two",
+        "label": "Choose Recommended Products"
+      },
+      {
+        "type": "product",
+        "id": "product_three",
+        "label": "Choose Recommended Products"
+      }
+    ]
+  }
+]

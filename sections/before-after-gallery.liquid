@@ -1,0 +1,105 @@
+<div class="container pt-0 pt-md-5">
+  <h2 class="text-center mb-3 mb-md-5 fs-1 fw-bolder">Why do 10,000+ women love Refresh's Serum?</h2>
+
+  <div class="glide" id="bag-slider">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+       {%- for block in section.blocks -%}
+          <div class="glide__slide">          
+             <div class="bg-black row text-white align-items-center">
+                <div class="col-md-5">
+                  {%-liquid 
+                  assign img_url = block.settings.customer_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+                  assign ration = block.settings.customer_image.aspect_ratio -%}
+                  <div class="lazyload__image-wrapper no-js header-logo__image imglazy"><div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div><noscript><img itemprop="image" class="lazy js" src="{{ block.settings.customer_image | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ block.settings.customer_image.alt | default: shop.name | escape }}"></noscript></div>
+                </div>
+               <div class="col-md-6 offset-md-1 mt-lg-5 mb-lg-5 p-4 p-md-0">
+                  <h3 class="fs-3 fw-bold">{{ block.settings.bag_title }}</h3>
+                  <h6 class="border-bottom fs-5 mb-4 pb-4 w-75">{{ block.settings.bag_sub_title }}</h6>
+                 
+                  <div>
+                    <p><b>SKIN TYPE : </b>{{ block.settings.bag_skin_type  }}</p>
+                    <p><b>SKIN CONCERN : </b>{{ block.settings.bag_skin_concern }}</p>
+                    <p><b>DURATION : </b>{{ block.settings.bag_skin_duration }}</p>
+                    <p class="w-75">{{ block.settings.bag_skin_content }}</p>
+                  </div>
+                 
+                </div>
+             </div>
+         </div>
+    {% endfor %}    
+      </div>
+    </div>
+       <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+       </div>
+ </div>
+</div>
+<script>
+   if(document.querySelector("#bag-slider")){
+  new Glide('#bag-slider',{type: 'slider',autoplay: 3000,focusAt: 'center',perView: 1,activeNav: 'glide__bullet--active'}).mount();  
+}
+</script>
+{% schema %}
+  {
+    "name": "before_after_gallery",
+    "settings": [
+      {
+        "type" : "text",
+        "id": "before_after_gal",
+        "label": "title"
+      }    
+    ],
+    "blocks" : [
+      {
+        "name" : "before_after_sec",
+        "type" : "before_after_sec",
+        "settings" : [          
+            {
+              "type": "image_picker",
+              "id": "customer_image",
+              "label": "customer Image"
+             },
+           {
+            "type": "text",
+            "id": "bag_title",
+            "label": "Before After title"
+            },
+           {
+            "type": "text",
+            "id": "bag_sub_title",
+            "label": "Before After subtitle"
+            },
+            {
+            "type": "text",
+            "id": "bag_skin_type",
+            "label": "Before After Skintype"
+            },
+            {
+            "type": "text",
+            "id": "bag_skin_concern",
+            "label": "Before After concern"
+            },
+           {
+            "type": "text",
+            "id": "bag_skin_duration",
+            "label": "Before After duration"
+            },
+           {
+            "type": "textarea",
+            "id": "bag_skin_content",
+            "label": "Before After content"
+            }          
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

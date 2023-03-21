@@ -1,0 +1,54 @@
+<div class="overflow-hidden">
+  <div class="pr-reelase align-items-center mb-3 mb-md-5 pb-4  d-flex">
+    {%-for block in section.blocks-%}
+      <div class=" pr-reelase-item me-5">
+        <a href="{{ block.settings.pr_image_link }}" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="{{ block.settings.pr_image_jpg | img_url: 'master' }}" type="image/jpeg">
+            <source srcset="{{ block.settings.pr_image_jpg | img_url: 'master' }}" type="image/jpeg">
+            <img src="{{ block.settings.pr_image_jpg | img_url: 'master' }}" alt="{{ block.pr_image_jpg | alt}}" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">{{ block.settings.pr_image_title }}</p>
+        </a>
+      </div>
+    {%-endfor-%}
+  </div>
+</div>
+{%-schema-%}
+  {
+    "name": "press-relase",
+    "settings": [
+      {
+        "type": "text",
+        "id": "press_title",
+        "label": "Press Title",
+        "default": "Press Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "press-relase",
+        "type": "slide",
+        "settings": [
+          {
+            "id": "pr_image_webp",
+            "label": "PR Image WEbp ",
+            "type": "image_picker"
+          }, {
+            "id": "pr_image_jpg",
+            "label": "PR Image png ",
+            "type": "image_picker"
+          }, {
+            "id": "pr_image_title",
+            "label": "PR Image Title ",
+            "type": "text"
+          }, {
+            "id": "pr_image_link",
+            "label": "PR Image Link",
+            "type": "url"
+          }
+        ]
+      }
+    ]
+  }
+{%-endschema-%}

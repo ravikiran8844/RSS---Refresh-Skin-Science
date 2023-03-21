@@ -1,0 +1,83 @@
+<div class="blog-ban mb-5 mt-5 pb-5">
+  <h1 class="fs-1 fw-bold  text-center">FAQs</h1>
+</div>
+
+<div class="rae-section-1  pt-lg-3 pb-lg-3 mt-lg-5 mb-lg-5 pt-4 pb-5">
+  <div class="container">
+    <div class="w-75 m-auto">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+
+        {% capture faq_i %}1{% endcapture %}
+
+        {% for block in section.blocks %}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading{{ faq_i }}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ faq_i }}" aria-expanded="false" aria-controls="flush-collapse{{ faq_i }}">
+                {{ block.settings.faq_question }}
+              </button>
+            </h2>
+            <div id="flush-collapse{{ faq_i }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ faq_i }}" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                {{ block.settings.faq_answer}}
+              </div>
+            </div>
+          </div>
+
+          {%  assign faq_i = faq_i | plus: 1   %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .defltpg {
+    background: #FFFFFF;
+    box-shadow: 0 0 27px rgba(141, 141, 141, 0.25);
+    border-radius: 20px;
+  }
+  p {
+    font-size: 18px !important;
+  }
+  .accordion-button {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .accordion-body {
+    font-size: 18px;
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "faq-list",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title_faq",
+        "label": "Title FAQ"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "faq_list",
+        "type": "faq_list",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq_question",
+            "label": "FAQ Question"
+          }, {
+            "type": "textarea",
+            "id": "faq_answer",
+            "label": "FAQ Answer"
+          }
+        ]
+      }
+    ]
+
+  }
+{% endschema %}

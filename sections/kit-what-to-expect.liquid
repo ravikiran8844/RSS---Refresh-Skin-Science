@@ -1,0 +1,70 @@
+<div class="bg-black pb-5 pt-5 text-center text-white wte_bane">
+   <div class="conatiner">
+      <h2 class="fs-1 fw-bolder mb-4 text-capitalize">{{ section.settings.title_what_expect  }}</h2>
+     <h5 class="fs-4 text-capitalize">{{ section.settings.subtitle_what_expect }}</h5>
+   </div>
+</div>
+<div class="wte-sec pb-5 pb-lg-0  pt-lg-0 pt-5 pt-md-5 pb-md-5 ">
+   <div class="container">
+       <div class="row align-items-center">
+           <div class="col-md-4 col-6">
+               <div class="am_box bg-white">
+                  <img src="{{ 'wte-am.png' | asset_url }}" class="mb-5 ">
+                  {% for block in section.blocks %}
+                     {{ block.settings.Am_routine }}
+                  {% endfor %}
+               </div>
+           </div>
+          <div class="col-md-4 col-6">
+                <div class="pm_box bg-black">
+                    <img src="{{ 'wte-pm.png' | asset_url }}" class="mb-5 ">
+                    {% for block in section.blocks %}
+                     {{ block.settings.Pm_rountine }}
+                     {% endfor %}
+               </div>
+           </div>
+          <div class="col-md-4 d-none d-md-block">
+             <img src="{{ 'wte-model.png' | asset_url }}" class="wte-model ">
+          </div>
+           
+         
+       </div>
+   </div>
+</div>
+{% schema %}
+  {
+    "name": "kit-what-expect",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "title_what_expect",
+        "label" : "Title What Expect"
+      },
+      {
+        "type" : "text", 
+        "id" : "subtitle_what_expect",
+        "label" : "subtitle what expect"
+      }      
+    ],
+    "blocks" : [
+       {
+         "name" : "routine_blocks",
+         "type" : "routine_blocks",
+         "settings" : [
+           {
+             "type" : "html",
+             "id" : "Am_routine",
+             "label" : "AM Routine"
+           },
+           {
+              "type" : "html",
+              "id" : "Pm_rountine",
+              "label" : "PM Routine"
+           }
+         ]
+       }
+      
+    ]
+  }
+{% endschema %}
+

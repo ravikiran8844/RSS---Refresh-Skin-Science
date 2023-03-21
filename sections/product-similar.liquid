@@ -1,0 +1,118 @@
+<div class="container">
+  {% if section.settings.show_related_products == true  %}
+    <h2 class="text-center mb-5 fs-1 fw-bolder">Browse Similar Products</h2>
+      <div class="glide justify-content-center d-flex text-center" id="similar_products">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+      {% for block in  section.blocks %}
+        {%  assign similar_product = all_products[block.settings.similar_products]  %}
+
+        <div class="glide__slide">
+          <div class="similar_pd">
+            <a href="{{ similar_product.url }}" class="rfss-black product_a text-decoration-none">
+        {%- comment -%}
+              {%-liquid 
+        assign img_url = similar_product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign ration = similar_product.featured_image.aspect_ratio -%}
+        <div class="lazyload__image-wrapper no-js header-logo__image imglazy">
+          <div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div>
+          <noscript>
+            <img itemprop="image" class="lazy js" src="{{ similar_product.featured_image | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ similar_product.featured_image.alt | default: shop.name | escape }}">
+          </noscript>
+        </div>
+        {%- endcomment -%}
+              <img src="{{ similar_product.featured_image  | img_url: 'large' }} " class="w-100">
+            </a>
+            <a href="{{ similar_product.url }}" class="rfss-black product_a text-decoration-none">
+              <h4 class="fs-5 fw-bolder mb-4 mt-4">
+                {{ similar_product.title }}
+              </h4>
+            </a>
+            <div class="mb-4">
+              <span class="rfss-grey rfss_sub_title">{{ similar_product.description }}</span>
+
+              <div class="wc_product_review_badge" data-handle="{{ similar_product.handle }}" data-product_id="{{ similar_product.id }}"></div>
+
+              {% if similar_product.compare_at_price == blank %}
+                <span class="pe-2">MRP :</span>
+                <span class="fs-5 fw-bolder me-3">{{ similar_product.price | money}}
+                {% else %}
+                  <span class="pe-2">MRP :</span>
+                  {% if similar_product.compare_at_price != blank %}
+                    <span class="dashed fs-6 position-relative">{{ similar_product.compare_at_price | money }}</span>
+                  {% endif %}
+                  <span class="fs-5 fw-bolder ms-3">{{ similar_product.price | money }}</span>
+                {% endif %}
+
+              </div>
+              <form method="post" action="/cart/add" class="ac_form position-relative">
+                <input name="id" value="{{ similar_product.variants.first.id }}" type="hidden"/>
+                <input name="add" value="Buy Now" type="submit" class="w-100"/>
+                <div class="rotates">
+                  <span class="spin"></span>
+                </div>
+                <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/t/6/assets/right-arrow-thin.svg?v=25521640411634951531663145304" class="bn_right_arrow">
+
+              </form>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+  {% endif %}
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Related products",
+    "class": "mb-5 mt-5 pb-5 pt-5",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_related_products",
+        "label": "Show related products",
+        "default": false
+      }, {
+        "id": "related_title",
+        "type": "text",
+        "label": "Section title",
+        "default": "Other fine products"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "similar-products",
+        "type": "similar-products",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "product",
+            "id": "similar_products",
+            "label": "choose similar products"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+{% stylesheet  %}
+  div#most_loved .owl-nav {
+    top: 45%;
+    position: absolute;
+    width: 100%;
+  }
+  div#most_loved .owl-nav .owl-next {
+    position: absolute;
+    right: 0;
+  }
+  div#most_loved .owl-nav button:hover {
+    background-color: transparent;
+  }
+{% endstylesheet %}
+<script>
+  if(document.querySelector("#similar_products")){new Glide("#similar_products",{type:"slider",bound:true,perView:4,breakpoints:{0:{perView:1.3},300:{perView:1.3},600:{perView:1.3},800:{perView:3},1000:{perView:4}}}).mount();}
+</script>

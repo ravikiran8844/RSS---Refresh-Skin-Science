@@ -1,0 +1,365 @@
+{
+  "sections": {
+    "product-meta-kit": {
+      "type": "product-meta-rfss-kit",
+      "blocks": {
+        "6c214657-b024-4148-a3e9-df3b49e4636d": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Helps Make Your Skin Appear Fresh And Radiant",
+            "product_contains_price": ""
+          }
+        },
+        "bfd3f5b1-027b-4b74-aa73-fa04d049a4b6": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Calms, Soothes And Maintains Skin’s pH.",
+            "product_contains_price": ""
+          }
+        },
+        "a7e9c2b4-e118-41ab-957b-356bceecca0e": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Fights Free Radical Damage.",
+            "product_contains_price": ""
+          }
+        },
+        "9ff38eae-57e1-49ca-914f-98da7fda0d6a": {
+          "type": "today-offer-for-kit",
+          "settings": {
+            "today-offer-title": "Today’s Offers",
+            "whats_the_offer-one": "FLAT 25% OFF + FREE HYALURONIC ACID SERUM ON ORDERS ABOVE RS.599\/-",
+            "whats_the_offer-two": "FREE SHIPPING ON ALL PREPAID ORDERS",
+            "whats_the_offer-three": "Get Flat 25% Off On Gift Sets"
+          }
+        }
+      },
+      "block_order": [
+        "6c214657-b024-4148-a3e9-df3b49e4636d",
+        "bfd3f5b1-027b-4b74-aa73-fa04d049a4b6",
+        "a7e9c2b4-e118-41ab-957b-356bceecca0e",
+        "9ff38eae-57e1-49ca-914f-98da7fda0d6a"
+      ],
+      "settings": {
+        "product_title": "",
+        "product_subtitle": "Foaming Cleanser + PHA Alcohol-Free Face Toner",
+        "product_det": ""
+      }
+    },
+    "product-kit-ingredients-featured-in": {
+      "type": "product-kit-ingredients-featured-in",
+      "blocks": {
+        "6819ba5c-cc15-41a7-b16f-107eba976417": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/vogue.png",
+            "featured_in_detail": "Potato extract is rich in Vitamin C, and can combat dark spots, blemishes or acne scars. Its skin-tightening properties are perfect to diminish puffiness and dark circles."
+          }
+        },
+        "d20bc685-8e10-43f8-b2ae-123b1fcf22f9": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/healthline.png",
+            "featured_in_detail": "PHAs(Polyhydroxy Acids) are the least well-known of the skincare acids. Due to its large molecules, they penetrate the skin less thoroughly, & therefore are less likely to induce side effects."
+          }
+        },
+        "0fc84e4a-c959-44f8-87dc-a3ff91c52c6b": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/webmd.png",
+            "featured_in_detail": "Polyhydroxy acid is a gentle chemical exfoliant. The most common PHAs are gluconolactone and lactobionic acid. PHAs exfoliate dead skin cells from the surface, which helps skin be smoother and more even."
+          }
+        }
+      },
+      "block_order": [
+        "6819ba5c-cc15-41a7-b16f-107eba976417",
+        "d20bc685-8e10-43f8-b2ae-123b1fcf22f9",
+        "0fc84e4a-c959-44f8-87dc-a3ff91c52c6b"
+      ],
+      "settings": {
+        "Title_featured": "Ingredients Featured In"
+      }
+    },
+    "kit-complete-skincare-regime": {
+      "type": "kit-complete-skincare-regime",
+      "settings": {
+      }
+    },
+    "kit-whats-inside": {
+      "type": "kit-whats-inside",
+      "blocks": {
+        "a697f2f6-b75c-4ca2-85b1-a3a3cd555ab8": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Foaming Cleanser With Purslane Extract",
+            "product_image": "shopify:\/\/shop_images\/skin-brigting-kit-sec.jpg",
+            "item_dec": "Introducing India’s 1st Foaming cleanser with Purslane extract. Remove even the hardest to remove makeup, mildly exfoliate your skin and get the rejuvenation your skin needs with our foaming cleanser.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_one": "Minimises dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/even-skin-tone.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/reduce-scares.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        },
+        "3468c1e6-0695-4c4e-b8f8-6569c7b18b85": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "PHA Alcohol-Free Face Toner",
+            "product_image": "shopify:\/\/shop_images\/Face-Toner-Kit_png.webp",
+            "item_dec": "Say goodbye to clogged pores and hello to smoother and brighter skin. Make exfoliating, pH balancing, pore tightening, and skin moisturizing possible, all with a single toner! 100% Alcohol-free with added PHA to give excellent hydration effects on the skin!",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/pha-icon1.png",
+            "what_it_does_text_one": "Hydrates & rejuvenates the skin",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon2.png",
+            "what_it_does_text_two": "Restores the skin’s pH level",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/pha-icon3.png",
+            "what_it_does_text_three": "Minimises pore size & unclogs them"
+          }
+        }
+      },
+      "block_order": [
+        "a697f2f6-b75c-4ca2-85b1-a3a3cd555ab8",
+        "3468c1e6-0695-4c4e-b8f8-6569c7b18b85"
+      ],
+      "settings": {
+        "whats_inside_title": ""
+      }
+    },
+    "kit-key-ingredients": {
+      "type": "kit-key-ingredients",
+      "blocks": {
+        "ab6d4de8-12a6-4d67-89cf-5f2cac0b3acc": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Berry",
+            "ki_image": "shopify:\/\/shop_images\/cranberry.png"
+          }
+        },
+        "3155a230-ee7b-48e3-9c49-3e2b79a5b058": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Orange",
+            "ki_image": "shopify:\/\/shop_images\/orange.png"
+          }
+        },
+        "6e1473e8-e6ee-44cd-8f4d-2990e62a5c1f": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Avocado",
+            "ki_image": "shopify:\/\/shop_images\/avocado.png"
+          }
+        },
+        "65f9f62c-4b20-41ca-9406-1449dc000a78": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Strawberry",
+            "ki_image": "shopify:\/\/shop_images\/strawberry.png"
+          }
+        },
+        "7aee3ffd-c01c-4dcd-9d9b-e719fc7342af": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Olive Squalane",
+            "ki_image": "shopify:\/\/shop_images\/olive.png"
+          }
+        },
+        "1c32c998-65bc-433f-afdb-db8f5e04e4d4": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Potato",
+            "ki_image": "shopify:\/\/shop_images\/potato.png"
+          }
+        }
+      },
+      "block_order": [
+        "ab6d4de8-12a6-4d67-89cf-5f2cac0b3acc",
+        "3155a230-ee7b-48e3-9c49-3e2b79a5b058",
+        "6e1473e8-e6ee-44cd-8f4d-2990e62a5c1f",
+        "65f9f62c-4b20-41ca-9406-1449dc000a78",
+        "7aee3ffd-c01c-4dcd-9d9b-e719fc7342af",
+        "1c32c998-65bc-433f-afdb-db8f5e04e4d4"
+      ],
+      "settings": {
+        "ki_title": "Key Ingredients"
+      }
+    },
+    "kit-what-to-expect": {
+      "type": "kit-what-to-expect",
+      "blocks": {
+        "069a7c23-f027-4891-bd48-81798af44b09": {
+          "type": "routine_blocks",
+          "settings": {
+            "Am_routine": "<ul>\n<li>Foaming Cleanser<\/li>\n<li>Alcohol-Free Face Toner<\/li>\n<\/ul>",
+            "Pm_rountine": "<ul>\n<li>Foaming Cleanser<\/li>\n<li>Alcohol-Free Face Toner<\/li>\n<\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "069a7c23-f027-4891-bd48-81798af44b09"
+      ],
+      "settings": {
+        "title_what_expect": "What to expect?",
+        "subtitle_what_expect": "Makes the skin – Radiant, Soft, Dewey, Naturally Glowing"
+      }
+    },
+    "collapsible-section": {
+      "type": "collapsible-section",
+      "settings": {
+      }
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "0b7eb364-fe29-4fb9-ab65-c7fc7cf4b873": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Will the cleanser help me with removing makeup?",
+            "faq_answers": "We recommend using a makeup remover to remove makeup and using the cleanser to remove any makeup residue left on the skin."
+          }
+        },
+        "53d17636-12e6-4ddd-9894-23fd4bb5fa2f": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Is it necessary to do a patch test before applying?",
+            "faq_answers": "Yes, it is recommended to do a patch test before applying serum, irrespective of the skin type."
+          }
+        },
+        "d4f44f69-ae61-4d9a-8f22-0c783a1f9fce": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Will my skin feel Oily after application?",
+            "faq_answers": "Our lightweight, oil-free formula ensures your skin feels light and supple post-application without leaving a sticky residue on the face."
+          }
+        },
+        "2b214ae8-2300-4482-ba86-5bd14e624e37": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Does the toner have exfoliating properties?",
+            "faq_answers": "Yes, PHA toner’s can be used as a gentle exfoliant from gentle skin to help remove dead skin cells from the surface layer of the skin."
+          }
+        },
+        "9ba6237f-cd93-4cfc-963f-7f2917a84ce9": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Is this combo suitable for Dry\/acne prone skin?",
+            "faq_answers": "Yes, it is suitable for dry and acne-prone skin. It helps tighten pores and prevents open pores."
+          }
+        }
+      },
+      "block_order": [
+        "0b7eb364-fe29-4fb9-ab65-c7fc7cf4b873",
+        "53d17636-12e6-4ddd-9894-23fd4bb5fa2f",
+        "d4f44f69-ae61-4d9a-8f22-0c783a1f9fce",
+        "2b214ae8-2300-4482-ba86-5bd14e624e37",
+        "9ba6237f-cd93-4cfc-963f-7f2917a84ce9"
+      ],
+      "settings": {
+        "FAQ_title": "FAQs",
+        "Faq_image": "shopify:\/\/shop_images\/faq_sec_image.jpg"
+      }
+    },
+    "rfss-promise": {
+      "type": "rfss-promise",
+      "settings": {
+      }
+    },
+    "product-similar": {
+      "type": "product-similar",
+      "blocks": {
+        "68d0451e-69b8-4c90-9c72-891d819495fb": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-salicylic-acid"
+          }
+        },
+        "312a397f-2ca9-45b1-aca9-70bdc0793ae3": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-vitamin-c"
+          }
+        },
+        "923499ce-a8f2-4a72-9d47-63b4818e2844": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-granactive-retinoid"
+          }
+        }
+      },
+      "block_order": [
+        "68d0451e-69b8-4c90-9c72-891d819495fb",
+        "312a397f-2ca9-45b1-aca9-70bdc0793ae3",
+        "923499ce-a8f2-4a72-9d47-63b4818e2844"
+      ],
+      "settings": {
+        "show_related_products": true,
+        "related_title": "Other fine products"
+      }
+    },
+    "product-our-heros": {
+      "type": "product-our-heros",
+      "blocks": {
+        "3e8e6798-e66c-462d-bc30-86ec15a93d46": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d7fbaa3c56564d57b0484ef19bee1591.mp4"
+          }
+        },
+        "9350a70e-40e8-400a-9634-986353a3a60a": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b66b8cc98add489ca6664d97b81864d0.mp4"
+          }
+        },
+        "794d6de9-8f43-4c01-a714-75742dc17475": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2286c78b5761411ca8014520330bd8ac.mp4"
+          }
+        },
+        "a1ce3374-0b8c-408c-9511-44a526dc3473": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/114babfbcdcd452792515230538bb7d3.mp4"
+          }
+        },
+        "bddc5d82-534d-43b8-a7b5-3bba2434c8a0": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e43ac7d77e4a421ebc90b4205c42cf26.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "3e8e6798-e66c-462d-bc30-86ec15a93d46",
+        "9350a70e-40e8-400a-9634-986353a3a60a",
+        "794d6de9-8f43-4c01-a714-75742dc17475",
+        "a1ce3374-0b8c-408c-9511-44a526dc3473",
+        "bddc5d82-534d-43b8-a7b5-3bba2434c8a0"
+      ],
+      "settings": {
+        "influncer_video_text": "Influncer Video"
+      }
+    }
+  },
+  "order": [
+    "product-meta-kit",
+    "product-kit-ingredients-featured-in",
+    "kit-complete-skincare-regime",
+    "kit-whats-inside",
+    "kit-key-ingredients",
+    "kit-what-to-expect",
+    "collapsible-section",
+    "product-review",
+    "product-faq",
+    "rfss-promise",
+    "product-similar",
+    "product-our-heros"
+  ]
+}

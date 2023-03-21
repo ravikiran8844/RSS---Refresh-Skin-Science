@@ -1,0 +1,78 @@
+<div class="container mt-md-5 pt-md-5"">
+  <h2 class="fs-1 fw-bolder mb-5 text-center text-capitalize">{{ section.settings.os-dd-heading}}</h2>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+      {% for block  in  section.blocks %}
+        <div class="align-items-center d-flex mb-5 serum-dont-do-sec">
+          <div class="sdd_img-sec">
+            {%-liquid 
+        assign img_url = block.settings.os_dd_icon_png | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign ration = block.settings.os_dd_icon_png.aspect_ratio -%}
+        <div class="lazyload__image-wrapper no-js header-logo__image imglazy">
+          <div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div>
+          <noscript>
+            <img itemprop="image" class="lazy js" src="{{ block.settings.os_dd_icon_png | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ block.settings.os_dd_icon_png.alt | default: shop.name | escape }}">
+          </noscript>
+        </div>
+          </div>
+          <div class="ms-5">
+            <span style='color:#5F5F5F;text-decoration:line-through'>
+              <span class="d-block fs-2 text-capitalize" style="color:#222222; ">{{ block.settings.os-dd-title }}</span>
+            </span>
+            <small>{{ block.settings.os-dd-description }}</small>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+
+
+</div>
+
+{% schema %}
+  {
+    "name": "os-dont-do",
+    "tag": "section",
+    "class": "os-dont-do mb-1 mt-1 mt-md-5 pt-5",
+    "settings": [
+      {
+        "type": "text",
+        "id": "os-dd-heading",
+        "label": "Our serum dont do Heading",
+        "default": "What our Serums DON'T DO?"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "our-serum-dont-do",
+        "type": "our-serum-dont-do",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "os_dd_icon_png",
+            "label": "choose PNG icon to display"
+          }, {
+            "type": "image_picker",
+            "id": "os_dd_icon_webp",
+            "label": "choose Webp icon to display"
+          }, {
+            "type": "text",
+            "id": "os-dd-title",
+            "label": "Our serum dont do Title"
+          }, {
+            "type": "textarea",
+            "id": "os-dd-description",
+            "label": "Our serum dont do description"
+          }
+
+
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,501 @@
+{
+  "sections": {
+    "product-template": {
+      "type": "product-meta-rfss",
+      "blocks": {
+        "d2f2fa2c-acb1-498c-a79f-6cf67818ec21": {
+          "type": "product-points",
+          "settings": {
+            "product_points": "Helps with <b>skin hydration<\/b>"
+          }
+        },
+        "e8450ef2-2170-4f5e-8436-30b4c96c0198": {
+          "type": "product-points",
+          "settings": {
+            "product_points": "Maintains <b>skin’s moisture barrier<\/b>"
+          }
+        },
+        "4bdb5b89-93a7-462a-81e4-a070bbe28164": {
+          "type": "product-points",
+          "settings": {
+            "product_points": "Helps your <b>skin stay young<\/b>"
+          }
+        },
+        "a341422c-14ac-4fa3-b8f9-3b2f74776e94": {
+          "type": "Product-Desc-Toggle",
+          "settings": {
+            "icon_title": "shopify:\/\/shop_images\/ingredients_product.png",
+            "question": "Benefits",
+            "details": "<ul>\n<li>Hydrates your skin and prevents dryness.<\/li>\n<li>Protects your skin’s moisture barrier.<\/li>\n<li>Helps keep your skin stay young and away from all skin problems.\n<\/li>\n<li>Reduces the appearance of acne and other blemishes.<\/li>\n<li>Gentler on the skin and suitable for all skin types.<\/li>\n<\/ul>"
+          }
+        },
+        "4dd4f626-8397-4a8d-b36f-53868faa1ad2": {
+          "type": "Product-Desc-Toggle",
+          "disabled": true,
+          "settings": {
+            "icon_title": "shopify:\/\/shop_images\/User-products.png",
+            "question": "Composition",
+            "details": "<ul>\n<li>The face moisturiser is suitable for all skin types and helps restore the skin’s barrier and reduce the chances of extreme dryness or oiliness.<\/li>\n<li>The combination of grape seed extract and ceramide present in the moisturiser helps heal and brighten the skin tone, while generating a barrier to lock in moisture ,preventing dryness and irritation.<\/li>\n<li>The hyaluronic acid combination hydrates your skin and helps keep the skin looking firm and youthful.<\/li>\n<li>Cucumber extract is nutritive to the skin and provides all-day hydration to your skin.<\/li>\n<li>Face moisturiser is applicable for all types of skin and soothes even the most sensitive skin types.<\/li>\n<\/ul>"
+          }
+        },
+        "db42be4a-ba1b-4357-ac7e-7f2ee800a3ee": {
+          "type": "Product-Desc-Toggle",
+          "disabled": true,
+          "settings": {
+            "icon_title": "shopify:\/\/shop_images\/use_product.png",
+            "question": "Ingredients",
+            "details": "Ceramides, Cucumber, Grapeseed, 3-O-Ethyl Ascorbic Acid, Hyaluronic Acid(Combination), Multipeptide Complex, Vitamin E"
+          }
+        },
+        "8d2613ad-8a5f-420c-9c70-672eeadfaf86": {
+          "type": "suitable_for",
+          "settings": {
+            "suitable_image_picker": "shopify:\/\/shop_images\/skinglow.png",
+            "suitable_for_text": "SKIN GLOW"
+          }
+        },
+        "6c0f1831-cfc2-4604-867b-8601f2eb0931": {
+          "type": "suitable_for",
+          "settings": {
+            "suitable_image_picker": "shopify:\/\/shop_images\/sensittive-skin.png",
+            "suitable_for_text": "SENSITIVE SKIN"
+          }
+        },
+        "d4b1bcd5-2288-45e4-9edf-6ecb915da619": {
+          "type": "suitable_for",
+          "settings": {
+            "suitable_image_picker": "shopify:\/\/shop_images\/dull-face.png",
+            "suitable_for_text": "DULL FACE"
+          }
+        },
+        "ff56401b-17b2-40ec-9348-89eb9334fb5b": {
+          "type": "video-sec-product",
+          "settings": {
+            "product_description_video": "<iframe width=\"100%\" height=\"400\" src=\"https:\/\/www.youtube.com\/embed\/lHwJSEVtFgI\" title=\"How To Remove Pimples Completely in 12 Weeks | Acne Reduction Kit | Refresh Skin Science\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>"
+          }
+        },
+        "563c755d-39ee-43a4-a7aa-1a16abf52c94": {
+          "type": "Trust-factor-image",
+          "settings": {
+            "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-4.png",
+            "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-4.png"
+          }
+        },
+        "35367ec7-458e-4991-9c38-5a318d02dd0b": {
+          "type": "Trust-factor-image",
+          "settings": {
+            "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-3.png"
+          }
+        },
+        "29874965-0d1e-4a12-9a2a-72840ada2088": {
+          "type": "Trust-factor-image",
+          "settings": {
+            "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-2.webp"
+          }
+        },
+        "0e13d165-0cf3-45ce-8201-0666ad3afbf8": {
+          "type": "Trust-factor-image",
+          "settings": {
+            "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "d2f2fa2c-acb1-498c-a79f-6cf67818ec21",
+        "e8450ef2-2170-4f5e-8436-30b4c96c0198",
+        "4bdb5b89-93a7-462a-81e4-a070bbe28164",
+        "a341422c-14ac-4fa3-b8f9-3b2f74776e94",
+        "4dd4f626-8397-4a8d-b36f-53868faa1ad2",
+        "db42be4a-ba1b-4357-ac7e-7f2ee800a3ee",
+        "8d2613ad-8a5f-420c-9c70-672eeadfaf86",
+        "6c0f1831-cfc2-4604-867b-8601f2eb0931",
+        "d4b1bcd5-2288-45e4-9edf-6ecb915da619",
+        "ff56401b-17b2-40ec-9348-89eb9334fb5b",
+        "563c755d-39ee-43a4-a7aa-1a16abf52c94",
+        "35367ec7-458e-4991-9c38-5a318d02dd0b",
+        "29874965-0d1e-4a12-9a2a-72840ada2088",
+        "0e13d165-0cf3-45ce-8201-0666ad3afbf8"
+      ],
+      "settings": {
+        "product_title": "",
+        "product_subtitle": "Soft Skin and Smooth Complexion",
+        "product_det": "Dull and dry skin begone! \nGet moisturised skin with our Moisturiser For All Skin Types. With the added freshness of cucumber and grape seed extract, it keeps your skin healthy, hydrated and firm throughout the day. The moisturiser is non-sticky & non-greasy and sinks into skin easily.",
+        "kit_product": "no"
+      }
+    },
+    "product-proven-effective": {
+      "type": "product-proven-effective",
+      "blocks": {
+        "db3fec64-c311-44d5-b3fb-221de22c1ff8": {
+          "type": "pe-percent-details",
+          "settings": {
+            "pe-percent": "95%",
+            "pe-percent-det": "saw an increase in skin’s moisture*"
+          }
+        },
+        "f1991e28-9051-4e64-94f8-15ef577845d0": {
+          "type": "pe-percent-details",
+          "settings": {
+            "pe-percent": "91%",
+            "pe-percent-det": "found soft and supple skin*"
+          }
+        },
+        "5f211437-c112-4277-b80b-46a10d899ffd": {
+          "type": "pe-percent-details",
+          "settings": {
+            "pe-percent": "87%",
+            "pe-percent-det": "saw improvement in skin elasticity*"
+          }
+        }
+      },
+      "block_order": [
+        "db3fec64-c311-44d5-b3fb-221de22c1ff8",
+        "f1991e28-9051-4e64-94f8-15ef577845d0",
+        "5f211437-c112-4277-b80b-46a10d899ffd"
+      ],
+      "settings": {
+        "pe-sub-title": "RESULTS WITHOUT COMPROMISE",
+        "pe-description": "Seeing is believing! Our Face Moisturiser is formulated with clinically proven ingredients to give results in just 84 days of CONTINUOUS use.",
+        "pe_before_image": "shopify:\/\/shop_images\/Group_2988.jpg",
+        "pe_after_image": "shopify:\/\/shop_images\/Group_2988.jpg"
+      }
+    },
+    "collapsible-section": {
+      "type": "collapsible-section",
+      "settings": {
+      }
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "product-how-to-use": {
+      "type": "product-how-to-use",
+      "disabled": true,
+      "blocks": {
+        "1b547ad1-eef2-42dd-b257-1e0bf66e1676": {
+          "type": "how-to-use-steps",
+          "settings": {
+            "hw_to_use_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5b731b42301e4930b4be51aea7580563.mp4",
+            "hw_to_use_step": "Step No 1",
+            "hw_to_use_det": "Cleanse your skin with Refresh's gentle foaming cleanser to remove any dirt or impurities. The AHA + PHA + BHA Peeling solution should be applied only once or twice a week depending on your needs and skin type and generally a PM routine."
+          }
+        },
+        "b6f0e51e-9645-4913-865a-0a5733cadb3d": {
+          "type": "how-to-use-steps",
+          "settings": {
+            "hw_to_use_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9bf7e0d65a354708922cbb91940ecd2c.mp4",
+            "hw_to_use_step": "Step No 2",
+            "hw_to_use_det": "Apply peeling solution evenly across face and neck area and gently massage evenly using fingertips, avoiding the eye area. Leave on for no more than 10 minutes. Rinse thoroughly with lukewarm water."
+          }
+        },
+        "cd325ac8-9b4a-4762-838c-f06f521f859e": {
+          "type": "how-to-use-steps",
+          "settings": {
+            "hw_to_use_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b668bafcd921457aa111ee0dbab729ea.mp4",
+            "hw_to_use_step": "Step No 3",
+            "hw_to_use_det": "Follow your normal skincare routine after a peeling session for maximum absorption and efficiency, and never step out without sun protection."
+          }
+        }
+      },
+      "block_order": [
+        "1b547ad1-eef2-42dd-b257-1e0bf66e1676",
+        "b6f0e51e-9645-4913-865a-0a5733cadb3d",
+        "cd325ac8-9b4a-4762-838c-f06f521f859e"
+      ],
+      "settings": {
+        "hw_to_use_title": "How to use?",
+        "hw_to_use_subtitle": "3 Simple Steps For Your Skin care Ever"
+      }
+    },
+    "product-how-refresh-works": {
+      "type": "product-how-refresh-works",
+      "blocks": {
+        "9addcdad-5862-499c-95b9-d25785f40bfa": {
+          "type": "how_refresh_work",
+          "settings": {
+            "rw_image_pickr_png": "shopify:\/\/shop_images\/30-days.webp",
+            "rw_image_pickr_webp": "shopify:\/\/shop_images\/30-days.png",
+            "rw_details": "Increases skin’s moisture barrier and boosts collagen production"
+          }
+        },
+        "68ee3112-f818-4648-9e47-537d4310665d": {
+          "type": "how_refresh_work",
+          "settings": {
+            "rw_image_pickr_png": "shopify:\/\/shop_images\/60-days_6c9c8d81-4b35-4c84-aa62-a4834412480f.png",
+            "rw_image_pickr_webp": "shopify:\/\/shop_images\/60-days.png",
+            "rw_details": "Plumps up the skin and adds a brilliant glow"
+          }
+        },
+        "4256d266-0bce-405d-a09a-415a1ad5c4e8": {
+          "type": "how_refresh_work",
+          "settings": {
+            "rw_image_pickr_png": "shopify:\/\/shop_images\/90-days.webp",
+            "rw_image_pickr_webp": "shopify:\/\/shop_images\/90-days.png",
+            "rw_details": "Rejuvenated skin with improved softness and elasticity"
+          }
+        }
+      },
+      "block_order": [
+        "9addcdad-5862-499c-95b9-d25785f40bfa",
+        "68ee3112-f818-4648-9e47-537d4310665d",
+        "4256d266-0bce-405d-a09a-415a1ad5c4e8"
+      ],
+      "settings": {
+        "rw_title": "How Refresh Beauty Basics Works",
+        "refund_text": "<b>80-Day Full Refund<\/b> if we’re not the right fit!"
+      }
+    },
+    "product-our-serums-dontdo": {
+      "type": "product-our-serums-dontdo",
+      "blocks": {
+        "3f7d3dfe-da81-407a-9bbc-dbd198e45dfd": {
+          "type": "our-serum-dont-do",
+          "settings": {
+            "os_dd_icon_png": "shopify:\/\/shop_images\/transform-overnight.png",
+            "os_dd_icon_webp": "shopify:\/\/shop_images\/transform-overnight.webp",
+            "os-dd-title": "Transform you overnight",
+            "os-dd-description": "Our products take a minimum of 84 days of religious usage before they can show noticeable differences. It's a skincare product, not a magic potion!"
+          }
+        },
+        "0ae83517-08c3-4110-bcd2-cf59db6f3fd7": {
+          "type": "our-serum-dont-do",
+          "settings": {
+            "os_dd_icon_png": "shopify:\/\/shop_images\/side-effects.png",
+            "os_dd_icon_webp": "shopify:\/\/shop_images\/side-effects.webp",
+            "os-dd-title": "Side effects",
+            "os-dd-description": "New skincare products might cause rashes or infections. Our products are made with skin safe ingredients to avoid any side effects!"
+          }
+        },
+        "01139f23-6387-47a9-8b57-113144eb807c": {
+          "type": "our-serum-dont-do",
+          "settings": {
+            "os_dd_icon_png": "shopify:\/\/shop_images\/one-for-all.png",
+            "os_dd_icon_webp": "shopify:\/\/shop_images\/one-for-all.png",
+            "os-dd-title": "One for all",
+            "os-dd-description": "We have different products to tackle different issues. Each one does their job and does it well. There is no one cure for all skincare issues."
+          }
+        }
+      },
+      "block_order": [
+        "3f7d3dfe-da81-407a-9bbc-dbd198e45dfd",
+        "0ae83517-08c3-4110-bcd2-cf59db6f3fd7",
+        "01139f23-6387-47a9-8b57-113144eb807c"
+      ],
+      "settings": {
+        "os-dd-heading": "What our Serums DON'T DO?"
+      }
+    },
+    "product-how-our-serum-works": {
+      "type": "product-how-our-serum-works",
+      "blocks": {
+        "54fc5f2e-8eea-4e99-878d-a19efec052cf": {
+          "type": "how_our_serum_works",
+          "settings": {
+            "item_title": "Skin-Friendly",
+            "refresh_product": "yes",
+            "other_product": "no"
+          }
+        },
+        "61982f53-4780-4691-a4f1-18a6371d2081": {
+          "type": "how_our_serum_works",
+          "settings": {
+            "item_title": "Cruelty-Free",
+            "refresh_product": "yes",
+            "other_product": "no"
+          }
+        },
+        "f17b5d6c-7167-4984-8b28-3ceb5d603033": {
+          "type": "how_our_serum_works",
+          "settings": {
+            "item_title": "Harsh Alcohol Content",
+            "refresh_product": "no",
+            "other_product": "yes"
+          }
+        },
+        "457a4076-7d1b-4d94-a62a-f4637fef818e": {
+          "type": "how_our_serum_works",
+          "settings": {
+            "item_title": "Contains Sulphates",
+            "refresh_product": "no",
+            "other_product": "yes"
+          }
+        },
+        "90cf65bc-e576-4e4f-8009-711a7afa6efa": {
+          "type": "how_our_serum_works",
+          "settings": {
+            "item_title": "Contains Parabens",
+            "refresh_product": "no",
+            "other_product": "yes"
+          }
+        }
+      },
+      "block_order": [
+        "54fc5f2e-8eea-4e99-878d-a19efec052cf",
+        "61982f53-4780-4691-a4f1-18a6371d2081",
+        "f17b5d6c-7167-4984-8b28-3ceb5d603033",
+        "457a4076-7d1b-4d94-a62a-f4637fef818e",
+        "90cf65bc-e576-4e4f-8009-711a7afa6efa"
+      ],
+      "settings": {
+        "hw_se_works_title": "How Does Our Serum Works?"
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "7d009913-62e9-4feb-8830-e06312699731": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Can I use it for oily acne-prone skin?",
+            "faq_answers": "Yes, you can use it for oily skin. The moisturiser contains hyaluronic acid and grape seed extract which helps keep the skin moist and fight against acne and other skin problems."
+          }
+        },
+        "13b80d15-b19a-4834-90f9-0fe936a408b2": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Does it contain parabens?",
+            "faq_answers": "No. All our Refresh skin products are made to ensure that you have healthy and naturally glowing skin and do not contain any harmful substances."
+          }
+        },
+        "de17f659-ad7a-4e80-8887-42ce89bf4412": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Can I use it as a night-time moisturiser?",
+            "faq_answers": "Our moisturiser can be used for both your morning and evening face routines."
+          }
+        },
+        "69c9a38c-e6a6-439a-ae7f-985680ec1457": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "What is the main benefit of using moisturiser?",
+            "faq_answers": "Moisturiser is essential to keeping your skin looking and feeling its best. Our moisturiser adds strength to your skin’s protective barrier and improves its elasticity by promoting collagen creation."
+          }
+        },
+        "965fe1c9-79e2-4708-9a4f-b1a408374137": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "When should the moisturiser be included in my skincare routine?",
+            "faq_answers": "It is always important that we apply moisturiser after cleansing your face and applying all your skincare products. Moisturiser helps to lock in the moisture as hydrated skin is more likely to absorb the topical ingredients applied to it as compared to dry skin."
+          }
+        }
+      },
+      "block_order": [
+        "7d009913-62e9-4feb-8830-e06312699731",
+        "13b80d15-b19a-4834-90f9-0fe936a408b2",
+        "de17f659-ad7a-4e80-8887-42ce89bf4412",
+        "69c9a38c-e6a6-439a-ae7f-985680ec1457",
+        "965fe1c9-79e2-4708-9a4f-b1a408374137"
+      ],
+      "settings": {
+        "FAQ_title": "FAQs",
+        "Faq_image": "shopify:\/\/shop_images\/faq_sec_image.jpg"
+      }
+    },
+    "rfss-promise": {
+      "type": "rfss-promise",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-our-heros": {
+      "type": "product-our-heros",
+      "blocks": {
+        "e6d341f0-d828-45bb-8165-17b7582a754d": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d7fbaa3c56564d57b0484ef19bee1591.mp4"
+          }
+        },
+        "2591b8f6-433b-4776-b4ca-0fab54bc2369": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b66b8cc98add489ca6664d97b81864d0.mp4"
+          }
+        },
+        "9ad5af53-2ef8-44c6-ada4-bd08d17092f1": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2286c78b5761411ca8014520330bd8ac.mp4"
+          }
+        },
+        "4784b4cd-f4bb-4c94-9ef2-c757ba97452b": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/114babfbcdcd452792515230538bb7d3.mp4"
+          }
+        },
+        "843d8e35-de37-4d3c-8149-c724f79f5786": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e43ac7d77e4a421ebc90b4205c42cf26.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "e6d341f0-d828-45bb-8165-17b7582a754d",
+        "2591b8f6-433b-4776-b4ca-0fab54bc2369",
+        "9ad5af53-2ef8-44c6-ada4-bd08d17092f1",
+        "4784b4cd-f4bb-4c94-9ef2-c757ba97452b",
+        "843d8e35-de37-4d3c-8149-c724f79f5786"
+      ],
+      "settings": {
+        "influncer_video_text": "Influncer Video"
+      }
+    },
+    "product-similar": {
+      "type": "product-similar",
+      "blocks": {
+        "6e251060-59d4-4f60-8512-b04c14b90fb0": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser"
+          }
+        },
+        "375ae5d5-dd36-4592-b516-587eb4328b19": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "pha-3-alcohol-free-face-toner"
+          }
+        },
+        "fc69f6ff-7f71-4e4e-b21e-bc837a1534d0": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "aha-pha-bha-peeling-solution"
+          }
+        },
+        "11058b7d-0622-4ef3-9287-0afd70a4b554": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "sundrops"
+          }
+        }
+      },
+      "block_order": [
+        "6e251060-59d4-4f60-8512-b04c14b90fb0",
+        "375ae5d5-dd36-4592-b516-587eb4328b19",
+        "fc69f6ff-7f71-4e4e-b21e-bc837a1534d0",
+        "11058b7d-0622-4ef3-9287-0afd70a4b554"
+      ],
+      "settings": {
+        "show_related_products": true,
+        "related_title": "Other fine products"
+      }
+    }
+  },
+  "order": [
+    "product-template",
+    "product-proven-effective",
+    "collapsible-section",
+    "product-review",
+    "product-how-to-use",
+    "product-how-refresh-works",
+    "product-our-serums-dontdo",
+    "product-how-our-serum-works",
+    "product-faq",
+    "rfss-promise",
+    "product-our-heros",
+    "product-similar"
+  ]
+}

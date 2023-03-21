@@ -1,0 +1,588 @@
+
+<script src="{{-'owl.carousel.min.js'|asset_url-}}"></script>
+<link href="{{-'owl.carousel.min.css'|asset_url-}}" rel="stylesheet" type="text/css" media="all" />
+
+<div class="border-top breadcrumbs mt-3 pb-5 pb-md-3 pt-md-3 pt-lg-5 pb-lg-5 pt-5 d-md-block d-none">
+  <div class="container">
+   
+    {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+      {%- assign t = template | split: '.' | first -%}
+
+      <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a class="breadcrumbs__link" href="/">Home</a>
+          </li>
+          {%- case t -%}
+            {%- when 'product' -%}
+              {%- if collection.url -%}
+                <li class="breadcrumb-item">
+                  {{ collection.title | link_to: collection.url }}
+                </li>
+              {%- endif -%}
+              <li class="breadcrumb-item">
+                <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+              </li>
+            {%- when 'collection' and collection.handle -%}
+              {%- if current_tags -%}
+                <li class="breadcrumb-item">
+                  {{ collection.title | link_to: collection.url }}
+                </li>
+                <li class="breadcrumb-item">
+                  {%- capture tag_url -%}
+                    {{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+                  <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
+                </li>
+              {%- else -%}
+                <li class="breadcrumb-item">
+                  <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+                </li>
+              {%- endif -%}
+
+            {%- else -%}
+              <li class="breadcrumb-item">
+                <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+              </li>
+          {%- endcase -%}
+        </ol>
+      </nav>
+    {%- endunless -%}
+  </div>
+</div>
+<section class="rfss-product-met rfss-product-met-kit">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-12 col-lg-6">
+
+        <div class="text-center d-block d-md-block d-lg-none mt-5 mt-md-3 mt-lg-5  pb-0 pb-md-4 ">
+          <h1 class="fs-3 fw-bolder">{{ product.title }}</h1>
+          <h3 class="fs-5 rfss-grey rfss_sub_title">{{ product.description }}</h3>
+          <div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+
+        </div>
+
+        <div>
+          <div class="thubnail-slide d-none d-md-block d-lg-block">
+
+            <div id="sync2" class="owl-carousel owl-theme">
+              {% for image in product.images %}
+                <div class="item">
+                  <img src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}" title="{{ image.alt | escape }}">
+                </div>
+              {% endfor %}
+
+            </div>
+
+          </div>
+          <div class="w-75 float-md-end product-slide">
+            {% assign current_variant = product.selected_or_first_available_variant %}
+            {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+            <div id="sync1" class="owl-carousel owl-theme" data-slider-id="1">
+              {% for image in product.images %}
+                <div class="item">
+                  <img src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}" title="{{ image.alt | escape }}">
+                </div>
+              {% endfor %}
+            </div>
+
+
+          </div>
+
+        </div>
+    {% comment %}
+        <div class="product_description_video d-none d-md-none d-lg-block">
+          {% for block in section.blocks  %}
+            {{ block.settings.product_description_video }}
+          {% endfor %}
+        </div>
+{% endcomment %}
+
+      </div>
+
+      <div class="col-12 col-md-12 col-lg-6 ps-2 ps-md-5">
+        <div class="text-center ">
+          <h1 class="fs-3 fw-bolder d-none d-md-none d-lg-block  mb-3">{{ product.title }}</h1>
+          <h3 class="fs-5 d-none d-md-none d-lg-block rfss-grey rfss_sub_title">{{ product.description }}</h3>
+          <div class="mb-4">
+            <div class="wc_product_review_badge d-none d-md-none d-lg-block" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+
+            <div class="price_mob d-none d-md-none d-lg-block">          
+              {% if product.compare_at_price == blank %}
+                <span class="pe-2">MRP :</span>
+                <span class="fs-5 fw-bolder me-3">{{ product.price | money}}
+                {% else %}
+                <span class="pe-2">MRP :</span>
+                  {% if product.compare_at_price != blank %}
+                    <span class="dashed fs-6 position-relative">{{ product.compare_at_price | money }}</span>
+                  {% endif %}
+                  <span class="fs-5 fw-bolder ms-3">{{ product.price | money }}</span>
+                {% endif %}
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="d-md-none d-lg-block d-block ">
+        <div class="border-bottom mb-4 pb-3 pt-3 rfss-grey d-md-none d-lg-block d-block rfss-prdt-dec">
+          {% if section.settings.product_det != blank %}
+          <p>{{ section.settings.product_det }}</p>
+          {% endif %}  
+          <ul class="kit-product-contains  position-relative">
+            {% for block in section.blocks  %}
+              {% if block.type == "kit-product-contains" %}
+                <li class="kitproduct {% if block.settings.product_contains_price == blank %}{{ "price_empty" }} {% endif %}" {{ block.shopify_attributes }} >
+                  <div class="d-flex justify-content-between"> 
+                    <span class="kit-product-name">
+                      {{ block.settings.product_contains }}</span>
+                    <span class="kit-product-price">₹ {{ block.settings.product_contains_price }}</span>
+                  </div>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="price_mob d-block d-md-block d-lg-none mb-4 text-center">          
+          {% if product.compare_at_price == blank %}
+            <span class="pe-2">MRP :</span>
+            <span class="fs-5 fw-bolder me-3">{{ product.price | money}}
+            {% else %}
+            <span class="pe-2">MRP :</span>
+              {% if product.compare_at_price != blank %}
+                <span class="dashed fs-6 position-relative">{{ product.compare_at_price | money }}</span>
+              {% endif %}
+              <span class="fs-5 fw-bolder ms-3">{{ product.price | money }}</span>
+            {% endif %}
+        </div>
+        <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+          <select name="id" id="productSelect" class="d-none">
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                <option value="{{ variant.id }}">
+                  {{ variant.title }} - {{ variant.price | money_with_currency }}
+                </option>
+              {% else %}
+                <option disabled="disabled">
+                  {{ variant.title }} - sold out
+                </option>
+              {% endif %}
+            {% endfor %}
+          </select>
+          <small class="d-none">{{ current_variant.price | money }}</small>
+          <label for="Quantity" class="d-none">quantity</label>
+          <div class="border-bottom d-md-flex mb-3 mt-3 mb-md-5 mt-md-2 mt-lg-5 pb-3 pb-md-3 align-items-center ">
+            <div class="d-flex justify-content-between mb-4 mb-md-0 qtybox refss-single-product-page-quantity me-md-4">
+              <input type="button" value="&#8331;" class="qty_button qtyminus minus fa">
+              <input type="number" id="Quantity" class="input-text quantity-input qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="" readonly="">
+              <input type="button" value="&#43;" class="qty_button qtyplus plus fa">
+            </div>
+            <div class="w-100 position-relative">
+              {% for collection in product.collections %}
+                {% if collection.title contains "Gift Kits" %}
+                  <p class="fs-6 rfss-grey text-center"> {{ settings.Offer_gift_products }} </p>
+                {% endif %}
+                {% if collection.title contains "Combo Packs" %}
+                  <p class="fs-6 rfss-grey text-center"> {{ settings.Offer_combo_products }} </p>
+                {% endif %}
+              {% endfor %}
+              <button type="submit" name="add" id="AddToCart">Add to cart</button>
+              <div class="rotates ">
+                <span class="spin"></span>
+              </div>
+                  {% comment %}
+              <p class="fs-6 mt-1 rfss-grey text-center">
+                <b class="me-2 text-dark">84-Day Full Refund</b>if we’re not the right fit!</p> {% endcomment %}
+            </div>
+
+          </div>
+
+          <!-- <input type="number" id="Quantity" name="quantity" value="1" min="1"> -->
+        </form>
+
+        <div class="today-offer position-relative p-4 bg-light">
+          <div class="p-0 p-md-4">
+            
+              
+                <h2 class="fw-bolder pb-2 mb-3">
+                  <svg width="29" height="31" viewBox="0 0 29 31" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5881 30.6333L0.342212 13.205L2.13818 0.834678L14.6186 1.53552L28.8645 18.9638L14.5881 30.6333ZM5.10607 4.46557C4.31762 5.11005 4.21019 6.2828 4.86562 7.08464C5.52126 7.88675 6.69198 8.01429 7.48018 7.37002C8.26863 6.72554 8.37606 5.55279 7.72063 4.75095C7.0652 3.9491 5.89452 3.82109 5.10607 4.46557Z" fill="black"/>
+                  </svg>
+
+                  <span>Today’s Offers </span>
+                </h2>
+                {% if  settings.Offer_gift_products != "" %}
+                  <h4 class="border-bottom fs-5 mb-0 pb-3 pt-3" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span>{{ settings.Offer_gift_products}}
+                    </span>
+                  </h4>
+                {% endif %}
+                {% if  settings.Offer_combo_products != "" %}
+                  <h4 class="border-bottom fs-5 mb-0 pb-3 pt-3" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span class="rfss-grey">{{ settings.Offer_combo_products }}</span>
+                  </h4>
+                {% endif %}
+                {% if  settings.Offer_all_products != "" %}
+                  <h4 class="fs-5 pt-3 pb-3 mb-0" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span class="rfss-grey">{{ settings.Offer_all_products }}</span>
+                  </h4>
+                {% endif %}
+
+              
+            
+          </div>
+        </div>
+        {%- comment -%} <div class="today-offer position-relative p-4 bg-light">
+          <div class="p-0 p-md-4">
+            {% for block in section.blocks %}
+              {% if block.type == "today-offer-for-kit" %}
+                <h2 class="fw-bolder pb-2 mb-3">
+                  <svg width="29" height="31" viewBox="0 0 29 31" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5881 30.6333L0.342212 13.205L2.13818 0.834678L14.6186 1.53552L28.8645 18.9638L14.5881 30.6333ZM5.10607 4.46557C4.31762 5.11005 4.21019 6.2828 4.86562 7.08464C5.52126 7.88675 6.69198 8.01429 7.48018 7.37002C8.26863 6.72554 8.37606 5.55279 7.72063 4.75095C7.0652 3.9491 5.89452 3.82109 5.10607 4.46557Z" fill="black"/>
+                  </svg>
+
+                  <span>{{ block.settings.today-offer-title }}</span>
+                </h2>
+                {% if  block.settings.whats_the_offer-one != "" %}
+                  <h4 class="border-bottom fs-5 fw-bold pb-3" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span>{{ block.settings.whats_the_offer-one }}
+                    </span>
+                  </h4>
+                {% endif %}
+                {% if  block.settings.whats_the_offer-two != "" %}
+                  <h4 class="border-bottom fs-5 mb-0 pb-3 pt-3" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span class="rfss-grey">{{ block.settings.whats_the_offer-two }}</span>
+                  </h4>
+                {% endif %}
+                {% if  block.settings.whats_the_offer-three != "" %}
+                  <h4 class="fs-5 pt-3 pb-3 mb-0" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span class="rfss-grey">{{ block.settings.whats_the_offer-three }}</span>
+                  </h4>
+                {% endif %}
+
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div> {%- endcomment -%}
+
+
+        {%- comment -%} <div class="Trust-factor-image d-flex justify-content-center mt-5 mb-5 text-center">
+          {% for block in section.blocks %}
+            {% if block.type  =="Trust-factor-image" %}
+              <picture class="me-3">
+                <source srcset="{{ block.settings.trust_fac_webp | img_url: 'medium' }}" type="image/webp">
+                <source srcset="{{ block.settings.trust_fac_img | img_url: 'medium' }}" type="image/png">
+                <img src="{{ block.settings.trust_fac_img | img_url: 'medium' }}" alt="{{ block.trust_fac_img | alt}}" class="w-100">
+              </picture>
+            {% endif %}
+          {% endfor %}
+        </div> {%- endcomment -%}
+
+        <div class="Trust-factor-image d-flex justify-content-center mt-5 mb-5 text-center border-top pt-5">
+         
+          <picture class="me-3">
+            <source srcset="{{ 'no-harsh-webp.webp' | asset_url }}" type="image/webp">
+            <source srcset="{{ 'no-harsh.png' | asset_url }}" type="image/png">
+            <img src="{{ 'no-harsh.png' | asset_url }}" alt="{{ block.slide_img_jpg | alt}}" class="w-75">
+          </picture>
+          <picture class="me-3">
+            <source srcset="{{ 'paraben-free-webp.webp' | asset_url }}" type="image/webp">
+            <source srcset="{{ 'paraben-free.png' | asset_url }}" type="image/png">
+            <img src="{{ 'paraben-free.png' | asset_url }}" alt="{{ block.slide_img_jpg | alt}}" class="w-75">
+          </picture>
+          <picture class="me-3">
+            <source srcset="{{ 'sulphate_free.webp' | asset_url }}" type="image/webp">
+            <source srcset="{{ 'sulphate_free.png' | asset_url }}" type="image/png">
+            <img src="{{ 'sulphate_free.png' | asset_url }}" alt="{{ block.slide_img_jpg | alt}}" class="w-75">
+          </picture>
+          <picture class="me-3">
+            <source srcset="{{ 'cruelty_free_one.webp' | asset_url }}" type="image/webp">
+            <source srcset="{{ 'cruelty_free_one.png' | asset_url }}" type="image/png">
+            <img src="{{ 'cruelty_free_one.png' | asset_url }}" alt="{{ block.slide_img_jpg | alt}}" class="w-75">
+          </picture>
+           
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<div class="bg-black overflow-hidden mt-5">
+  <div class="rfss-marquee-highlight pt-3 text-white  pb-3 d-flex">
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-6.svg' | asset_url  }}" alt="">
+      <span class="ps-3">Free Shipping</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-1.svg' | asset_url  }}" alt="">
+      <span class="ps-3">Unmatched Customer Support</span>
+    </div>
+    <div class="high-item d-flex align-items-center text-center">
+      <img src="{{ 'rfss-scroll-icon-2.svg' | asset_url  }}" alt="">
+      <span class="ps-3">Secure Payment</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-3.svg' | asset_url  }}" alt="">
+      <span class="ps-3">84 days money back guarantee</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-4.svg' | asset_url  }}" alt="">
+      <span class="ps-3">Problem solving skincare</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-5.svg' | asset_url  }}" alt="">
+      <span class="ps-3">10,000+ trusted customers</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-6.svg' | asset_url  }}" alt="">
+      <span class="ps-3">Free Shipping</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-1.svg' | asset_url  }}" alt="">
+      <span class="ps-3">Unmatched Customer Support</span>
+    </div>
+    <div class="high-item d-flex align-items-center text-center">
+      <img src="{{ 'rfss-scroll-icon-2.svg' | asset_url  }}" alt="">
+      <span class="ps-3">Secure Payment</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-3.svg' | asset_url  }}" alt="">
+      <span class="ps-3">84 days money back guarantee</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-4.svg' | asset_url  }}" alt="">
+      <span class="ps-3">Problem solving skincare</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-5.svg' | asset_url  }}" alt="">
+      <span class="ps-3">10,000+ trusted customers</span>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "ProductDescription",
+    "tag": "div",
+    "class": "product_desciption",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "product_title",
+        "label": "product Title"
+      }, {
+        "type": "text",
+        "id": "product_subtitle",
+        "label": "product Sub Title"
+      },
+      {
+        "type": "textarea",
+        "id": "product_det",
+        "label": "Product Details"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "kit-product-contains",
+        "type": "kit-product-contains",
+        "settings": [
+          {
+            "type": "text",
+            "id": "product_contains",
+            "label": "Kit Product Contains"
+          }, {
+            "type": "text",
+            "id": "product_contains_price",
+            "label": "Price"
+          }
+        ]
+      }, {
+        "name": "today-offer-for-kit",
+        "type": "today-offer-for-kit",
+        "settings": [
+          {
+            "type": "text",
+            "id": "today-offer-title",
+            "label": "Today Offer Title"
+          }, {
+            "type": "text",
+            "id": "whats_the_offer-one",
+            "label": "please add your offer details"
+          }, {
+            "type": "text",
+            "id": "whats_the_offer-two",
+            "label": "please add your offer details"
+          }, {
+            "type": "text",
+            "id": "whats_the_offer-three",
+            "label": "please add your offer details"
+          }
+        ]
+      }, {
+        "type": "Trust-factor-image",
+        "name": "Trust-factor-image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "trust_fac_img",
+            "label": "Choose Image"
+          }, {
+            "type": "image_picker",
+            "id": "trust_fac_webp",
+            "label": "choose webp"
+          }
+        ]
+      }, {
+        "type": "video-sec-product",
+        "name": "video_sec_product",
+        "settings": [
+          {
+            "type": "html",
+            "id": "product_description_video",
+            "label": "Product  video iframe"
+
+          }
+        ]
+      }
+
+
+    ],
+    "templates": ["product"]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+  .owl-theme .owl-nav [class*='owl-'] {
+    transition: all 0.3s ease;
+  }
+  .owl-theme .owl-nav [class*='owl-'].disabled:hover {
+    background-color: #d6d6d6;
+  }
+  #sync1.owl-theme {
+    position: relative;
+  }
+  #sync1.owl-theme .owl-next,
+  #sync1.owl-theme .owl-prev {
+    width: 22px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+  }
+  #sync1.owl-theme .owl-prev {
+    left: 10px;
+  }
+  #sync1.owl-theme .owl-next {
+    right: 10px;
+  }
+  div#sync1 .owl-dots {
+    display: none;
+  }
+  .product_description_video iframe {
+    margin-top: 10%;
+  }
+.shopify-section.product_desciption section.rfss-product-met-kit form.js-ajax-cart-form-in-progress #AddToCart:after {
+    top: -30px!important;
+    background-color: #ff6464!important;
+    padding: 15px 0!important;
+}
+  .shopify-section.product_desciption section.rfss-product-met-kit .rotates {
+    top: 55px!important;
+}  
+{% endstylesheet %}
+
+{% javascript %}
+  var sync1 = $("#sync1");
+  var sync2 = $("#sync2");
+  var slidesPerPage = 4; // globaly define number of elements per page
+  var syncedSecondary = true;
+
+  sync1.owlCarousel({
+    items: 1,
+    slideSpeed: 2000,
+    nav: false,
+    autoplay: false,
+    dots: true,
+    loop: true,
+    responsiveRefreshRate: 200
+  }).on('changed.owl.carousel', syncPosition);
+
+  sync2.on('initialized.owl.carousel', function() {
+    sync2.find(".owl-item").eq(0).addClass("current");
+  }).owlCarousel({
+    items: 5,
+    dots: true,
+    nav: true,
+    navText: [
+      "<img src='https://cdn.shopify.com/s/files/1/0577/7129/4793/files/rfss-arrow-right.png?v=1665390600'>", "<img src='https://cdn.shopify.com/s/files/1/0577/7129/4793/files/rfss-arrow-left.png?v=1665390600'>"
+    ],
+    margin: 20,
+    smartSpeed: 200,
+    slideSpeed: 500,
+    slideBy: 1, // alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+    responsiveRefreshRate: 100
+  }).on('changed.owl.carousel', syncPosition2);
+
+  function syncPosition(el) {
+
+    var count = el.item.count - 1;
+    var current = Math.round(el.item.index -(el.item.count / 2) - .5);
+
+    if (current < 0) {
+      current = count;
+    }
+    if (current > count) {
+      current = 0;
+    }
+
+// end block
+
+    sync2
+      .find(".owl-item")
+      .removeClass("current")
+      .eq(current)
+      .addClass("current");
+    var onscreen = sync2.find('.owl-item.active').length - 1;
+    var start = sync2.find('.owl-item.active').first().index();
+    var end = sync2.find('.owl-item.active').last().index();
+
+    if (current > end) {
+      sync2.data('owl.carousel').to(current, 100, true);
+    }
+    if (current < start) {
+      sync2.data('owl.carousel').to(current - onscreen, 100, true);
+    }
+  }
+
+  function syncPosition2(el) {
+    if (syncedSecondary) {
+      var number = el.item.index;
+      sync1.data('owl.carousel').to(number, 100, true);
+    }
+  }
+
+  sync2.on("click", ".owl-item", function(e) {
+    e.preventDefault();
+    var number = $(this).index();
+    sync1.data('owl.carousel').to(number, 300, true);
+  });
+{% endjavascript %}

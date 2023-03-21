@@ -1,0 +1,108 @@
+<div class="review_section mt-5 mb-5 pt-3 pb-3">
+<div class="container">
+   <h2 class="fs-1 fw-bold mb-5 mt-4 pb-3 text-center">{{ section.settings.review_heading }}</h2>
+  
+     <div class="glide" id="home-review">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+       {%- for block in section.blocks -%}
+          <div class="glide__slide">
+        <div class="testimonial text-center">
+           <img src="{{ block.settings.customer_image | image_url  }}" class="m-auto mb-4 w-25 lazyload">
+           <p class="test_ctn">
+           <span>{{ block.settings.Customer_reviews }} </span> 
+           {% if block.settings.Customer_reviews_more !="" %}
+            <span class="readmore"><b>Read More..</b></span>{% endif %}          
+           {% if block.settings.Customer_reviews_more !="" %}            
+            <span class="test_ctn_more d-none">{{ block.settings.Customer_reviews_more }} </span>
+           <span class="readless d-none"><b>Read Less..</b></span>
+           {% endif %}
+            </p>
+           <p class="author_name"><b>-{{ block.settings.Customer_name }}</b></p>
+         </div>
+      </div>
+       {% endfor %}
+      </div>
+      </div> 
+       <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+       </div>
+</div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "HomeReview",   
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "review_heading",
+        "label" : "Review Heading"
+      }     
+    ],
+    "blocks" : [
+      {
+         "name" : "review_item",       
+         "type" : "review_item",
+         "settings": [
+           {
+              "type" : "image_picker",
+              "id" : "customer_image",
+              "label" : "Customer Image"
+           },
+           {
+              "type": "textarea",
+              "id": "Customer_reviews",
+              "label": "Customer Reviews"
+           },
+            {
+              "type": "textarea",
+              "id": "Customer_reviews_more",
+              "label": "Customer Reviews Read More"
+           },
+           {
+              "type" : "text",
+              "id" : "Customer_name",
+              "label" : "Customer Name"
+           }
+         ] 
+      }
+    ]
+  }
+{% endschema %}
+<script>  $(document).ready(function () { $(".readmore").click(function () { $(this).addClass("d-none"), $(this).next(".test_ctn_more").removeClass("d-none"), $(this).next(".test_ctn_more").next(".readless").removeClass("d-none"); }); }), $(document).ready(function () { $(".readless").click(function () { $(this).addClass("d-none"), $(this).prev(".test_ctn_more").addClass("d-none"), $(this).prev(".test_ctn_more").prev(".readmore").removeClass("d-none"); }); }); if(document.querySelector("#home-review")){new Glide("#home-review",{type:"carousel",perView:3,activeNav: 'glide__bullet--active', focusAt: '1',gap:40,breakpoints:{0:{perView:1.5},300:{perView:1.5},600:{perView:1.5},800:{perView:2.5},1000:{perView:2.5}}}).mount();}
+</script>
+<style>
+#home-review .glide__slide--active {
+  cursor: pointer;
+ transform: scale(1.07);
+}
+#home-review .glide__slide{
+  margin-top:22px;
+}
+.testimonial {
+    background: #FFFFFF;  
+    border-radius: 8.72727px;
+    padding: 10%;
+    box-shadow: 0px 0px 28.3636px rgba(183, 183, 183, 0.25);
+    margin: 5%;
+}
+  .glide__bullets {
+    position: inherit;
+    bottom: inherit;
+    margin-top: 2%;
+}
+  button.glide__bullet.glide__bullet--active {
+    background-color: #000;
+    border: none;
+}
+  .glide__bullet {
+    width: 28.38px;
+    height: 6.31px;
+    top: 6107.31px;
+    background: #CFCFCF;
+    border-radius: 0px;
+}
+</style>

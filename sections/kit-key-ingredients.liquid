@@ -1,0 +1,71 @@
+<section>
+  <h2 class="fs-1 fw-bold pt-5 text-center text-capitalize">{{ section.settings.ki_title }}</h2>
+  <div id="key_ingredient" class="owl-carousel owl-theme">
+    {% for block in section.blocks %}
+      <div class="item">
+        <div class="key_bx text-center">
+          <span class="text-capitalize">{{ block.settings.ki_title }}</span>
+          <img src="{{ block.settings.ki_image | img_url : 'medium' }}" alt="{{ block.settings.ki_image  }}" class="w-50 m-auto">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "key-ingredients",
+    "class": "key-ingredients mb-2 pb-2 mb-md-2 pb-md-2",
+    "settings": [
+      {
+        "type": "text",
+        "id": "ki_title",
+        "label": "Key Ingredients Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "key_ingredient_sec",
+        "type": "key_ingredient_sec",
+        "settings": [
+          {
+            "type": "text",
+            "id": "ki_title",
+            "label": "Key Ingredients Title"
+          }, {
+            "type": "image_picker",
+            "id": "ki_image",
+            "label": "Key Ingredients Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  #key_ingredient .owl-stage-outer {
+    padding-bottom: 5% !important;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  $('#key_ingredient').owlCarousel({
+    loop: false,
+    nav: false,
+    stagePadding: 100,
+    responsive: {
+      0: {
+        items: 1,
+        margin: 50
+      },
+      600: {
+        items: 3,
+        margin: 50
+      },
+      1072: {
+        items: 5,
+        margin: 70
+      }
+    }
+  })
+{% endjavascript %}

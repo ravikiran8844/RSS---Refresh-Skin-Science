@@ -1,0 +1,119 @@
+<div class="container lazyload">
+  <h2 class="text-center mb-3 mb-md-5 fs-1 fw-bolder">Most Loved <img src="https://cdn.shopify.com/s/files/1/0577/7129/4793/files/love.png?v=1668086222" class="lazyload"></h2>
+<div class="glide mb-5 pb-4" id="most_loved">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+    {% for block in  section.blocks %}
+      {%  assign similar_product = all_products[block.settings.most_loved_products]  %}
+
+      <div class="glide__slide">
+
+        <div class="similar_pd text-center">
+          <a href="{{ similar_product.url }}" class="rfss-black product_a text-decoration-none"><img src="{{ similar_product.featured_image  | img_url: 'large' }} " class="w-100 lazyload"></a>
+          <a href="{{ similar_product.url }}" class="rfss-black product_a text-decoration-none">
+            <h4 class="fs-5 fw-bolder mb-4 mt-4">
+              {{ similar_product.title }}
+            </h4>
+          </a>
+          <div class="mb-4">
+            <span class="rfss-grey rfss_sub_title">{{ similar_product.description }}</span>
+            <div class="wc_product_review_badge" data-handle="{{ similar_product.handle }}" data-product_id="{{ similar_product.id }}"></div>
+            {% if similar_product.compare_at_price == blank %}
+              <span class="pe-2">MRP :</span>
+              <span class="fs-5 fw-bolder me-3">{{ similar_product.price | money}}</span>
+              {% else %}
+              <span class="pe-2">MRP :</span>
+                {% if similar_product.compare_at_price != blank %}
+                  <span class="dashed fs-6 position-relative">{{ similar_product.compare_at_price | money }}</span>
+                {% endif %}
+                <span class="fs-5 fw-bolder ms-3">{{ similar_product.price | money }}</span>
+              {% endif %}
+
+          </div>
+          {% unless similar_product.available %}
+            <strong class="sold_out">sold out</strong>
+          {% endunless %}
+          {% if similar_product.available %}
+            <form method="post" action="/cart/add" class="ac_form position-relative">
+              <input name="id" value="{{ similar_product.variants.first.id }}" type="hidden"/>
+              <input name="add" id="AddToCart" value="Buy Now" type="submit" class="w-100"/>
+              <div class="rotates">
+                <span class="spin"></span>
+              </div>
+              <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/t/6/assets/right-arrow-thin.svg?v=25521640411634951531663145304" class="bn_right_arrow lazyload">
+
+            </form>
+          {% else %}
+            <form method="post" class="ac_form position-relative">
+              <input name="id" value="{{ similar_product.variants.first.id }}" type="hidden"/>
+              <input name="add" value="Sold Out" type="submit" class="w-100" disabled/>
+              <div class="rotates">
+                <span class="spin"></span>
+              </div>
+              <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/t/6/assets/right-arrow-thin.svg?v=25521640411634951531663145304" class="bn_right_arrow lazyload">
+
+            </form>
+          {% endif %}
+        </div> 
+      </div>
+
+    {% endfor %}
+              </div>
+      <div data-glide-el="controls">
+    <button class="slider__arrow slider__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+        <path d="M0 12l10.975 11 2.848-2.828-6.176-6.176H24v-3.992H7.646l6.176-6.176L10.975 1 0 12z"/></path>
+      </svg>
+    </button>
+
+    <button class="slider__arrow slider__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+        <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></path>
+      </svg>
+    </button>
+</div>
+        <div class="dots dots-medios" id="dots-medios"></div>
+
+              </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "most-loved",
+    "class": "most-loved",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "most-loved-title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "loved_products",
+        "type": "loved_products",
+        "settings": [
+          {
+            "type": "product",
+            "id": "most_loved_products",
+            "label": "choose Product that most loved"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+<script>  if(document.querySelector("#most_loved")){new Glide("#most_loved",{type:"slider",bound:true,perView:4,dots: '#dots-testimonios',gap:30,breakpoints:{0:{perView:1},300:{perView:1},600:{perView:1},800:{perView:2.5},1000:{perView:2.5}}}).mount();}
+</script>
+<style>
+  div#most_loved .slider__arrow {
+    top: 35%;
+  }
+  div#most_loved .glide__arrow--next {
+    position: absolute;
+    right: 0;
+  }
+ 
+</style>

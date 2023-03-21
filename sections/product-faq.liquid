@@ -1,0 +1,77 @@
+<div class="container  mb-4">
+  <div class="row align-items-center align-items-md-center">
+    <div class="col-md-6">
+      <h2 class="fs-1 fw-bold mb-4 text-center">{{ section.settings.FAQ_title }}
+      </h2>
+      {% capture i %}0{% endcapture %}
+      <div class="accordion mb-0 mb-md-0" id="accordionExample">
+        {% for block in section.blocks %}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading_{{i}} ">
+              <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{i}}" aria-expanded="false" aria-controls="collapseOne">
+                {{ block.settings.faq_question }}
+              </button>
+            </h2>
+            <div id="collapse_{{i}}" class="accordion-collapse collapse" aria-labelledby="heading_{{i}}" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                {{ block.settings.faq_answers }}
+              </div>
+            </div>
+          </div>
+
+          {% assign i = i | plus:1 %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-md-6 text-center d-none d-md-block">
+      {%-liquid 
+        assign img_url = section.settings.Faq_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign ration = section.settings.Faq_image.aspect_ratio -%}
+        <div class="lazyload__image-wrapper no-js header-logo__image imglazy">
+          <div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div>
+          <noscript>
+            <img itemprop="image" class="lazy js" src="{{ section.settings.Faq_image | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ section.settings.Faq_image.alt | default: shop.name | escape }}">
+          </noscript>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  {% include 'recently-viewed' %}
+</div>
+{% schema %}
+  {
+    "name": "faq-sec-product",
+    "tag": "div",
+    "class": "faq_sec mb-0 mb-md-5  pb-5 pt-5",
+    "settings": [
+      {
+        "type": "text",
+        "id": "FAQ_title",
+        "label": "Title"
+      }, {
+        "type": "image_picker",
+        "id": "Faq_image",
+        "label": " FAQ IMAGE"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "faq-sec-accordion",
+        "type": "faq-sec-accordion",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq_question",
+            "label": "Faq questions"
+          }, {
+            "type": "textarea",
+            "id": "faq_answers",
+            "label": "Faq Answers"
+          }
+        ]
+      }
+
+    ]
+  }
+{%- endschema -%}

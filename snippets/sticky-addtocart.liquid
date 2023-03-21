@@ -1,0 +1,133 @@
+{% if template contains 'product' %}
+  <div class="sticky_cart pt-4 pb-4 w-100" style="display:none;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 col-lg-2">
+          {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+          <img src="{{ featured_image | img_url: 'large' }}" alt="{{ featured_image.alt | escape }}" id="ProductPhotoImg" class="position-absolute">
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h2 class="fs-4 fw-bold product_title">{{ product.title }} </h2>
+          <p class="align-items-center d-flex d-lg-block d-md-block d-none mb-0" style="color: #11c339;">
+                 <svg width="20" height="26" viewBox="0 0 26 26" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.33385e-06 12.9302C0.00752423 5.7875 5.83775 -0.0293775 12.9591 0.00011163C20.1118 0.0296008 25.8755 5.81005 25.8662 12.9441C25.8564 20.1036 20.0545 25.8933 12.9158 25.8661C5.76431 25.8395 -0.00750956 20.0579 7.33385e-06 12.9302ZM11.2453 15.1176C11.1175 14.9575 11.0579 14.869 10.9851 14.7933C10.1571 13.934 9.33195 13.0725 8.49584 12.2213C8.06217 11.7802 7.43422 11.7992 7.04218 12.2439C6.68773 12.6463 6.7126 13.2292 7.11967 13.6501C8.21655 14.7846 9.31923 15.9133 10.4202 17.0437C10.9741 17.6127 11.5055 17.6144 12.0617 17.0454C14.281 14.7748 16.4996 12.5029 18.7177 10.2305C19.1889 9.74772 19.2109 9.11168 18.7749 8.69074C18.3522 8.2831 17.7659 8.32762 17.2975 8.80812C15.3559 10.7989 13.4154 12.7909 11.4772 14.7846C11.3979 14.8661 11.3447 14.9725 11.2453 15.1176Z" fill="#21C427"></path>
+</svg> In stock </p>
+        </div>
+
+        <div class="col-md-3  col-lg-3 sticky_price  d-none d-md-none d-lg-block">          
+          {% if product.compare_at_price == blank %}
+            <span class="pe-2">MRP :</span>
+            <span class="fs-5 fw-bolder me-3">{{ product.price | money}}
+            {% else %}
+            <div><span class="badge bg-save ">SAVE {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%</span></div>
+
+            <span class="pe-2">MRP :</span>
+               {% if product.compare_at_price != blank %}
+                <span class="dashed fs-5 position-relative">{{ product.compare_at_price | money }}</span>
+              {% endif %}
+              <span class="fs-4 fw-bolder me-3">{{ product.price | money }}</span>
+             
+            {% endif %}
+
+        </div>
+        
+        <div class="col-12 d-block d-md-none d-lg-none offer_price">
+          {% for collection in product.collections %}
+            {% if collection.title contains "All Products" %}
+              <p class="fs-6 rfss-grey text-center">{{ settings.Offer_all_products }} </p>
+            {% endif %}
+            {% if collection.title contains "Gift Kits" %}
+              <p class="fs-6 rfss-grey text-center"> {{ settings.Offer_gift_products }} </p>
+            {% endif %}
+            {% if collection.title contains "Combo Packs" %}
+              <p class="fs-6 rfss-grey text-center"> {{ settings.Offer_combo_products }} </p>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="col-md-2 col-lg-2 d-none d-md-none d-lg-block ">
+          <div class="d-flex justify-content-between qtybox refss-single-product-page-quantity ">
+            <input type="button" value="&#8331;" class="qty_button qtyminus minus fa">
+            <input type="number" id="Quantity" class="input-text quantity-input qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="" readonly="">
+            <input type="button" value="&#43;" class="qty_button qtyplus plus fa">
+          </div>
+        </div>
+        <div class="col-md-2 col-lg-2 mt-3 mt-md-0">
+          <form method="post" action="/cart/add" class="ac_form mb-0 position-relative sticky_btn" style="height: 62px;">
+            <input min="1" type="hidden" id="stick_qty" name="quantity" value="1"/>
+            <input name="id" value="{{ product.variants.first.id }}" type="hidden"/>
+           <button type="submit" name="add" id="AddToCart" class="fw-bold">
+              <svg width="32" height="32" viewBox="0 0 43 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.3008 15.3089L40.6763 15.3089L40.6763 17.98L15.3008 17.98L15.3008 15.3089Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9648 9.96667L42.0115 9.96667L42.0115 12.6378L13.9648 12.6378L13.9648 9.96667Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.609375 1.95335C0.609375 1.21575 1.20732 0.617798 1.94493 0.617798H11.6197L17.6297 20.6511H38.0049C38.7425 20.6511 39.3404 21.2491 39.3404 21.9867C39.3404 22.7243 38.7425 23.3222 38.0049 23.3222H15.6423L9.63233 3.28891H1.94493C1.20732 3.28891 0.609375 2.69096 0.609375 1.95335Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.9752 28.6644C18.8688 28.6644 17.9719 29.5613 17.9719 30.6677C17.9719 31.7741 18.8688 32.6711 19.9752 32.6711C21.0816 32.6711 21.9785 31.7741 21.9785 30.6677C21.9785 29.5613 21.0816 28.6644 19.9752 28.6644ZM15.3008 30.6677C15.3008 28.0861 17.3936 25.9933 19.9752 25.9933C22.5568 25.9933 24.6497 28.0861 24.6497 30.6677C24.6497 33.2493 22.5568 35.3422 19.9752 35.3422C17.3936 35.3422 15.3008 33.2493 15.3008 30.6677Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M33.3307 28.6644C32.2243 28.6644 31.3274 29.5613 31.3274 30.6677C31.3274 31.7741 32.2243 32.6711 33.3307 32.6711C34.4371 32.6711 35.334 31.7741 35.334 30.6677C35.334 29.5613 34.4371 28.6644 33.3307 28.6644ZM28.6562 30.6677C28.6562 28.0861 30.7491 25.9933 33.3307 25.9933C35.9123 25.9933 38.0051 28.0861 38.0051 30.6677C38.0051 33.2493 35.9123 35.3422 33.3307 35.3422C30.7491 35.3422 28.6562 33.2493 28.6562 30.6677Z" fill="white"></path>
+</svg> Add to cart </button>
+<!--             <input name="add" value="Add to cart" class="bg-black btn border pb-3 pt-3 text-white w-100 fs-5" type="submit" class="w-100"/>-->
+            <div class="rotates"> 
+              <span class="spin"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+<style>
+  .sticky_btn 
+ button#AddToCart {
+    background-color: #ff6668;
+    color: #fff;
+    width: 100%;
+    height: 62px;
+    border-radius: 10px;
+    animation: glow 1s  ease-in-out infinite alternate;  
+    text-transform: uppercase;
+}  
+  .sticky_cart form.js-ajax-cart-form-in-progress:after {
+    background-color: #ff6668;
+}
+  .sticky_cart form.ac_form.js-ajax-cart-form-in-progress .rotates {
+    z-index: 9;
+    display: block;
+    right: 12px;
+}
+</style>
+<script>
+  $(document).ready(function() {
+    var w = $(window).width();
+    if( w <= 700 )
+     {
+
+      $(document).scroll(function() {
+        var y = $(this).scrollTop();
+       
+        if (y > 1000) {
+          $('.sticky_cart ').fadeIn(1000);
+        } else if(y<1000)
+        {
+          $('.sticky_cart ').fadeOut(1000);
+        }
+        else {
+          $('.sticky_cart ').fadeOut(500);
+        }
+      });
+
+     }
+     else
+     {
+
+      $(document).scroll(function() {
+      var y = $(this).scrollTop();
+      if (y > 800) {
+        $('.sticky_cart ').fadeIn();
+      } else {
+        $('.sticky_cart ').fadeOut();
+      }
+      });
+
+     } 
+ 
+  });
+</script>

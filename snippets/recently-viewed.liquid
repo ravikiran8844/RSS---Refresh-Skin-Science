@@ -1,0 +1,131 @@
+
+<div class="mt-5 pt-5 mb-5 pb-5">
+    <div class="text-center">
+          <h3 class="fs-1 fw-bolder h2 mb-5 product-recommendations__heading text-center">Recently Viewed Products</h3>
+    </div>
+    <div  class="recently-viewed owl carousel owl-carousel owl-theme" role="list">
+<!--      <span>There in no recently viewed products here. Keep Searching. </span> -->
+    </div>
+</div>
+
+<script>
+  
+function setRecentlyViewedProducts() {
+  const productData = {
+    productTitle: "{{ product.title }}",
+    productsId:"{{ product.id }}",
+    productId:"{{ product.variants.first.id }}",
+    productHandle : "{{ product.handle }}",
+    productAvailable : "{{ product.available }}",
+    productCompareprice : "{{ product.compare_at_price }}",
+    productDescription: "{{ product.description| strip_html }}",
+    productImg: "{{ product.featured_media | image_url: width: 400 }}",
+    imgWidth:"{{ product.featured_media.width }}",
+    imgHeight:"{{ product.featured_media.height }}",
+    productPrice: "{{ product.price | money_with_currency }}",
+    productUrl: "{{ product.url }}",
+    productImageAltText: "{{product.featured_media.alt | escape }}"
+  };
+  const productList = [];
+  let jsonResp, jsonRespArr, jsonRespArrStr;
+  const numberOfProducts = 4;
+  productList.push(productData);
+  const currProductPageTitle = productData.productTitle;
+  const productDataString = JSON.stringify(productList);
+  const localData = localStorage.getItem("recentlyViewedProduct");
+
+  if (localData === null) {
+    localStorage.setItem("recentlyViewedProduct", productDataString);
+  } else if (localData) {
+    const oldProductData = localStorage.getItem("recentlyViewedProduct");
+    const countProductData = (oldProductData.match(/productTitle/g) || []).length;
+    const sameProduct = oldProductData.includes(currProductPageTitle);
+    if (countProductData < numberOfProducts && sameProduct == false) {
+      jsonResp = JSON.parse(oldProductData);
+      jsonRespArr = jsonResp.concat(productList);
+      jsonRespArrStr = JSON.stringify(jsonRespArr);
+      localStorage.setItem("recentlyViewedProduct", jsonRespArrStr);
+    } else if (countProductData >= numberOfProducts && sameProduct == false) {
+      jsonResp = JSON.parse(oldProductData);
+      jsonResp.shift();
+      jsonRespArr = jsonResp.concat(productList);
+      jsonRespArr = JSON.stringify(jsonRespArr);
+      localStorage.setItem("recentlyViewedProduct", jsonRespArr);
+    }
+  }
+}
+
+setRecentlyViewedProducts();
+const localViewed = localStorage.recentlyViewedProduct;
+function getRecentlyViewedProducts() {
+  const productData = JSON.parse(localStorage.getItem("recentlyViewedProduct"));
+  const recentlyViewedHtml = [];
+  productData.map(item => {
+    recentlyViewedHtml.unshift(`
+         <div  class="item">
+
+        <div class="similar_pd text-center">
+          <a href="${item.productUrl}" class="rfss-black product_a text-decoration-none"><img src="${item.productImg}" alt="${item.productImageAltText}" class="w-100 lazyload"></a>
+          <a href="${item.productUrl}" class="rfss-black product_a text-decoration-none">
+            <h4 class="fs-5 fw-bolder mb-4 mt-4">
+               ${item.productTitle}
+            </h4>
+          </a>
+          <div class="mb-4">
+            <span class="rfss-grey rfss_sub_title">${item.productDescription}</span>
+            <div class="wc_product_review_badge" data-handle="${item.productHandle}" data-product_id="${item.productsId}"></div>
+              <span class="pe-2">MRP :</span>
+              <span class="fs-5 fw-bolder me-3">${item.productPrice}
+              
+                  </div>
+         
+            <form method="post" action="/cart/add" class="ac_form position-relative">
+              <input name="id" value="${item.productId}" type="hidden"/>
+              <input name="add" value="Buy Now" type="submit" class="w-100"/>
+              <div class="rotates">
+                <span class="spin"></span>
+              </div>
+              <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/t/6/assets/right-arrow-thin.svg?v=25521640411634951531663145304" class="bn_right_arrow lazyload">
+
+            </form>
+          
+        </div> 
+      </div>    
+ 
+   `);
+  });
+  const newProductData = `${recentlyViewedHtml.join("")}`;
+  const fullContent = document.getElementsByClassName("recently-viewed");
+  fullContent[0].innerHTML = newProductData; 
+  var owl = $(".recently-viewed");
+   owl.owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: false,
+      navText: [
+        "<img src='https://cdn.shopify.com/s/files/1/0577/7129/4793/files/rfss-arrow-right.png?v=1665390600'>", "<img src='https://cdn.shopify.com/s/files/1/0577/7129/4793/files/rfss-arrow-left.png?v=1665390600'>"
+      ],
+      responsive: {
+        0: {
+          items: 1,
+          stagePadding: 50
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4
+        }
+      }
+  });
+  owl.trigger('refresh.owl.carousel');  
+  
+  }
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  getRecentlyViewedProducts();
+});
+ 
+
+ 
+</script>

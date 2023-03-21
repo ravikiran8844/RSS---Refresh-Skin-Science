@@ -1,0 +1,849 @@
+<script src="{{-'owl.carousel.min.js'|asset_url-}}"></script>
+<link href="{{-'owl.carousel.min.css'|asset_url-}}" rel="stylesheet" type="text/css" media="all" />
+
+<div class="border-top breadcrumbs mt-3 pb-5 pb-md-3 pt-md-3 pt-lg-5 pb-lg-5 pt-5 d-md-block d-none">
+  <div class="container">
+    {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+      {%- assign t = template | split: '.' | first -%}
+
+      <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a class="breadcrumbs__link" href="/">Home</a>
+          </li>
+          {%- case t -%}
+            {%- when 'product' -%}
+              {%- if collection.url -%}
+                <li class="breadcrumb-item">
+                  {{ collection.title | link_to: collection.url }}
+                </li>
+              {%- endif -%}
+              <li class="breadcrumb-item">
+                <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+              </li>
+            {%- when 'collection' and collection.handle -%}
+              {%- if current_tags -%}
+                <li class="breadcrumb-item">
+                  {{ collection.title | link_to: collection.url }}
+                </li>
+                <li class="breadcrumb-item">
+                  {%- capture tag_url -%}
+                    {{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+                  <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
+                </li>
+              {%- else -%}
+                <li class="breadcrumb-item">
+                  <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+                </li>
+              {%- endif -%}
+
+            {%- else -%}
+              <li class="breadcrumb-item">
+                <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+              </li>
+          {%- endcase -%}
+        </ol>
+      </nav>
+    {%- endunless -%}
+  </div>
+</div>
+<section class="rfss-product-met">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-12 col-lg-6">
+
+      
+          <div class="stky">
+
+        <div class="justify-content-end row mb-5">
+          <div class="d-block d-lg-block d-md-block order-last order-md-first thubnail-slide">
+
+            <div id="sync2" class="owl-carousel owl-theme">
+              {% for image in product.images %}
+                <div class="item">
+                  <img src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}" title="{{ image.alt | escape }}">
+                </div>
+              {% endfor %}
+
+            </div>
+
+          </div>
+          <div class="float-md-end order-first order-md-last product-slide w-75">
+            {% assign current_variant = product.selected_or_first_available_variant %}
+            {% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+            <div id="sync1" class="owl-carousel owl-theme" data-slider-id="1">
+              {% for image in product.images %}
+                <div class="item">
+                  {%-liquid 
+        assign img_url = image.src | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign ration = image.src.aspect_ratio -%}
+        <div class="lazyload__image-wrapper no-js header-logo__image imglazy">
+          <div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div>
+          <noscript>
+            <img itemprop="image" class="lazy js" src="{{ image.src | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ image.alt | default: shop.name | escape }}">
+          </noscript>
+        </div>
+                </div>
+              {% endfor %}
+            </div>
+
+
+          </div>
+
+        </div>
+      {% comment %}
+        <div class="product_description_video d-none d-md-none d-lg-block">
+          {% for block in section.blocks  %}
+            {{ block.settings.product_description_video }}
+          {% endfor %}
+        </div>
+    {% endcomment %}
+      </div>
+        
+      </div>
+
+      <div class="col-12 col-md-12 col-lg-6 ps-lg-5">
+        <div class="text-center">
+          <h1 class="fs-3 fw-bolder mb-3 block d-md-block d-lg-block  mt-5 mt-md-0">{{ product.title }}</h1>        
+          <h3 class="fs-5 rfss-grey d-block d-md-block d-lg-block rfss_sub_title">{{ product.description }}</h3>
+           <div class="wc_product_review_badge d-block d-md-none d-lg-none rfss_sub_title" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+          
+          <div class="border-bottom border-top d-flex d-lg-flex d-md-flex d-none justify-content-evenly mb-4 pb-4 pt-4">
+              <div class="border-end pe-5"> 
+                <div class="wc_product_review_badge d-none d-md-block d-lg-block" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+              </div>
+              <div class="align-items-center d-flex"> 
+                <label for="Quantity" class="fs-5 pe-3 ms-4 text-uppercase">quantity</label>
+                <div class="d-flex justify-content-between qtybox mb-4 mb-md-0   mt-0 refss-single-product-page-quantity ">
+                    <input type="button" value="&#8331;" class="qty_button qtyminus minus fa">
+                    <input type="number" id="Quantity" class="input-text quantity-selector quantity-input qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="" readonly="">
+                    <input type="button" value="&#43;" class="qty_button  qtyplus plus fa">
+                  </div>
+              </div>
+          </div>
+          <div class="mb-1 mb-md-4">
+            
+            <div>            
+            {% if product.compare_at_price == blank %}
+              <span class="pe-2">MRP :</span>
+              <span class="fs-5 fw-bolder me-3">{{ product.price | money}}
+              {% else %}              
+                  <span class="pe-2">MRP :</span>               
+                  {% if product.compare_at_price != blank %}
+                    <span class="dashed fs-5 position-relative">{{ product.compare_at_price | money }}</span>
+                  {% endif %}
+                 <span class="fs-4 fw-bolder ms-4">{{ product.price | money }}</span>
+                 <span class="badge bg-save ms-2">SAVE {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%</span>
+               {% endif %}
+              </div>
+              <span class="rfss_grey">(inclusive of taxes)</span>
+          </div>
+        </div>
+
+        <hr class="d-md-none d-lg-block d-none">
+        <div class="border-bottom d-lg-block d-md-block d-none mb-1 mb-md-4 pb-3 pt-3 rfss-grey rfss-prdt-dec">
+          <p>{{ section.settings.product_det }}</p>
+
+          <ul class="d-md-none d-lg-none d-none produt_points">
+            {% for block in section.blocks  %}
+              {% if block.type == "product-points" %}
+                <li class="product-points" {{ block.shopify_attributes }}>
+                  {{ block.settings.product_points }}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+
+        <form action="/cart/add" method="post" class="border-bottom mb-5" enctype="multipart/form-data" id="AddToCartForm">
+          <select name="id" id="productSelect" class="d-none">
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                <option value="{{ variant.id }}">
+                  {{ variant.title }} - {{ variant.price | money_with_currency }}
+                </option>
+              {% else %}
+                <option disabled="disabled">
+                  {{ variant.title }} - sold out
+                </option>
+              {% endif %}
+            {% endfor %}
+          </select>
+          <small class="d-none">{{ current_variant.price | money }}</small>
+        
+          <div class="d-block align-items-center d-flex d-lg-none d-md-none justify-content-evenly mb-4 mt-5">
+            <label for="Quantity" class="text-uppercase">quantity</label>
+            <div class="d-flex justify-content-between qtybox mb-md-0  refss-single-product-page-quantity me-md-4 ">
+              <input type="button" value="&#8331;" class="qty_button qtyminus minus fa">
+              <input type="number" id="Quantity" class="input-text quantity-selector quantity-input qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" aria-labelledby="" readonly="">
+              <input type="button" value="&#43;" class="qty_button  qtyplus plus fa">
+            </div>
+              <p class="align-items-center d-flex " style="color: #11c339;">
+                             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+             <path d="M7.33385e-06 12.9302C0.00752423 5.7875 5.83775 -0.0293775 12.9591 0.00011163C20.1118 0.0296008 25.8755 5.81005 25.8662 12.9441C25.8564 20.1036 20.0545 25.8933 12.9158 25.8661C5.76431 25.8395 -0.00750956 20.0579 7.33385e-06 12.9302ZM11.2453 15.1176C11.1175 14.9575 11.0579 14.869 10.9851 14.7933C10.1571 13.934 9.33195 13.0725 8.49584 12.2213C8.06217 11.7802 7.43422 11.7992 7.04218 12.2439C6.68773 12.6463 6.7126 13.2292 7.11967 13.6501C8.21655 14.7846 9.31923 15.9133 10.4202 17.0437C10.9741 17.6127 11.5055 17.6144 12.0617 17.0454C14.281 14.7748 16.4996 12.5029 18.7177 10.2305C19.1889 9.74772 19.2109 9.11168 18.7749 8.69074C18.3522 8.2831 17.7659 8.32762 17.2975 8.80812C15.3559 10.7989 13.4154 12.7909 11.4772 14.7846C11.3979 14.8661 11.3447 14.9725 11.2453 15.1176Z" fill="#21C427"/>
+            </svg> In stock </p>
+           </div>
+
+          
+          <div class="d-md-flex mb-3 mt-3 mb-md-2 mt-md-5 pb-3 pb-md-4 align-items-center">           
+            
+            <div class="m-auto position-relative w-75"">
+              
+              <button type="submit" name="add" id="AddToCart" class="fw-bold">
+              <svg width="43" height="36" viewBox="0 0 43 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-3">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.3008 15.3089L40.6763 15.3089L40.6763 17.98L15.3008 17.98L15.3008 15.3089Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9648 9.96667L42.0115 9.96667L42.0115 12.6378L13.9648 12.6378L13.9648 9.96667Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.609375 1.95335C0.609375 1.21575 1.20732 0.617798 1.94493 0.617798H11.6197L17.6297 20.6511H38.0049C38.7425 20.6511 39.3404 21.2491 39.3404 21.9867C39.3404 22.7243 38.7425 23.3222 38.0049 23.3222H15.6423L9.63233 3.28891H1.94493C1.20732 3.28891 0.609375 2.69096 0.609375 1.95335Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.9752 28.6644C18.8688 28.6644 17.9719 29.5613 17.9719 30.6677C17.9719 31.7741 18.8688 32.6711 19.9752 32.6711C21.0816 32.6711 21.9785 31.7741 21.9785 30.6677C21.9785 29.5613 21.0816 28.6644 19.9752 28.6644ZM15.3008 30.6677C15.3008 28.0861 17.3936 25.9933 19.9752 25.9933C22.5568 25.9933 24.6497 28.0861 24.6497 30.6677C24.6497 33.2493 22.5568 35.3422 19.9752 35.3422C17.3936 35.3422 15.3008 33.2493 15.3008 30.6677Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M33.3307 28.6644C32.2243 28.6644 31.3274 29.5613 31.3274 30.6677C31.3274 31.7741 32.2243 32.6711 33.3307 32.6711C34.4371 32.6711 35.334 31.7741 35.334 30.6677C35.334 29.5613 34.4371 28.6644 33.3307 28.6644ZM28.6562 30.6677C28.6562 28.0861 30.7491 25.9933 33.3307 25.9933C35.9123 25.9933 38.0051 28.0861 38.0051 30.6677C38.0051 33.2493 35.9123 35.3422 33.3307 35.3422C30.7491 35.3422 28.6562 33.2493 28.6562 30.6677Z" fill="white"></path>
+</svg> Add to cart</button>
+    <div id="simpl-checkout-product-v2" class="simpl-button-container"></div>
+              <div class="rotates">
+                <span class="spin"></span>
+              </div>
+              <div class="d-flex justify-content-around">
+                 <span class="fs-6 mt-1 rfss-grey text-center">
+                   FREE SHIPPING ON ALL PREPAID ORDERS
+                 </span>
+                <span class="align-items-center d-flex d-lg-block d-md-block d-none" style="color: #11c339;">
+                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.33385e-06 12.9302C0.00752423 5.7875 5.83775 -0.0293775 12.9591 0.00011163C20.1118 0.0296008 25.8755 5.81005 25.8662 12.9441C25.8564 20.1036 20.0545 25.8933 12.9158 25.8661C5.76431 25.8395 -0.00750956 20.0579 7.33385e-06 12.9302ZM11.2453 15.1176C11.1175 14.9575 11.0579 14.869 10.9851 14.7933C10.1571 13.934 9.33195 13.0725 8.49584 12.2213C8.06217 11.7802 7.43422 11.7992 7.04218 12.2439C6.68773 12.6463 6.7126 13.2292 7.11967 13.6501C8.21655 14.7846 9.31923 15.9133 10.4202 17.0437C10.9741 17.6127 11.5055 17.6144 12.0617 17.0454C14.281 14.7748 16.4996 12.5029 18.7177 10.2305C19.1889 9.74772 19.2109 9.11168 18.7749 8.69074C18.3522 8.2831 17.7659 8.32762 17.2975 8.80812C15.3559 10.7989 13.4154 12.7909 11.4772 14.7846C11.3979 14.8661 11.3447 14.9725 11.2453 15.1176Z" fill="#21C427"/>
+</svg> In stock </span>
+              </div>
+             
+            </div>
+          </div>
+    {% comment %}
+     <div class="text-center  w-75 m-auto">
+       <img src="https://cdn.shopify.com/s/files/1/0577/7129/4793/files/payment_icon_483dee6f-e153-4c97-a680-0fab1fb45f25.png?v=1672837611" class="m-auto  w-100 pb-5 text-center">
+     </div>
+         {% endcomment %}
+
+          <!-- <input type="number" id="Quantity" name="quantity" value="1" min="1"> -->
+        </form>
+
+
+        {% for block in section.blocks %}
+          {% if block.type == "Upsell-Product" %}
+            <div class="bg-black p-3 p-md-5 text-white pb-5 pt-5 upsell_box">
+              <h3 class="fs-3 fw-bold mb-4 text-center text-md-start">{{ block.settings.upsell_title }}</h3>
+              {% assign upsell_product = all_products[block.settings.upsell_product] %}
+              <div class="row align-items-center">
+                <div class="col-5 col-md-2">
+                  <img src="{{ upsell_product.featured_image | img_url: 'small' }}" class="w-100">
+                </div>
+                <div class="col-7 col-md-6 ">
+                  <p class="fs-4 fw-bold mb-1">{{ upsell_product.title }}</p>
+                  <span class="d-block">{{ upsell_product.description }}</span>
+                  <span class="fs-5 fw-bolder me-3 text-white">{{ upsell_product.price | money}}</span>
+                  <span class="dashed fs-6 position-relative ps-2">{{ upsell_product.compare_at_price | money }}</span>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a href="#">
+                    <button class="mt-4 mt-md-0">Add to cart
+                      <small>+</small>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+
+           <div class="today-offer position-relative p-4 bg-light">
+          <div class="p-0 p-md-4">
+            
+              
+                <h2 class="fw-bolder pb-2 mb-3">
+                  <svg width="29" height="31" viewBox="0 0 29 31" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5881 30.6333L0.342212 13.205L2.13818 0.834678L14.6186 1.53552L28.8645 18.9638L14.5881 30.6333ZM5.10607 4.46557C4.31762 5.11005 4.21019 6.2828 4.86562 7.08464C5.52126 7.88675 6.69198 8.01429 7.48018 7.37002C8.26863 6.72554 8.37606 5.55279 7.72063 4.75095C7.0652 3.9491 5.89452 3.82109 5.10607 4.46557Z" fill="black"/>
+                  </svg>
+
+                  <span>Today’s Offers </span>
+                </h2>
+                {% if  settings.Offer_gift_products != "" %}
+                  <h4 class="border-bottom fs-5 mb-0 pb-3 pt-3" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span>{{ settings.Offer_gift_products}}
+                    </span>
+                  </h4>
+                {% endif %}
+                {% if  settings.Offer_combo_products != "" %}
+                  <h4 class="border-bottom fs-5 mb-0 pb-3 pt-3" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span class="rfss-grey">{{ settings.Offer_combo_products }}</span>
+                  </h4>
+                {% endif %}
+                {% if  settings.Offer_all_products != "" %}
+                  <h4 class="fs-5 pt-3 pb-3 mb-0" style="height: 65px;">
+                    <svg width="25" height="25" viewBox="0 0 25 25" class="me-2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.70925 12.4913H12.1229V24.3608H1.70925V12.4913ZM13.4369 6.09096C12.975 4.78133 12.546 3.68213 12.1641 2.82394C12.1585 2.81251 12.1533 2.80089 12.1486 2.78887C11.7103 1.80807 11.3344 1.1475 11.0428 0.85549V0.855684C10.3042 0.11744 9.22782 -0.170655 8.21929 0.0998306C7.21076 0.370515 6.42311 1.15856 6.15302 2.16729C5.88311 3.17602 6.17162 4.25216 6.91026 4.99041C7.10906 5.18921 7.60471 5.5407 8.83586 6.091L13.4369 6.09096ZM16.1647 6.09096C17.3922 5.54299 17.8911 5.19016 18.0928 4.98962C18.8268 4.25004 19.1116 3.17563 18.8405 2.16943C18.5695 1.16343 17.7834 0.377714 16.7772 0.106831C15.771 -0.163854 14.6967 0.121363 13.9575 0.85574C13.7678 1.04466 13.4359 1.50991 12.9147 2.65519C13.3142 3.56492 13.7549 4.71005 14.2367 6.09101L16.1647 6.09096ZM16.2434 6.84627H16.2319H13.9787H13.9686H13.9577H8.77272C8.76167 6.84685 8.75063 6.84685 8.73958 6.84627H0V11.7364H25V6.84532H16.2594C16.2542 6.84571 16.2501 6.84765 16.2431 6.84765L16.2434 6.84627ZM12.8775 24.3606H23.2912V12.4911H12.8775V24.3606Z" fill="black"/>
+                    </svg>
+                    <span class="rfss-grey">{{ settings.Offer_all_products }}</span>
+                  </h4>
+                {% endif %}
+
+              
+            
+          </div>
+        </div>
+           
+        <p class=" rfss-grey d-block d-md-none d-lg-none mb-4 mt-4 ">{{ section.settings.product_det }}</p>
+
+        <div class="product_dec mt-3">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+
+            {% for block in section.blocks %}
+
+              {% if block.type == "Product-Desc-Toggle" %}
+
+                <div class="accordion-item border-0 mb-3">
+                  <h2 class="accordion-header" id="flush-heading{{ forloop.index }}">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ forloop.index }}" aria-expanded="true" aria-controls="flush-collapse{{ forloop.index }}">
+                      <span class="me-3">
+                        <img src="{{ block.settings.icon_title | img_url: 'small' }}" alt="" srcset="">
+                      </span>
+                      {{ block.settings.question }}
+                    </button>
+                  </h2>
+                  <div id="flush-collapse{{ forloop.index }}" class="accordion-collapse show" aria-labelledby="flush-heading{{ forloop.index }}" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      {{ block.settings.details }}
+                    </div>
+                  </div>
+                </div>
+
+              {% endif %}
+
+
+            {% endfor %}
+
+          </div>
+        </div>
+{%- comment -%} 
+        <div class="Trust-factor-image border-bottom d-flex justify-content-center  border-top mt-5 pb-4 pt-4 mb-5 text-center">
+          {% for block in section.blocks %}
+            {% if block.type  =="Trust-factor-image" %}
+              <picture class="me-3">
+                <source srcset="{{ block.settings.trust_fac_webp | img_url: 'medium' }}" type="image/webp">
+                <source srcset="{{ block.settings.trust_fac_img | img_url: 'medium' }}" type="image/png">
+                <img src="{{ block.settings.trust_fac_img | img_url: 'medium' }}" alt="{{ block.trust_fac_img | alt}}" class="w-100">
+              </picture>
+            {% endif %}
+          {% endfor %}
+        </div> {%- endcomment -%}
+
+        <div class="Trust-factor-image d-flex justify-content-center mt-5 mb-5 text-center border-top pt-5 pb-5 border-bottom">
+         
+          <picture class="me-3">
+            <source srcset="{{ 'no-harsh-webp.webp' | asset_url }}" type="image/webp">
+            <source srcset="{{ 'no-harsh.png' | asset_url }}" type="image/png">
+            <img src="{{ 'no-harsh.png' | asset_url }}" alt="{{ block.slide_img_jpg | alt}}" class="w-75">
+          </picture>
+          <picture class="me-3">
+            <source srcset="{{ 'paraben-free-webp.webp' | asset_url }}" type="image/webp">
+            <source srcset="{{ 'paraben-free.png' | asset_url }}" type="image/png">
+            <img src="{{ 'paraben-free.png' | asset_url }}" alt="{{ block.slide_img_jpg | alt}}" class="w-75">
+          </picture>
+          <picture class="me-3">
+            <source srcset="{{ 'sulphate_free.webp' | asset_url }}" type="image/webp">
+            <source srcset="{{ 'sulphate_free.png' | asset_url }}" type="image/png">
+            <img src="{{ 'sulphate_free.png' | asset_url }}" alt="{{ block.slide_img_jpg | alt}}" class="w-75">
+          </picture>
+          <picture class="me-3">
+            <source srcset="{{ 'cruelty_free_one.webp' | asset_url }}" type="image/webp">
+            <source srcset="{{ 'cruelty_free_one.png' | asset_url }}" type="image/png">
+            <img src="{{ 'cruelty_free_one.png' | asset_url }}" alt="{{ block.slide_img_jpg | alt}}" class="w-75">
+          </picture>
+           
+        </div>
+
+
+        <div>
+          <h2 class="fs-4 mb-4 fw-bold text-center text-uppercase">Suitable for</h2>
+          <div class="bg-light mb-0 mb-md-5  mt-3 p-3 pt-5 pb-5 p-md-5 sustainable_box text-center">
+            <div class="d-flex justify-content-between">
+
+              {% for block in section.blocks %}
+                {% if block.type  == "suitable_for" %}
+
+                  <div class="text-center">
+                    <div class="white-circle">
+                      <img src="{{ block.settings.suitable_image_picker | img_url: 'medium' }}" alt="{{ block.settings.suitable_image_picker | image_alt }}">
+                    </div>
+                    <p class="mt-3">{{ block.settings.suitable_for_text }}</p>
+                  </div>
+
+                {% endif %}
+              {% endfor %}
+
+            </div>
+            <p class="mt-5">NEED HELP BUILDING YOUR ROUTINE?</p>
+            <a class="fs-6 rfss-grey text-uppercase" href="https://wa.me/918565992992?text=Hi, I need help building my personalised skincare regimen."  target="_blank">Contact our expert team to get the best advice and a customized routine MADE JUST FOR YOU!</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="overflow-hidden">
+  <div class="pr-reelase align-items-center mb-3 mt-md-5 pt-4 pb-4 d-flex"><div class=" pr-reelase-item me-5">
+        <a href="/blogs/pr/business-standard" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/bs-png.png?v=1663155629" type="image/jpeg">
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/bs-png.png?v=1663155629" type="image/jpeg">
+            <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/files/bs-png.png?v=1663155629" alt="" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">The Best in Skincare</p>
+        </a>
+      </div><div class=" pr-reelase-item me-5">
+        <a href="/blogs/pr/timestech" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/timetech-png.png?v=1663155771" type="image/jpeg">
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/timetech-png.png?v=1663155771" type="image/jpeg">
+            <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/files/timetech-png.png?v=1663155771" alt="" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">“Problem Solving Skincare”</p>
+        </a>
+      </div><div class=" pr-reelase-item me-5">
+        <a href="/blogs/pr/zee5" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/zee-png.png?v=1663155893" type="image/jpeg">
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/zee-png.png?v=1663155893" type="image/jpeg">
+            <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/files/zee-png.png?v=1663155893" alt="" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">“500+ orders on launch day”</p>
+        </a>
+      </div><div class=" pr-reelase-item me-5">
+        <a href="/blogs/pr/dailyhunt" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/dailyhunt-png_aa29f2f0-db59-400a-b04d-7323da140a49.png?v=1663156253" type="image/jpeg">
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/dailyhunt-png_aa29f2f0-db59-400a-b04d-7323da140a49.png?v=1663156253" type="image/jpeg">
+            <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/files/dailyhunt-png_aa29f2f0-db59-400a-b04d-7323da140a49.png?v=1663156253" alt="" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">“skin-routine builder”</p>
+        </a>
+      </div><div class=" pr-reelase-item me-5">
+        <a href="/blogs/pr/business-standard" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/bs-png.png?v=1663155629" type="image/jpeg">
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/bs-png.png?v=1663155629" type="image/jpeg">
+            <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/files/bs-png.png?v=1663155629" alt="" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">“The Best in Skincare”</p>
+        </a>
+      </div><div class=" pr-reelase-item me-5">
+        <a href="/blogs/pr/timestech" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/timetech-png.png?v=1663155771" type="image/jpeg">
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/timetech-png.png?v=1663155771" type="image/jpeg">
+            <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/files/timetech-png.png?v=1663155771" alt="" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">“India's 1st Problem”</p>
+        </a>
+      </div><div class=" pr-reelase-item me-5">
+        <a href="/blogs/pr/zee5" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/zee-png.png?v=1663155893" type="image/jpeg">
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/zee-png.png?v=1663155893" type="image/jpeg">
+            <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/files/zee-png.png?v=1663155893" alt="" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">“500+ orders on launch day”</p>
+        </a>
+      </div><div class=" pr-reelase-item me-5">
+        <a href="/blogs/pr/dailyhunt" target="_blank" class="align-items-center d-flex">
+          <picture>
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/dailyhunt-png_aa29f2f0-db59-400a-b04d-7323da140a49.png?v=1663156253" type="image/jpeg">
+            <source srcset="//cdn.shopify.com/s/files/1/0577/7129/4793/files/dailyhunt-png_aa29f2f0-db59-400a-b04d-7323da140a49.png?v=1663156253" type="image/jpeg">
+            <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/files/dailyhunt-png_aa29f2f0-db59-400a-b04d-7323da140a49.png?v=1663156253" alt="" class="lazyload">
+          </picture>
+          <p class="fs-4 mb-0 ms-4">“skin-routine builder”</p>
+        </a>
+      </div></div>
+</div>
+
+<div class="bg-black overflow-hidden ">
+  <div class="rfss-marquee-highlight pt-3 text-white  pb-3 d-flex">
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-6.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">Free Shipping</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-1.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">Unmatched Customer Support</span>
+    </div>
+    <div class="high-item d-flex align-items-center text-center">
+      <img src="{{ 'rfss-scroll-icon-2.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">Secure Payment</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-3.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">84 days money back guarantee</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-4.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">Problem solving skincare</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-5.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">10,000+ trusted customers</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-6.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">Free Shipping</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-1.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">Unmatched Customer Support</span>
+    </div>
+    <div class="high-item d-flex align-items-center text-center">
+      <img src="{{ 'rfss-scroll-icon-2.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">Secure Payment</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-3.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">84 days money back guarantee</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-4.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">Problem solving skincare</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'rfss-scroll-icon-5.svg' | asset_url  }}" alt="">
+      <span class="ps-3 text-capitalize">10,000+ trusted customers</span>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "ProductDescription",
+    "tag": "div",
+    "class": "product_desciption",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "product_title",
+        "label": "product Title"
+      }, {
+        "type": "text",
+        "id": "product_subtitle",
+        "label": "product Sub Title"
+      }, {
+        "type": "textarea",
+        "id": "product_det",
+        "label": "Product Details"
+      }, {
+        "type": "radio",
+        "id": "kit_product",
+        "label": "This is a kit product?",
+        "options": [
+          {
+            "value": "yes",
+            "label": "yes"
+          }, {
+            "value": "no",
+            "label": "no"
+          }
+        ],
+        "default": "no"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product-points",
+        "name": "product-points",
+        "settings": [
+          {
+            "type": "text",
+            "id": "product_points",
+            "label": "Product Points"
+          }
+        ]
+      },
+      {
+        "name": "kit-product-contains",
+        "type": "kit-product-contains",
+        "settings": [
+          {
+            "type": "text",
+            "id": "product_contains",
+            "label": "Kit Product Contains"
+          }, {
+            "type": "text",
+            "id": "product_contains_price",
+            "label": "Price"
+          }
+        ]
+      },
+      {
+        "type": "Upsell-Product",
+        "name": "Upsell-product",
+        "settings": [
+          {
+            "type": "text",
+            "id": "upsell_title",
+            "label": "Upsell Title"
+          }, {
+            "type": "product",
+            "id": "upsell_product",
+            "label": "Choose Upsell Product"
+          }
+        ]
+      },
+      {
+        "type": "Product-Desc-Toggle",
+        "name": "Product-Desc-Toggle",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon_title",
+            "label": "Icon for question"
+          }, {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          }, {
+            "type": "html",
+            "id": "details",
+            "label": "Details"
+          }
+        ]
+      }, {
+        "type": "Trust-factor-image",
+        "name": "Trust-factor-image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "trust_fac_img",
+            "label": "Choose Image"
+          }, {
+            "type": "image_picker",
+            "id": "trust_fac_webp",
+            "label": "choose webp"
+          }
+        ]
+      }, {
+        "type": "suitable_for",
+        "name": "suitable_for",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "suitable_image_picker",
+            "label": "choose image"
+          }, {
+            "type": "text",
+            "id": "suitable_for_text",
+            "label": "Enter Text"
+          }
+        ]
+      }, {
+        "type": "video-sec-product",
+        "name": "video_sec_product",
+        "settings": [
+          {
+            "type": "html",
+            "id": "product_description_video",
+            "label": "Product  video iframe"
+
+          }
+        ]
+      }
+
+
+    ],
+    "templates": ["product"]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .shopify-section.product_desciption form.js-ajax-cart-form-in-progress #AddToCart::after {   
+    top: -37px !important; 
+    background-color: #ff6464 !important;
+    padding: 22px 0 !important;    
+}
+  section.rfss-product-met .rotates {   
+    margin-top: 10px !important;
+}
+
+  .owl-theme .owl-nav [class*='owl-'] {
+    transition: all 0.3s ease;
+  }
+  .owl-theme .owl-nav [class*='owl-'].disabled:hover {
+    background-color: #d6d6d6;
+  }
+  #sync1.owl-theme {   
+    position: relative;
+  }
+  #sync1.owl-theme .owl-next,
+  #sync1.owl-theme .owl-prev {
+    width: 22px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+  }
+  #sync1.owl-theme .owl-prev {
+    left: 10px;
+  }
+  #sync1.owl-theme .owl-next {
+    right: 10px;
+  }
+  div#sync1 .owl-dots {
+    display: none;
+  }
+  .product_description_video iframe {
+    margin-top: 10%;
+  }
+.stky {
+    position: sticky;
+    top: 10px;
+}
+ /**********new css ***************/ 
+  span.badge.bg-save {
+    background: #21C327;
+    border-radius: 5px;
+}
+  div#sync2 {    
+    margin-left: -22% !important;   
+}
+  section.rfss-product-met .rotates {   
+    top: 25px !important;
+}
+   #AddToCartForm button#AddToCart {
+    background-color: #FF6464 !important;  
+    height: 74px !important;
+/*     box-shadow: 0px 3px 1px #C63636; */
+    animation: glow 1s  ease-in-out infinite alternate;        
+}
+  @-webkit-keyframes glow {
+  from {
+     box-shadow: 0px;
+  }
+  to {
+    box-shadow: 2px 4px 4px 1px #c63636d1;
+  }
+}
+@media(min-width:320px) and (max-width:767px){
+div#sync2 {
+    margin-top: 3% !important;
+    transform: inherit !important;
+    margin-left: 13% !important;
+    width: 65% !important;
+}
+  div#sync2 .item {
+    transform: inherit !important;
+}
+
+ div#sync1 .owl-dots {
+    display: none !important;
+}     .rfss_sub_title p {
+    font-size: 18px;
+}
+  .rfss-product-met .w-75 {
+    min-width: 100% !important;
+}
+}
+{% endstylesheet %}
+
+{% javascript %}
+  var sync1 = $("#sync1");
+  var sync2 = $("#sync2");
+  var slidesPerPage = 4; // globaly define number of elements per page
+  var syncedSecondary = true;
+
+  sync1.owlCarousel({
+    items: 1,
+    slideSpeed: 2000,
+    nav: false,
+    autoplay: false,
+    dots: true,
+    loop: true,
+    responsiveRefreshRate: 200
+  }).on('changed.owl.carousel', syncPosition);
+
+  sync2.on('initialized.owl.carousel', function() {
+    sync2.find(".owl-item").eq(0).addClass("current");
+  }).owlCarousel({
+    items: 5,
+    dots: false,
+    nav: true,
+    navText: [
+      "<img src='https://cdn.shopify.com/s/files/1/0577/7129/4793/files/rfss-arrow-right.png?v=1665390600'>", "<img src='https://cdn.shopify.com/s/files/1/0577/7129/4793/files/rfss-arrow-left.png?v=1665390600'>"
+    ],
+    margin: 20,
+    smartSpeed: 200,
+    slideSpeed: 500,
+    slideBy: 1, // alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+    responsiveRefreshRate: 100,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:3,
+            nav:true
+        },
+        600:{
+            items:4,
+            nav:true
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+  }).on('changed.owl.carousel', syncPosition2);
+
+  function syncPosition(el) {
+
+    var count = el.item.count - 1;
+    var current = Math.round(el.item.index -(el.item.count / 2) - .5);
+
+    if (current < 0) {
+      current = count;
+    }
+    if (current > count) {
+      current = 0;
+    }
+
+// end block
+
+    sync2
+      .find(".owl-item")
+      .removeClass("current")
+      .eq(current)
+      .addClass("current");
+    var onscreen = sync2.find('.owl-item.active').length - 1;
+    var start = sync2.find('.owl-item.active').first().index();
+    var end = sync2.find('.owl-item.active').last().index();
+
+    if (current > end) {
+      sync2.data('owl.carousel').to(current, 100, true);
+    }
+    if (current < start) {
+      sync2.data('owl.carousel').to(current - onscreen, 100, true);
+    }
+  }
+
+  function syncPosition2(el) {
+    if (syncedSecondary) {
+      var number = el.item.index;
+      sync1.data('owl.carousel').to(number, 100, true);
+    }
+  }
+
+  sync2.on("click", ".owl-item", function(e) {
+    e.preventDefault();
+    var number = $(this).index();
+    sync1.data('owl.carousel').to(number, 300, true);
+  });
+{% endjavascript %}

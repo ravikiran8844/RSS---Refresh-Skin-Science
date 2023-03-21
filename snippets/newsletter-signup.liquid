@@ -1,0 +1,26 @@
+<div class="bg-black pb-5 pt-5 whatsapp_subs">
+  <div class="container mt-5 mb-5 ">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-3 mb-md-0 pb-4 pb-md-0 text-center text-md-start text-white">
+        <h2 class="fw-bolder text-capitalize">Subscribe to our newsletter</h2>
+        <p class="fs-5 mb-0">to get updates on all NEW things about SKINCARE
+        </p>
+      </div>
+      <div class="col-md-6">
+        {% form 'customer' %}
+          {{ form.errors | default_errors }}
+          {% if form.posted_successfully? %}
+            <p class="fw-bold m-auto p-3 success-msg text-white w-30" style=" background-color: transparent;">The form submitted successfully
+            </p>
+          {% else %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <input type="email" name="contact[email]" id="Email" value="{% if customer.email != blank %}{{ customer.email }}{% endif %}" placeholder="Enter Your Email" autocorrect="off" autocapitalize="off" class="bg-transparent border-0">
+            <button type="submit" name="commit" id="Subscribe">
+              Subscribe
+            </button>
+          {% endif %}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>

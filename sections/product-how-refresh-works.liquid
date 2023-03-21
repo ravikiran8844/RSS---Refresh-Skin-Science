@@ -1,0 +1,94 @@
+<div class="pt-5">
+  <div class="container">
+    {%- comment -%}
+      <h2 class="fs-1 fw-bolder text-center">{{ section.settings.rw_title }}</h2>
+    {%- endcomment -%}
+    <h2 class="fs-1 fw-bolder text-center">How Our Refresh Beauty Products Work?
+    </h2>
+
+    <div class="bg-black m-auto mb-5 mt-5 p-5 refresh-box text-center w-75" style="border-radius: 40px;">
+
+      <div class="row">
+
+        {% for block in section.blocks  %}
+          <div class="refresh_day  mb-5 mb-md-0 col-md-4">
+            <picture>
+              <source srcset="{{ block.settings.rw_image_pickr_webp | img_url: 'small' }}" type="image/webp">
+              <source srcset="{{ block.settings.rw_image_pickr_png | img_url: 'small' }}" type="image/jpeg">
+              <img src="{{ block.settings.rw_image_pickr_png | img_url: 'small' }}" alt="{{ block.pr_image_jpg | alt}}">
+            </picture>
+            <p class="fs-5 m-auto mb-0 mt-4 text-white">{{ block.settings.rw_details}}</p>
+          </div>
+        {% endfor %}
+
+      </div>
+      <div class="text-center pt-0 pt-md-5">
+        <button class="d-block m-auto mt-5 mt-md-2 mt-lg-5" id="try_it">Try it for yourself</button>
+        {%- comment -%}
+          <span class="d-block mt-3 text-white mb_span">{{ section.settings.refund_text }}</span>
+        {%- endcomment -%}
+        <span class="d-block mt-3 text-white mb_span">
+          <b>84-Day Full Refund</b>
+          if our products don’t work!</span>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+
+// variables 
+    var toTop = $('#try_it');
+
+// logic
+    toTop.on('click', function() {
+      $('html, body').animate({scrollTop: $('html, body').offset().top});
+    });
+
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "how_refresh_works",
+    "tag": "div",
+    "class": "how_refresh_works",
+    "settings": [
+      {
+        "type": "text",
+        "id": "rw_title",
+        "label": " how refresh works title"
+      }, {
+        "type": "text",
+        "id": "refund_text",
+        "label": "btn_refund_text"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "how_refresh_work",
+        "type": "how_refresh_work",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "rw_image_pickr_png",
+            "label": "PNG Image"
+          }, {
+            "type": "image_picker",
+            "id": "rw_image_pickr_webp",
+            "label": "webp Image"
+          }, {
+            "type": "textarea",
+            "id": "rw_details",
+            "label": "how refresh details"
+          }
+        ]
+      }
+
+    ]
+
+  }
+{% endschema %}

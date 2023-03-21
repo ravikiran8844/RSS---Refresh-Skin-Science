@@ -1,0 +1,1486 @@
+{
+  "current": {
+    "rfss_logo": "shopify:\/\/shop_images\/RefreshSkinScience-Logo_96c9f91b-f741-407a-bd65-9f7eeffa102c.png",
+    "logo_link": "https:\/\/refreshskinscience.myshopify.com\/",
+    "fav_icon": "shopify:\/\/shop_images\/Refresh_Fave_icon_white-01.png",
+    "announcement": "<span>March Madness Sale<\/span> <b>Use code: EXTRA<\/b> To Get 15% Off<span> On Orders Above 999<\/span>",
+    "Offer_all_products": "Get 15% Offer on orders above 999<b>Use code: EXTRA<\/b>",
+    "Offer_combo_products": "<b class=\"text-dark\">Free Shipping<\/b> Sitewide On Orders Above ₹500",
+    "Offer_gift_products": "Get <b class=\"text-dark\">5% OFF<\/b> On Online Payment",
+    "product_one": "acne-reduction-kit",
+    "product_two": "anti-aging-kit",
+    "product_three": "dry-skin-essentials-kit",
+    "checkout_logo_image": "shopify:\/\/shop_images\/RefreshSkinScience-Logo_96c9f91b-f741-407a-bd65-9f7eeffa102c.png",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#000000",
+    "sections": {
+      "Home-banner": {
+        "type": "Home-banner",
+        "blocks": {
+          "f8873e31-8f4b-4414-ae2b-6999d2958268": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "slide_img_jpg": "shopify:\/\/shop_images\/new-ban.jpg",
+              "slide_img_mobile_jpg": "shopify:\/\/shop_images\/Frame_68_1.jpg",
+              "image_link": "shopify:\/\/collections\/all"
+            }
+          },
+          "4c2aac4f-de1a-4e68-8a8a-5f2eb94fff4a": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "slide_img_jpg": "shopify:\/\/shop_images\/ref_ben_new.jpg",
+              "slide_img_mobile_jpg": "shopify:\/\/shop_images\/fer_ban_mob_new.jpg",
+              "image_link": "shopify:\/\/collections\/all"
+            }
+          },
+          "6cd69931-da0b-40d0-9e9f-130d18143e5f": {
+            "type": "slide",
+            "settings": {
+              "slide_img_jpg": "shopify:\/\/shop_images\/march_madness_-_final_banner.jpg",
+              "slide_img_mobile_jpg": "shopify:\/\/shop_images\/new_March_Madness_mobile_c274b3ab-66c2-4eea-8164-6b63896eb3f5.jpg",
+              "image_link": "shopify:\/\/collections\/all"
+            }
+          },
+          "4aa99a5a-66aa-4143-ad4b-d6a9f5e4cae8": {
+            "type": "slide",
+            "disabled": true,
+            "settings": {
+              "slide_img_jpg": "shopify:\/\/shop_images\/rfss_home-ban.jpg",
+              "image_link": "https:\/\/refreshskinscience.myshopify.com\/"
+            }
+          }
+        },
+        "block_order": [
+          "f8873e31-8f4b-4414-ae2b-6999d2958268",
+          "4c2aac4f-de1a-4e68-8a8a-5f2eb94fff4a",
+          "6cd69931-da0b-40d0-9e9f-130d18143e5f",
+          "4aa99a5a-66aa-4143-ad4b-d6a9f5e4cae8"
+        ],
+        "settings": {
+          "slide_title": ""
+        }
+      },
+      "rfss-home-pr": {
+        "type": "rfss-home-pr",
+        "blocks": {
+          "584331e9-fc85-4d75-a088-2830b41104d7": {
+            "type": "slide",
+            "settings": {
+              "pr_image_webp": "shopify:\/\/shop_images\/bs-webp.webp",
+              "pr_image_jpg": "shopify:\/\/shop_images\/bs-png.png",
+              "pr_image_title": "The Best in Skincare",
+              "pr_image_link": "\/blogs\/pr\/business-standard"
+            }
+          },
+          "c860b8ce-454f-4c4b-93f2-e290fc14155b": {
+            "type": "slide",
+            "settings": {
+              "pr_image_webp": "shopify:\/\/shop_images\/timestech-webp.webp",
+              "pr_image_jpg": "shopify:\/\/shop_images\/timetech-png.png",
+              "pr_image_title": "“Problem Solving Skincare Brand”",
+              "pr_image_link": "\/blogs\/pr\/timestech"
+            }
+          },
+          "037cca46-58ce-4dd4-8d3e-86690c9411f2": {
+            "type": "slide",
+            "settings": {
+              "pr_image_webp": "shopify:\/\/shop_images\/zee-wepb.webp",
+              "pr_image_jpg": "shopify:\/\/shop_images\/zee-png.png",
+              "pr_image_title": "“500+ Orders on Launch Day”",
+              "pr_image_link": "\/blogs\/pr\/zee5"
+            }
+          },
+          "24c68371-3be3-407e-8f75-f524613c12b9": {
+            "type": "slide",
+            "settings": {
+              "pr_image_webp": "shopify:\/\/shop_images\/dailyhunt-webp_bd203377-e4d9-4644-b216-9211d7a73640.webp",
+              "pr_image_jpg": "shopify:\/\/shop_images\/dailyhunt-png_aa29f2f0-db59-400a-b04d-7323da140a49.png",
+              "pr_image_title": "“Skin-Routine Builder”",
+              "pr_image_link": "\/blogs\/pr\/dailyhunt"
+            }
+          },
+          "3f25436d-e42c-4e1c-98d0-1f57bc01cc63": {
+            "type": "slide",
+            "settings": {
+              "pr_image_webp": "shopify:\/\/shop_images\/bs-webp.webp",
+              "pr_image_jpg": "shopify:\/\/shop_images\/bs-png.png",
+              "pr_image_title": "“The Best in Skincare”",
+              "pr_image_link": "\/blogs\/pr\/business-standard"
+            }
+          },
+          "425cf647-5960-4ff2-8076-be1d5c00d501": {
+            "type": "slide",
+            "settings": {
+              "pr_image_webp": "shopify:\/\/shop_images\/timestech-webp.webp",
+              "pr_image_jpg": "shopify:\/\/shop_images\/timetech-png.png",
+              "pr_image_title": "“Problem Solving Skincare Brand”",
+              "pr_image_link": "\/blogs\/pr\/timestech"
+            }
+          },
+          "78dbd9f4-e0eb-413b-bc1e-01a0fc1c0c91": {
+            "type": "slide",
+            "settings": {
+              "pr_image_webp": "shopify:\/\/shop_images\/zee-wepb.webp",
+              "pr_image_jpg": "shopify:\/\/shop_images\/zee-png.png",
+              "pr_image_title": "“500+ Orders on Launch Day”",
+              "pr_image_link": "\/blogs\/pr\/zee5"
+            }
+          },
+          "19c35bc1-9d31-4b9d-a24b-88459134b42b": {
+            "type": "slide",
+            "settings": {
+              "pr_image_webp": "shopify:\/\/shop_images\/dailyhunt-webp_bd203377-e4d9-4644-b216-9211d7a73640.webp",
+              "pr_image_jpg": "shopify:\/\/shop_images\/dailyhunt-png_aa29f2f0-db59-400a-b04d-7323da140a49.png",
+              "pr_image_title": "“Skin-Routine Duilder”",
+              "pr_image_link": "\/blogs\/pr\/dailyhunt"
+            }
+          }
+        },
+        "block_order": [
+          "584331e9-fc85-4d75-a088-2830b41104d7",
+          "c860b8ce-454f-4c4b-93f2-e290fc14155b",
+          "037cca46-58ce-4dd4-8d3e-86690c9411f2",
+          "24c68371-3be3-407e-8f75-f524613c12b9",
+          "3f25436d-e42c-4e1c-98d0-1f57bc01cc63",
+          "425cf647-5960-4ff2-8076-be1d5c00d501",
+          "78dbd9f4-e0eb-413b-bc1e-01a0fc1c0c91",
+          "19c35bc1-9d31-4b9d-a24b-88459134b42b"
+        ],
+        "settings": {
+          "press_title": "Press Title"
+        }
+      },
+      "product-meta-rfss": {
+        "type": "product-meta-rfss",
+        "blocks": {
+          "82667a6c-711c-4056-8130-5c447c4a2272": {
+            "type": "product-points",
+            "settings": {
+              "product_points": "Two powerful humectants to <b>hydrate your skin<\/b>"
+            }
+          },
+          "fc6b791f-359f-451e-a013-f6b61daac0a8": {
+            "type": "product-points",
+            "settings": {
+              "product_points": "Promotes <b>healthier and more supple skin<\/b>"
+            }
+          },
+          "c75eb691-e4aa-4b1d-8cbe-2f99a1744505": {
+            "type": "product-points",
+            "settings": {
+              "product_points": "<b>Increases collagen<\/b> production"
+            }
+          },
+          "bc96de21-1e83-44c4-ac0a-9cc03c04087d": {
+            "type": "kit-product-contains",
+            "disabled": true,
+            "settings": {
+              "product_contains": "",
+              "product_contains_price": ""
+            }
+          },
+          "1b1af9ca-c458-4455-91d9-d1408137c1e7": {
+            "type": "Upsell-Product",
+            "settings": {
+              "upsell_title": "Bundle And Save 20%",
+              "upsell_product": "anti-aging-kit"
+            }
+          },
+          "11a8786b-d1b9-497a-8d86-daefbec4eeeb": {
+            "type": "Product-Desc-Toggle",
+            "settings": {
+              "icon_title": "shopify:\/\/shop_images\/User-products.png",
+              "question": "Benefits",
+              "details": "<ul>\n<li>Draws moisture to your skin's surface.<\/li>\n<li>Minimize epidermis water loss.<\/li>\n<li>Plumps your skin,  giving it a dewy &amp; youthful look.<\/li>\n<li>Exhibits anti-inflammatory properties.<\/li>\n<li>Reduces wrinkles and fine lines.<\/li>\n<\/ul>"
+            }
+          },
+          "8ffdc27e-fdf2-411a-8f8b-8ced82c3d764": {
+            "type": "Product-Desc-Toggle",
+            "settings": {
+              "icon_title": "shopify:\/\/shop_images\/use_product.png",
+              "question": "Composition",
+              "details": "<ul>\n<li>Hyaluronic acid for the face is a powerful humectant and helps draw moisture to your skin’s surface.<\/li>\n<li>By incorporating D-Panthenol with Hyaluronic Acid, Our serum hydrates even the deepest layers of skin and can be used for all skin types.<\/li>\n<li>This serum exhibits anti-inflammatory properties and plumps your skin, leaving it with a dewy, youthful appearance.<\/li>\n<li>Free from (i) Essential mineral oils (ii) Sulphates (iii) Parabens and (iv) Dyes. All our products are made to be hypoallergenic and are safe on the skin!<\/li>\n<li>Hyaluronic acid can help prepare the skin and works well as a base for makeup to go smooth and flawless - Suitable for all skin types.<\/li>\n<\/ul>"
+            }
+          },
+          "d01f7f75-5b4d-4653-9279-6bb94c6cb905": {
+            "type": "Product-Desc-Toggle",
+            "settings": {
+              "icon_title": "shopify:\/\/shop_images\/ingredients_product.png",
+              "question": "Ingredients",
+              "details": "Aqua, Propylene Glycol, Caprylic Capric Triglycerides, Hyaluronic Acid, D-Panthenol (B5), Rosehip Oil, Tocopheryl Acetate, Bisabolol, Biosaccharide Gum-4, Geranium, Wild Hibiscus,Vitamin C, Vitamin A, Honey, Phenoxyethanol, Ethylhexylglycerin."
+            }
+          },
+          "78bf9658-cf2a-4a6a-b39c-09bafa2ff28a": {
+            "type": "Trust-factor-image",
+            "settings": {
+              "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-4.png",
+              "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-4.webp"
+            }
+          },
+          "06d404ef-0199-4c59-a2e7-fd1409ab29f1": {
+            "type": "Trust-factor-image",
+            "settings": {
+              "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-3.png",
+              "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-3.webp"
+            }
+          },
+          "295bef85-7343-4f59-829c-894b7bbd0685": {
+            "type": "Trust-factor-image",
+            "settings": {
+              "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-2.png",
+              "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-2.webp"
+            }
+          },
+          "9f87ad02-d349-49ed-87f3-5f3fdc055ca4": {
+            "type": "Trust-factor-image",
+            "settings": {
+              "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-1.png",
+              "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-1.webp"
+            }
+          },
+          "ad1eba85-7d23-4d07-9fb8-8a59ae94f52a": {
+            "type": "suitable_for",
+            "settings": {
+              "suitable_image_picker": "shopify:\/\/shop_images\/skinglow.png",
+              "suitable_for_text": "SKINGLOW"
+            }
+          },
+          "faedf36e-957f-4196-973b-f3edbb6da9f9": {
+            "type": "suitable_for",
+            "settings": {
+              "suitable_image_picker": "shopify:\/\/shop_images\/sensittive-skin.png",
+              "suitable_for_text": "SENSITIVE SKIN"
+            }
+          },
+          "821d41c0-7567-40e2-b5dc-b3111f1d92be": {
+            "type": "suitable_for",
+            "settings": {
+              "suitable_image_picker": "shopify:\/\/shop_images\/dull-face.png",
+              "suitable_for_text": "DULL FACE"
+            }
+          },
+          "800fe0c1-8998-4738-a662-48e1796fcf7b": {
+            "type": "video-sec-product",
+            "settings": {
+              "product_description_video": "<iframe width=\"100%\" height=\"350\" src=\"https:\/\/www.youtube.com\/embed\/UdWEWuIWaTE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>"
+            }
+          }
+        },
+        "block_order": [
+          "82667a6c-711c-4056-8130-5c447c4a2272",
+          "fc6b791f-359f-451e-a013-f6b61daac0a8",
+          "c75eb691-e4aa-4b1d-8cbe-2f99a1744505",
+          "bc96de21-1e83-44c4-ac0a-9cc03c04087d",
+          "1b1af9ca-c458-4455-91d9-d1408137c1e7",
+          "11a8786b-d1b9-497a-8d86-daefbec4eeeb",
+          "8ffdc27e-fdf2-411a-8f8b-8ced82c3d764",
+          "d01f7f75-5b4d-4653-9279-6bb94c6cb905",
+          "78bf9658-cf2a-4a6a-b39c-09bafa2ff28a",
+          "06d404ef-0199-4c59-a2e7-fd1409ab29f1",
+          "295bef85-7343-4f59-829c-894b7bbd0685",
+          "9f87ad02-d349-49ed-87f3-5f3fdc055ca4",
+          "ad1eba85-7d23-4d07-9fb8-8a59ae94f52a",
+          "faedf36e-957f-4196-973b-f3edbb6da9f9",
+          "821d41c0-7567-40e2-b5dc-b3111f1d92be",
+          "800fe0c1-8998-4738-a662-48e1796fcf7b"
+        ],
+        "settings": {
+          "product_title": "Hyaluronic Acid Face Serum",
+          "product_subtitle": "Deep Hydration & Plumpness",
+          "product_det": "Get ready for soft, plump and & moisture-rich skin from Refresh’s 2% Hyaluronic acid serum + D-Panthenol!",
+          "kit_product": "no"
+        }
+      },
+      "product-proven-effective": {
+        "type": "product-proven-effective",
+        "blocks": {
+          "b8f876fe-08d9-43fc-8a1d-84ea82216798": {
+            "type": "pe-percent-details",
+            "settings": {
+              "pe-percent": "96%",
+              "pe-percent-det": "Said their skin felt moisturized after use*"
+            }
+          },
+          "bc6a3dba-347e-4ee4-8cc3-783255a1e9ec": {
+            "type": "pe-percent-details",
+            "settings": {
+              "pe-percent": "89%",
+              "pe-percent-det": "Said their skin appeared brighter*"
+            }
+          },
+          "dd418f46-874b-43f0-8538-ce4de4b563d0": {
+            "type": "pe-percent-details",
+            "settings": {
+              "pe-percent": "92%",
+              "pe-percent-det": "Said their skin felt firmer*"
+            }
+          }
+        },
+        "block_order": [
+          "b8f876fe-08d9-43fc-8a1d-84ea82216798",
+          "bc6a3dba-347e-4ee4-8cc3-783255a1e9ec",
+          "dd418f46-874b-43f0-8538-ce4de4b563d0"
+        ],
+        "settings": {
+          "pe-sub-title": "PROVEN EFFECTIVE",
+          "pe-description": "In Customer Testing, Boost was shown to increase skin elasticity and reduce the appearance of wrinkles and fine lines.",
+          "pe_before_image": "shopify:\/\/shop_images\/before-hafs-serum.jpg",
+          "pe_after_image": "shopify:\/\/shop_images\/after-hafs-serum.jpg"
+        }
+      },
+      "product-face-serum": {
+        "type": "product-face-serum",
+        "settings": {
+        }
+      },
+      "product-our-serums-dontdo": {
+        "type": "product-our-serums-dontdo",
+        "blocks": {
+          "b396a32e-cc92-4ec6-8062-7291d705f9c7": {
+            "type": "our-serum-dont-do",
+            "settings": {
+              "os_dd_icon_png": "shopify:\/\/shop_images\/transform-overnight.png",
+              "os_dd_icon_webp": "shopify:\/\/shop_images\/transform-overnight.webp",
+              "os-dd-title": "Trasnform You Overnight",
+              "os-dd-description": "Our serums take a minimum of 84 days of religious usage before they can show noticeable\ndifferences. It's a peeling solution, not a magic potion!"
+            }
+          },
+          "20f07eb6-3ca1-46ad-a950-3d806ecc5d36": {
+            "type": "our-serum-dont-do",
+            "settings": {
+              "os_dd_icon_png": "shopify:\/\/shop_images\/side-effects.png",
+              "os_dd_icon_webp": "shopify:\/\/shop_images\/side-effects.webp",
+              "os-dd-title": "Side Effects",
+              "os-dd-description": "New skincare products might cause rashes or infections. Our products are made with skin safe\ningredients to avoid any side effects!"
+            }
+          },
+          "297df3bf-1689-4d4b-8a6c-b8ea03628752": {
+            "type": "our-serum-dont-do",
+            "settings": {
+              "os_dd_icon_png": "shopify:\/\/shop_images\/one-for-all.png",
+              "os_dd_icon_webp": "shopify:\/\/shop_images\/one-for-all.webp",
+              "os-dd-title": "One For All",
+              "os-dd-description": "We have different solutions to tackle different issues. Each one does their job and does it well. There is no\none cure for all skincare issues."
+            }
+          }
+        },
+        "block_order": [
+          "b396a32e-cc92-4ec6-8062-7291d705f9c7",
+          "20f07eb6-3ca1-46ad-a950-3d806ecc5d36",
+          "297df3bf-1689-4d4b-8a6c-b8ea03628752"
+        ],
+        "settings": {
+          "os-dd-heading": "What our Serums DON'T DO?"
+        }
+      },
+      "product-how-to-use": {
+        "type": "product-how-to-use",
+        "blocks": {
+          "b00cd854-2f50-4bdd-9e47-d1c19e5e772c": {
+            "type": "how-to-use-steps",
+            "settings": {
+              "hw_to_use_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/dd505b95b3254b4b8388f8e2892791c1.mp4",
+              "hw_to_use_step": "STEP 01",
+              "hw_to_use_det": "Cleanse your skin with Refresh’s gentle foaming cleanser to remove any dirt or impurities"
+            }
+          },
+          "f67dfa5e-b020-4d05-993f-abceba1e1572": {
+            "type": "how-to-use-steps",
+            "settings": {
+              "hw_to_use_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8f5de497afff443fb01322f97fa0011b.mp4",
+              "hw_to_use_step": "STEP 02",
+              "hw_to_use_det": "Apply a couple of drops of Niacinamide serum to your cheekbones and forehead using the dropper."
+            }
+          },
+          "a6829379-81c0-4023-8a44-7e5102db8236": {
+            "type": "how-to-use-steps",
+            "settings": {
+              "hw_to_use_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6e46d2c6b29e4de7b417c9ccb1e54a4c.mp4",
+              "hw_to_use_step": "STEP 03",
+              "hw_to_use_det": "For optimal results, always leave 2-3 minutes between serums to allow deeper penetration and absorption before layering your face"
+            }
+          }
+        },
+        "block_order": [
+          "b00cd854-2f50-4bdd-9e47-d1c19e5e772c",
+          "f67dfa5e-b020-4d05-993f-abceba1e1572",
+          "a6829379-81c0-4023-8a44-7e5102db8236"
+        ],
+        "settings": {
+          "hw_to_use_title": "How to use Hyaluronic acid",
+          "hw_to_use_subtitle": "3 Simple Steps For Your Skin care Ever"
+        }
+      },
+      "product-how-refresh-works": {
+        "type": "product-how-refresh-works",
+        "blocks": {
+          "b71b5ab6-5e2e-4511-aa60-22082d4c2cd3": {
+            "type": "how_refresh_work",
+            "settings": {
+              "rw_image_pickr_png": "shopify:\/\/shop_images\/30-days.png",
+              "rw_image_pickr_webp": "shopify:\/\/shop_images\/30-days.webp",
+              "rw_details": "Replenshies moisture to your skin and hydrates the top surface"
+            }
+          },
+          "9080466b-5f6c-442d-8ac5-098db18fe94d": {
+            "type": "how_refresh_work",
+            "settings": {
+              "rw_image_pickr_png": "shopify:\/\/shop_images\/60-days.png",
+              "rw_image_pickr_webp": "shopify:\/\/shop_images\/60-days_6c9c8d81-4b35-4c84-aa62-a4834412480f.png",
+              "rw_details": "Tighter , smoother skin and regenerates healthy skin"
+            }
+          },
+          "4740cda4-58bd-4c97-87df-7d8646cdd027": {
+            "type": "how_refresh_work",
+            "settings": {
+              "rw_image_pickr_png": "shopify:\/\/shop_images\/90-days.png",
+              "rw_image_pickr_webp": "shopify:\/\/shop_images\/90-days.webp",
+              "rw_details": "Regains skin plumpness and elasticity"
+            }
+          }
+        },
+        "block_order": [
+          "b71b5ab6-5e2e-4511-aa60-22082d4c2cd3",
+          "9080466b-5f6c-442d-8ac5-098db18fe94d",
+          "4740cda4-58bd-4c97-87df-7d8646cdd027"
+        ],
+        "settings": {
+          "rw_title": "How Refresh Beauty Basics Works",
+          "refund_text": "<b>80-Day Full Refund<\/b> if we’re not the right fit!"
+        }
+      },
+      "product-how-our-serum-works": {
+        "type": "product-how-our-serum-works",
+        "blocks": {
+          "15a5943f-7430-4409-b4f6-eb18de2002c9": {
+            "type": "how_our_serum_works",
+            "settings": {
+              "item_title": "Skin-friendly",
+              "refresh_product": "yes",
+              "other_product": "no"
+            }
+          },
+          "154baa6c-7297-411f-8fa5-6444ea4ef3f0": {
+            "type": "how_our_serum_works",
+            "settings": {
+              "item_title": "Ingredients",
+              "refresh_product": "yes",
+              "other_product": "no"
+            }
+          },
+          "404f9c7b-b11c-4ee7-8223-62c628517262": {
+            "type": "how_our_serum_works",
+            "settings": {
+              "item_title": "Fragrance-free",
+              "refresh_product": "yes",
+              "other_product": "no"
+            }
+          },
+          "44375384-91eb-464d-b916-4c5e7ffbee0f": {
+            "type": "how_our_serum_works",
+            "settings": {
+              "item_title": "Cruelty-free",
+              "refresh_product": "yes",
+              "other_product": "no"
+            }
+          },
+          "91053993-d59e-4d7b-8928-501d0480c0a9": {
+            "type": "how_our_serum_works",
+            "settings": {
+              "item_title": "Harsh Alcohol Content",
+              "refresh_product": "no",
+              "other_product": "yes"
+            }
+          },
+          "d301c518-5d69-4d66-b302-0d3c4c16e759": {
+            "type": "how_our_serum_works",
+            "settings": {
+              "item_title": "Contains Sulphates",
+              "refresh_product": "no",
+              "other_product": "yes"
+            }
+          },
+          "d42a03d7-84b2-4211-ae7f-2d89f5521f04": {
+            "type": "how_our_serum_works",
+            "settings": {
+              "item_title": "Contains Parabens",
+              "refresh_product": "no",
+              "other_product": "yes"
+            }
+          }
+        },
+        "block_order": [
+          "15a5943f-7430-4409-b4f6-eb18de2002c9",
+          "154baa6c-7297-411f-8fa5-6444ea4ef3f0",
+          "404f9c7b-b11c-4ee7-8223-62c628517262",
+          "44375384-91eb-464d-b916-4c5e7ffbee0f",
+          "91053993-d59e-4d7b-8928-501d0480c0a9",
+          "d301c518-5d69-4d66-b302-0d3c4c16e759",
+          "d42a03d7-84b2-4211-ae7f-2d89f5521f04"
+        ],
+        "settings": {
+          "hw_se_works_title": "How does our Serum works?"
+        }
+      },
+      "product-faq": {
+        "type": "product-faq",
+        "blocks": {
+          "10ebecef-df58-4259-bc80-4736f0733077": {
+            "type": "faq-sec-accordion",
+            "settings": {
+              "faq_question": "Should I stop wearing makeup after using the serums?",
+              "faq_answers": "You don’t have to stop wearing makeup when using the serums. The serums form a good base to clear up your skin and get you ready for your everyday makeup."
+            }
+          },
+          "b59e7a12-c557-4eb2-94b2-2087f88bbf0d": {
+            "type": "faq-sec-accordion",
+            "settings": {
+              "faq_question": "What serum is best for brightening my complexion?",
+              "faq_answers": "Our power packed trio of Arbutin, Hyaluronic and Peeling solutions play a major role in skin brightening. The peeling solution helps unclog pores and exfoliate the dead skin cells while the Arbutin and Hyaluronic acid serums can restore the skin’s shine for glowing healthy skin."
+            }
+          },
+          "e0acc7f0-6cda-4a3c-b1fc-685ab436de01": {
+            "type": "faq-sec-accordion",
+            "settings": {
+              "faq_question": "How often should I use this regimen?",
+              "faq_answers": "It is recommended that you stick to this regimen everyday during both your AM and PM routines."
+            }
+          },
+          "af035f6b-25b8-4f3b-9d61-a4663b67949a": {
+            "type": "faq-sec-accordion",
+            "settings": {
+              "faq_question": "How much time will it take for the serums to work?",
+              "faq_answers": "Everyone’s skin reacts differently to different products. We recommend giving your skin some time to acclimate to the serums before seeing noticeable results."
+            }
+          },
+          "8b8bd58a-cfab-4a0e-8c19-e454074d2065": {
+            "type": "faq-sec-accordion",
+            "settings": {
+              "faq_question": "Is this product free from harmful chemicals?",
+              "faq_answers": "Our products do not contain any substances that might harm your skin. All our ingredients are clinically tested and studies show that 99% of the people do not experience any side effects."
+            }
+          }
+        },
+        "block_order": [
+          "10ebecef-df58-4259-bc80-4736f0733077",
+          "b59e7a12-c557-4eb2-94b2-2087f88bbf0d",
+          "e0acc7f0-6cda-4a3c-b1fc-685ab436de01",
+          "af035f6b-25b8-4f3b-9d61-a4663b67949a",
+          "8b8bd58a-cfab-4a0e-8c19-e454074d2065"
+        ],
+        "settings": {
+          "FAQ_title": "FAQs",
+          "Faq_image": "shopify:\/\/shop_images\/faq_sec_image.jpg"
+        }
+      },
+      "product-similar": {
+        "type": "product-similar",
+        "blocks": {
+          "03e096ac-99d2-432d-b95a-59afd49dde26": {
+            "type": "similar-products",
+            "settings": {
+              "similar_products": "moisturiser-all-skin-types"
+            }
+          },
+          "3ab71aa3-ee7d-4a9c-bde4-a38075dfbab0": {
+            "type": "similar-products",
+            "settings": {
+              "similar_products": "sundrops"
+            }
+          },
+          "f7ad800f-7ca7-4d98-89ca-2568f8b6fd78": {
+            "type": "similar-products",
+            "settings": {
+              "similar_products": "alpha-arbutin-grapeseed-beta-arbutin"
+            }
+          }
+        },
+        "block_order": [
+          "03e096ac-99d2-432d-b95a-59afd49dde26",
+          "3ab71aa3-ee7d-4a9c-bde4-a38075dfbab0",
+          "f7ad800f-7ca7-4d98-89ca-2568f8b6fd78"
+        ],
+        "settings": {
+          "show_related_products": true,
+          "related_title": "Browse Similar Products"
+        }
+      },
+      "product-our-heros": {
+        "type": "product-our-heros",
+        "blocks": {
+          "d877af3b-7f59-4b82-9e1e-bf8ce17f1cda": {
+            "type": "our-stars",
+            "settings": {
+              "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d7fbaa3c56564d57b0484ef19bee1591.mp4"
+            }
+          },
+          "050399a9-7580-4a54-a536-e2136dc89490": {
+            "type": "our-stars",
+            "settings": {
+              "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b66b8cc98add489ca6664d97b81864d0.mp4"
+            }
+          },
+          "b41989db-f301-49d6-bd2e-beb5bcbdc3ba": {
+            "type": "our-stars",
+            "settings": {
+              "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2286c78b5761411ca8014520330bd8ac.mp4"
+            }
+          },
+          "33a33067-c3da-4921-aad6-422d909a3ef0": {
+            "type": "our-stars",
+            "settings": {
+              "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/114babfbcdcd452792515230538bb7d3.mp4"
+            }
+          },
+          "ae94fbbd-979b-4241-a5b2-4985a184cf67": {
+            "type": "our-stars",
+            "settings": {
+              "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e43ac7d77e4a421ebc90b4205c42cf26.mp4"
+            }
+          }
+        },
+        "block_order": [
+          "d877af3b-7f59-4b82-9e1e-bf8ce17f1cda",
+          "050399a9-7580-4a54-a536-e2136dc89490",
+          "b41989db-f301-49d6-bd2e-beb5bcbdc3ba",
+          "33a33067-c3da-4921-aad6-422d909a3ef0",
+          "ae94fbbd-979b-4241-a5b2-4985a184cf67"
+        ],
+        "settings": {
+          "influncer_video_text": "Influncer Video"
+        }
+      },
+      "product-meta-rfss-kit": {
+        "type": "product-meta-rfss-kit",
+        "blocks": {
+          "eec886fd-f562-4097-98a0-d0a1ce6a3455": {
+            "type": "kit-product-contains",
+            "settings": {
+              "product_contains": "Foaming Cleanser with Purslane Extract",
+              "product_contains_price": "499.00"
+            }
+          },
+          "bdb7a6ef-8aa1-4143-9350-b3168709c532": {
+            "type": "kit-product-contains",
+            "settings": {
+              "product_contains": "3% PHA Alcohol Free - Face Toner",
+              "product_contains_price": "499.00"
+            }
+          },
+          "6c40e8bd-19e5-47e5-86c0-50a88ff60e35": {
+            "type": "kit-product-contains",
+            "settings": {
+              "product_contains": "Alpha Arbutin Face Serum",
+              "product_contains_price": "999.00"
+            }
+          },
+          "f7a08707-198e-40e7-8fea-9a3de9f507a3": {
+            "type": "kit-product-contains",
+            "settings": {
+              "product_contains": "20% Vitamin C Face Serum",
+              "product_contains_price": "999.00"
+            }
+          },
+          "38c8f8be-2921-43f7-bc15-b66f3d89117a": {
+            "type": "kit-product-contains",
+            "settings": {
+              "product_contains": "Face Moisturiser",
+              "product_contains_price": "999.00"
+            }
+          },
+          "20be9212-a8c2-4633-a02e-485e07c0b78b": {
+            "type": "kit-product-contains",
+            "settings": {
+              "product_contains": "Liquid Sun Drops",
+              "product_contains_price": "999.00"
+            }
+          },
+          "72c9c0b4-e8a8-4c59-b69a-fd8dfecb3085": {
+            "type": "video-sec-product",
+            "settings": {
+              "product_description_video": "<iframe width=\"100%\" height=\"400\" src=\"https:\/\/www.youtube.com\/embed\/lHwJSEVtFgI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>"
+            }
+          },
+          "82dd0489-7529-4def-be0d-4085b2b14195": {
+            "type": "Trust-factor-image",
+            "settings": {
+              "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-4.webp",
+              "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-4.png"
+            }
+          },
+          "a937e74f-b9f5-4e5b-be6b-2098afdc1563": {
+            "type": "Trust-factor-image",
+            "settings": {
+              "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-3.webp",
+              "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-3.png"
+            }
+          },
+          "7c9fecf6-bb81-4c17-83ac-6fa57b7bcf99": {
+            "type": "Trust-factor-image",
+            "settings": {
+              "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-2.png",
+              "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-2.png"
+            }
+          },
+          "cd5749b9-219b-405d-b993-a9d018ddc47a": {
+            "type": "Trust-factor-image",
+            "settings": {
+              "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-1.png",
+              "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-1.webp"
+            }
+          },
+          "ce87a0a0-9b62-458b-87eb-13d2ce687401": {
+            "type": "today-offer-for-kit",
+            "settings": {
+              "today-offer-title": "Today’s Offers",
+              "whats_the_offer-one": "FLAT 25% OFF + FREE HYALURONIC ACID SERUM ON ORDERS ABOVE RS.599\/-",
+              "whats_the_offer-two": "FREE SHIPPING ON ALL PREPAID ORDERS",
+              "whats_the_offer-three": "Get Flat 25% Off On Gift Sets"
+            }
+          },
+          "13585ab1-eeb4-4e7f-b6c5-b21a49419618": {
+            "type": "kit-product-contains",
+            "disabled": true,
+            "settings": {
+              "product_contains": "",
+              "product_contains_price": ""
+            }
+          },
+          "e30858e1-0b7a-4767-8e06-280794b88c08": {
+            "type": "today-offer-for-kit",
+            "disabled": true,
+            "settings": {
+              "today-offer-title": "",
+              "whats_the_offer-one": "",
+              "whats_the_offer-two": "",
+              "whats_the_offer-three": ""
+            }
+          }
+        },
+        "block_order": [
+          "eec886fd-f562-4097-98a0-d0a1ce6a3455",
+          "bdb7a6ef-8aa1-4143-9350-b3168709c532",
+          "6c40e8bd-19e5-47e5-86c0-50a88ff60e35",
+          "f7a08707-198e-40e7-8fea-9a3de9f507a3",
+          "38c8f8be-2921-43f7-bc15-b66f3d89117a",
+          "20be9212-a8c2-4633-a02e-485e07c0b78b",
+          "72c9c0b4-e8a8-4c59-b69a-fd8dfecb3085",
+          "82dd0489-7529-4def-be0d-4085b2b14195",
+          "a937e74f-b9f5-4e5b-be6b-2098afdc1563",
+          "7c9fecf6-bb81-4c17-83ac-6fa57b7bcf99",
+          "cd5749b9-219b-405d-b993-a9d018ddc47a",
+          "ce87a0a0-9b62-458b-87eb-13d2ce687401",
+          "13585ab1-eeb4-4e7f-b6c5-b21a49419618",
+          "e30858e1-0b7a-4767-8e06-280794b88c08"
+        ],
+        "settings": {
+          "product_title": "Skin Brightening Kit",
+          "product_subtitle": "Get rid of dark spots & improve skin glow",
+          "product_det": ""
+        }
+      },
+      "product-kit-ingredients-featured-in": {
+        "type": "product-kit-ingredients-featured-in",
+        "blocks": {
+          "1f059805-1c56-4f55-b78e-80712354deb9": {
+            "type": "featured_in_det",
+            "settings": {
+              "featured_img": "shopify:\/\/shop_images\/vogue.png",
+              "featured_in_detail": "PHAs(Polyhydroxy Acids) are the least well-known\nof the skincare acids. Due to its large molecules,\nthey penetrate the skin less thoroughly, & therefore\nare less likely to induce side effects."
+            }
+          },
+          "4a4ecc59-70dd-45a0-bc4a-6de6b094892c": {
+            "type": "featured_in_det",
+            "settings": {
+              "featured_img": "shopify:\/\/shop_images\/healthline.png",
+              "featured_in_detail": "Hyaluronic acid can help your skin look and feel\nmore supple. When applied to the surface of the\nskin, hyaluronic acid serums can reduce wrinkles,\nredness and dermatitis."
+            }
+          },
+          "8faf8abf-32b6-44a6-b949-767dce02243d": {
+            "type": "featured_in_det",
+            "settings": {
+              "featured_img": "shopify:\/\/shop_images\/webmd.png",
+              "featured_in_detail": "Grape seed extract is an active antioxidant &\nhelps in improved blood circulation. It also\nhas anti-inflammatory and antimicrobial\nproperties, and helps from sun damage."
+            }
+          }
+        },
+        "block_order": [
+          "1f059805-1c56-4f55-b78e-80712354deb9",
+          "4a4ecc59-70dd-45a0-bc4a-6de6b094892c",
+          "8faf8abf-32b6-44a6-b949-767dce02243d"
+        ],
+        "settings": {
+          "Title_featured": "Ingredients Featured In"
+        }
+      },
+      "kit-complete-skincare-regime": {
+        "type": "kit-complete-skincare-regime",
+        "settings": {
+        }
+      },
+      "kit-whats-inside": {
+        "type": "kit-whats-inside",
+        "blocks": {
+          "73cbc381-bf5e-4ff4-8508-c67a1bd58899": {
+            "type": "whats_inside_sec",
+            "settings": {
+              "Name_of_item": "Foaming Cleanser With Purslane Extract",
+              "product_image": "shopify:\/\/shop_images\/skin-brigting-kit-sec.jpg",
+              "item_dec": "Introducing India’s 1st Foaming cleanser with Purslane\nextract. Remove even the hardest to remove makeup, mildly\nexfoliate your skin and get the rejuvenation your skin needs\nwith our foaming cleanser.",
+              "what_it_does_title": "What does it do to your skin?",
+              "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+              "what_it_does_text_one": "Minimizes dark spots",
+              "what_it_does_image_two": "shopify:\/\/shop_images\/even-skin-tone.png",
+              "what_it_does_text_two": "Even Skin tone",
+              "what_it_does_image_three": "shopify:\/\/shop_images\/reduce-scares.png",
+              "what_it_does_text_three": "Reduce acne scars"
+            }
+          },
+          "bb1aeaf1-da7d-4d32-adb1-33dafb43e008": {
+            "type": "whats_inside_sec",
+            "settings": {
+              "Name_of_item": "PHA Alcohol-Free Face Toner",
+              "product_image": "shopify:\/\/shop_images\/Face-Toner-Kit_png.webp",
+              "item_dec": "Say goodbye to clogged pores and hello to smoother and brighter skin. Make exfoliating, pH balancing, pore tightening, and skin moisturizing possible, all with a single toner! 100% Alcohol-free with added PHA to give excellent hydration effects on the skin!",
+              "what_it_does_title": "What does it do to your skin?",
+              "what_it_does_image_one": "shopify:\/\/shop_images\/pha-icon1.png",
+              "what_it_does_text_one": "Hydrates & rejuvenates the skin",
+              "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon2.png",
+              "what_it_does_text_two": "Restores the skin’s pH level",
+              "what_it_does_image_three": "shopify:\/\/shop_images\/pha-icon3.png",
+              "what_it_does_text_three": "Minimises pore size & unclogs them"
+            }
+          },
+          "6c8cbc6e-779c-4963-8ae2-64e9ada155fd": {
+            "type": "whats_inside_sec",
+            "settings": {
+              "Name_of_item": "Alpha Arbutin Face Serum",
+              "product_image": "shopify:\/\/shop_images\/Alpha_Arbutin.png",
+              "item_dec": "Get rid of dark spots and hyperpigmentation forever. Our Arbutin serum with added grape seed extract is more effective and safer alternative to hydroquinone and provides a skin brightening effect.",
+              "what_it_does_title": "What does it do to your skin?",
+              "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+              "what_it_does_text_one": "Minimizes dark spots",
+              "what_it_does_image_two": "shopify:\/\/shop_images\/even-skin-tone.png",
+              "what_it_does_text_two": "Evens skin tone",
+              "what_it_does_image_three": "shopify:\/\/shop_images\/reduce-scares.png",
+              "what_it_does_text_three": "Reduce acne scars"
+            }
+          },
+          "80acf9f2-0896-4eff-af6a-56794e3899b2": {
+            "type": "whats_inside_sec",
+            "settings": {
+              "Name_of_item": "Vitamin C Face Serum",
+              "product_image": "shopify:\/\/shop_images\/Vitamin_c.png",
+              "item_dec": "Radiant, glowing skin with 100% Guaranteed results. Being India’s first 20% Vitamin C serum to help brighten your complexion and fight against free radical damage! A glow-boosting serum to reduce sun damage and dark spots.",
+              "what_it_does_title": "What does it do to your skin?",
+              "what_it_does_image_one": "shopify:\/\/shop_images\/vitaminc-icon1.png",
+              "what_it_does_text_one": "Brightens complexion",
+              "what_it_does_image_two": "shopify:\/\/shop_images\/dark-spot_min.png",
+              "what_it_does_text_two": "Treats dark spots",
+              "what_it_does_image_three": "shopify:\/\/shop_images\/vitaminc-icon3.png",
+              "what_it_does_text_three": "Fights free radical damage"
+            }
+          },
+          "b6c0b9cf-512f-430e-a9e5-0b090786f60f": {
+            "type": "whats_inside_sec",
+            "settings": {
+              "Name_of_item": "Face Moisturiser",
+              "product_image": "shopify:\/\/shop_images\/Face-Moisturiser.jpg",
+              "item_dec": "Fast absorbing moisturiser for all skin types to keep skin healthy, hydrated and firm throughout the day. With added cucumber and grape seed extract for added freshness!",
+              "what_it_does_title": "What does it do to your skin?",
+              "what_it_does_image_one": "shopify:\/\/shop_images\/mois-icon1.png",
+              "what_it_does_text_one": "Nourishes the skin",
+              "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon3.png",
+              "what_it_does_text_two": "Brightens complexion",
+              "what_it_does_image_three": "shopify:\/\/shop_images\/salicy-icon3.png",
+              "what_it_does_text_three": "Smoother skin texture"
+            }
+          },
+          "d46d7409-b304-4f17-8158-552613526e66": {
+            "type": "whats_inside_sec",
+            "settings": {
+              "Name_of_item": "Liquid Drop Formulation Sun Drops",
+              "product_image": "shopify:\/\/shop_images\/Sun-Drops-Kit-section.jpg",
+              "item_dec": "Introducing the newest range of sunscreen without the cream – Sundrops! Now available in liquid formulation SPF 50 to blend perfectly into your skin without leaving a smudge mark or greasy residue",
+              "what_it_does_title": "What does it do to your skin?",
+              "what_it_does_image_one": "shopify:\/\/shop_images\/vitaminc-icon1.png",
+              "what_it_does_text_one": "Uv protection",
+              "what_it_does_image_two": "shopify:\/\/shop_images\/sundrop-icon2.png",
+              "what_it_does_text_two": "Protects from sunburn",
+              "what_it_does_image_three": "shopify:\/\/shop_images\/sundrop-icon3.png",
+              "what_it_does_text_three": "Prevent premature aging"
+            }
+          }
+        },
+        "block_order": [
+          "73cbc381-bf5e-4ff4-8508-c67a1bd58899",
+          "bb1aeaf1-da7d-4d32-adb1-33dafb43e008",
+          "6c8cbc6e-779c-4963-8ae2-64e9ada155fd",
+          "80acf9f2-0896-4eff-af6a-56794e3899b2",
+          "b6c0b9cf-512f-430e-a9e5-0b090786f60f",
+          "d46d7409-b304-4f17-8158-552613526e66"
+        ],
+        "settings": {
+          "whats_inside_title": "What’s inside?"
+        }
+      },
+      "kit-key-ingredients": {
+        "type": "kit-key-ingredients",
+        "blocks": {
+          "5cb7d69d-f68e-4c2b-be28-42447ed6ed2e": {
+            "type": "key_ingredient_sec",
+            "settings": {
+              "ki_title": "Berry",
+              "ki_image": "shopify:\/\/shop_images\/cranberry.png"
+            }
+          },
+          "1b485034-1699-4fd6-a612-323e90531ec1": {
+            "type": "key_ingredient_sec",
+            "settings": {
+              "ki_title": "Orange",
+              "ki_image": "shopify:\/\/shop_images\/orange.png"
+            }
+          },
+          "3c661bd2-5197-4a13-a289-3d914a37765b": {
+            "type": "key_ingredient_sec",
+            "settings": {
+              "ki_title": "Avocado",
+              "ki_image": "shopify:\/\/shop_images\/avocado.png"
+            }
+          },
+          "f8616c7d-692c-43f3-b6ba-8217965de683": {
+            "type": "key_ingredient_sec",
+            "settings": {
+              "ki_title": "Strawberry",
+              "ki_image": "shopify:\/\/shop_images\/strawberry.png"
+            }
+          },
+          "7bda3e5e-8c79-4c2e-8141-9909f78a2444": {
+            "type": "key_ingredient_sec",
+            "settings": {
+              "ki_title": "Olive Squalane",
+              "ki_image": "shopify:\/\/shop_images\/olive.png"
+            }
+          },
+          "6382b339-2fb9-46b7-981a-2d5717573f64": {
+            "type": "key_ingredient_sec",
+            "settings": {
+              "ki_title": "Potato",
+              "ki_image": "shopify:\/\/shop_images\/potato.png"
+            }
+          }
+        },
+        "block_order": [
+          "5cb7d69d-f68e-4c2b-be28-42447ed6ed2e",
+          "1b485034-1699-4fd6-a612-323e90531ec1",
+          "3c661bd2-5197-4a13-a289-3d914a37765b",
+          "f8616c7d-692c-43f3-b6ba-8217965de683",
+          "7bda3e5e-8c79-4c2e-8141-9909f78a2444",
+          "6382b339-2fb9-46b7-981a-2d5717573f64"
+        ],
+        "settings": {
+          "ki_title": "Key ingredients"
+        }
+      },
+      "kit-what-to-expect": {
+        "type": "kit-what-to-expect",
+        "blocks": {
+          "94c35781-fa90-4995-81a3-b0d695c0050a": {
+            "type": "routine_blocks",
+            "settings": {
+              "Am_routine": "<ul>                    <li>Cleanser<\/li>                     <li>Toner<\/li>                     <li>Vitamin C<\/li>                     <li>Moisturiser<\/li>                     <li>Sundrops<\/li>\n  <\/ul>",
+              "Pm_rountine": "<ul class=\"text-white\">\n                      <li>Cleanser<\/li>                      <li>Toner<\/li>                      <li>Alpha Arbutin<\/li>                      <li>Moisturiser<\/li>\n   <\/ul>"
+            }
+          }
+        },
+        "block_order": [
+          "94c35781-fa90-4995-81a3-b0d695c0050a"
+        ],
+        "settings": {
+          "title_what_expect": "What to expect?",
+          "subtitle_what_expect": "<b>Makes the skin <\/b> – Radiant, Soft, Dewey, Naturally Glowing"
+        }
+      },
+      "rfss-home-most-loved": {
+        "type": "rfss-home-most-loved",
+        "blocks": {
+          "55e99ea4-6224-4e83-952c-da884513f9e6": {
+            "type": "loved_products",
+            "settings": {
+              "most_loved_products": "undereye-roll-on"
+            }
+          },
+          "b527697a-eb93-42d1-93a3-4cfff58c50a0": {
+            "type": "loved_products",
+            "settings": {
+              "most_loved_products": "moisturiser-all-skin-types"
+            }
+          },
+          "311ec708-764d-4f52-b60f-575dff95c35c": {
+            "type": "loved_products",
+            "settings": {
+              "most_loved_products": "sundrops"
+            }
+          },
+          "a2d2d024-dd9a-40ec-8d9b-b6d2757f88e1": {
+            "type": "loved_products",
+            "settings": {
+              "most_loved_products": "alpha-arbutin-grapeseed-beta-arbutin"
+            }
+          },
+          "14140619-1562-46eb-abd5-e2a0c3aa1b48": {
+            "type": "loved_products",
+            "settings": {
+              "most_loved_products": "salicylic-acid-serum"
+            }
+          }
+        },
+        "block_order": [
+          "55e99ea4-6224-4e83-952c-da884513f9e6",
+          "b527697a-eb93-42d1-93a3-4cfff58c50a0",
+          "311ec708-764d-4f52-b60f-575dff95c35c",
+          "a2d2d024-dd9a-40ec-8d9b-b6d2757f88e1",
+          "14140619-1562-46eb-abd5-e2a0c3aa1b48"
+        ],
+        "settings": {
+          "most-loved-title": ""
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+          "discount": "Use code: <b>EXTRA<\/b> Get 15% Off"
+        }
+      },
+      "faq-page": {
+        "type": "faq-page",
+        "blocks": {
+          "7773f20b-1fd1-42e5-99ce-41c1c1378190": {
+            "type": "faq_list",
+            "settings": {
+              "faq_question": "How do I join?",
+              "faq_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            }
+          },
+          "18b466be-1722-40da-9a84-bf8ddc325778": {
+            "type": "faq_list",
+            "settings": {
+              "faq_question": "Does it cost anything to join? Or to earn\/redeem points?",
+              "faq_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            }
+          },
+          "085c25c6-6486-43e3-918b-f85f11f39ef4": {
+            "type": "faq_list",
+            "settings": {
+              "faq_question": "How can I earn points?",
+              "faq_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            }
+          },
+          "57363130-bc8f-47a6-bf58-9d4135001889": {
+            "type": "faq_list",
+            "settings": {
+              "faq_question": "How do I earn points for leaving a review?",
+              "faq_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            }
+          },
+          "56ab7ab9-960f-4e38-a145-6c3c285d4854": {
+            "type": "faq_list",
+            "settings": {
+              "faq_question": "Can I buy extra points?",
+              "faq_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+            }
+          }
+        },
+        "block_order": [
+          "7773f20b-1fd1-42e5-99ce-41c1c1378190",
+          "18b466be-1722-40da-9a84-bf8ddc325778",
+          "085c25c6-6486-43e3-918b-f85f11f39ef4",
+          "57363130-bc8f-47a6-bf58-9d4135001889",
+          "56ab7ab9-960f-4e38-a145-6c3c285d4854"
+        ],
+        "settings": {
+          "title_faq": ""
+        }
+      },
+      "home-review": {
+        "type": "home-review",
+        "blocks": {
+          "9ba88e55-f986-4a89-8275-ea6700fa5d50": {
+            "type": "review_item",
+            "settings": {
+              "customer_image": "shopify:\/\/shop_images\/Joylyn.png",
+              "Customer_reviews": "I absolutely love the Niacinamide acid serum. It keeps my skin hydrated. Not to mention, loved all the other products in the gift kit too.",
+              "Customer_reviews_more": "",
+              "Customer_name": "Joylyn"
+            }
+          },
+          "ffefef36-6a4b-4bad-9547-67b336f563ee": {
+            "type": "review_item",
+            "settings": {
+              "customer_image": "shopify:\/\/shop_images\/Kushi.png",
+              "Customer_reviews": "I have used this serum for a month and I must say it is working pretty well. Though I dont have much wrinkles...",
+              "Customer_reviews_more": "it has controlled my elasticity. I am happy with the product. Thank you Team refresh skin science.",
+              "Customer_name": "kushi"
+            }
+          },
+          "9f223760-8826-43cf-86da-31315be0acb3": {
+            "type": "review_item",
+            "settings": {
+              "customer_image": "shopify:\/\/shop_images\/Maria_Joseph.png",
+              "Customer_reviews": "I had a dehydrated skin for a long time, which made my face look dry. One of my friend suggested Hyaluronic serum from Refresh.",
+              "Customer_reviews_more": "I am using it weekly thrice and now my skin is getting better. It is lightweight and worth the buy!",
+              "Customer_name": "Maria"
+            }
+          },
+          "04b2cd42-d4fc-4d09-9a4e-40d1b0554312": {
+            "type": "review_item",
+            "settings": {
+              "customer_image": "shopify:\/\/shop_images\/Spoorthy.png",
+              "Customer_reviews": "Have been trying out refresh products for a while now and it has become my go -to brand for skincare. Kudos team!",
+              "Customer_reviews_more": "",
+              "Customer_name": "spoorthy"
+            }
+          }
+        },
+        "block_order": [
+          "9ba88e55-f986-4a89-8275-ea6700fa5d50",
+          "ffefef36-6a4b-4bad-9547-67b336f563ee",
+          "9f223760-8826-43cf-86da-31315be0acb3",
+          "04b2cd42-d4fc-4d09-9a4e-40d1b0554312"
+        ],
+        "settings": {
+          "review_heading": "Real People Real Stories"
+        }
+      },
+      "active-ingredients": {
+        "type": "active-ingredients",
+        "settings": {
+          "ing-image": "shopify:\/\/shop_images\/inge.jpg"
+        }
+      },
+      "rfss-your-skin-type": {
+        "type": "rfss-your-skin-type",
+        "blocks": {
+          "fbee9c12-b8ef-42b0-a06b-683c761f9b55": {
+            "type": "skin_type",
+            "settings": {
+              "skintype_image": "shopify:\/\/shop_images\/dry_skin.png",
+              "type_name": "Dry Skin",
+              "link": "\/collections\/all-products?filter.p.m.custom.skin_type_for=Dry+Skin"
+            }
+          },
+          "347be892-400a-4fb8-9efa-ba7f918fd6f1": {
+            "type": "skin_type",
+            "settings": {
+              "skintype_image": "shopify:\/\/shop_images\/normal_skin.png",
+              "type_name": "Normal Skin",
+              "link": "\/collections\/all-products?filter.p.m.custom.skin_type_for=All+Skin+"
+            }
+          },
+          "a216c76d-cabe-48bf-8f42-5f4235e4b911": {
+            "type": "skin_type",
+            "settings": {
+              "skintype_image": "shopify:\/\/shop_images\/oily_skin.png",
+              "type_name": "Oily & Combination Skin",
+              "link": "\/collections\/all-products?filter.p.m.custom.skin_type_for=Oily+skin"
+            }
+          },
+          "2ea40cd5-eda3-4023-a1a4-683e7e677e96": {
+            "type": "skin_type",
+            "settings": {
+              "skintype_image": "shopify:\/\/shop_images\/mature_skin.png",
+              "type_name": "Mature Skin",
+              "link": "\/collections\/all-products?filter.p.m.custom.skin_type_for=Wrinkles"
+            }
+          }
+        },
+        "block_order": [
+          "fbee9c12-b8ef-42b0-a06b-683c761f9b55",
+          "347be892-400a-4fb8-9efa-ba7f918fd6f1",
+          "a216c76d-cabe-48bf-8f42-5f4235e4b911",
+          "2ea40cd5-eda3-4023-a1a4-683e7e677e96"
+        ],
+        "settings": {
+        }
+      },
+      "referandearn": {
+        "type": "referandearn",
+        "settings": {
+          "image_one": "shopify:\/\/shop_images\/good.png",
+          "image_two": "shopify:\/\/shop_images\/fdca.png",
+          "image_three": "shopify:\/\/shop_images\/tested.png"
+        }
+      },
+      "app-optimization": {
+        "type": "app-optimization",
+        "blocks": {
+          "180a7dd3-1eb1-4d43-9189-453a0ca40b19": {
+            "type": "app",
+            "settings": {
+              "title": "goaffpro",
+              "url": "cdn.shopify.com\/proxy\/07eb0cc5a7695bf52da16e7ec7f686044148c07efef661459cd4f21d9160d74c\/api.goaffpro.com\/loader.js",
+              "block_index": true,
+              "block_product": true,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": true,
+              "block_article": true,
+              "block_cart": true,
+              "block_search": true,
+              "block_customers": true,
+              "block_gift_card": true,
+              "scroll_index": false,
+              "scroll_product": true,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": true,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": true,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "7497b397-bcd2-410f-af6b-c8b1909eac7a": {
+            "type": "app",
+            "settings": {
+              "title": "review",
+              "url": "thimatic-apps.com\/product_review\/theme_files\/wc-product-review.js",
+              "block_index": true,
+              "block_product": true,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": true,
+              "block_article": true,
+              "block_cart": true,
+              "block_search": true,
+              "block_customers": true,
+              "block_gift_card": true,
+              "scroll_index": true,
+              "scroll_product": true,
+              "scroll_collection": true,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "6b3c59c6-a2ef-49ee-be9b-1d20d3327d9a": {
+            "type": "app",
+            "settings": {
+              "title": "embed",
+              "url": "https:\/\/meet.google.com\/fxs-ugru-ktq",
+              "block_index": true,
+              "block_product": true,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": true,
+              "block_article": true,
+              "block_cart": true,
+              "block_search": true,
+              "block_customers": true,
+              "block_gift_card": true,
+              "scroll_index": true,
+              "scroll_product": true,
+              "scroll_collection": true,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "ca5fa428-6156-4cd7-8b0d-9f44aac7a974": {
+            "type": "app",
+            "settings": {
+              "title": "boom",
+              "url": "boomapi.sealapps.com\/JS\/boom-iframe-pro.js",
+              "block_index": true,
+              "block_product": true,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": true,
+              "block_article": true,
+              "block_cart": true,
+              "block_search": false,
+              "block_customers": false,
+              "block_gift_card": false,
+              "scroll_index": true,
+              "scroll_product": true,
+              "scroll_collection": true,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          }
+        },
+        "block_order": [
+          "180a7dd3-1eb1-4d43-9189-453a0ca40b19",
+          "7497b397-bcd2-410f-af6b-c8b1909eac7a",
+          "6b3c59c6-a2ef-49ee-be9b-1d20d3327d9a",
+          "ca5fa428-6156-4cd7-8b0d-9f44aac7a974"
+        ],
+        "settings": {
+          "enable": true,
+          "debug_enable": false
+        }
+      },
+      "before-after-gallery": {
+        "type": "before-after-gallery",
+        "blocks": {
+          "393fddff-d476-404d-b564-59b0d3f1284f": {
+            "type": "before_after_sec",
+            "settings": {
+              "customer_image": "shopify:\/\/shop_images\/Group_2987.jpg",
+              "bag_title": "Granactive Retinoid Serum For Wrinkles & Fine Lines",
+              "bag_sub_title": "Reduce signs of aging & improve elasticity",
+              "bag_skin_type": "Normal Skin",
+              "bag_skin_concern": "Fine lines, loss of elasticity",
+              "bag_skin_duration": "8 weeks",
+              "bag_skin_content": "I am using granactive serum for 3 months now. Seeing such a huge difference compared to how my skin felt earlier and how it feels now. I definitely would recommend to try this routine!"
+            }
+          },
+          "b819c966-97f0-4fdf-bcdb-3a53d33b1474": {
+            "type": "before_after_sec",
+            "settings": {
+              "customer_image": "shopify:\/\/shop_images\/Salicylic_Serum_rfss.jpg",
+              "bag_title": "Salicylic Acid Face Serum With Green Tea Extract",
+              "bag_sub_title": "Reduce active acne for clear skin",
+              "bag_skin_type": "Oily Skin",
+              "bag_skin_concern": "Pimple, Frequent acne breakout",
+              "bag_skin_duration": "6 weeks",
+              "bag_skin_content": "Used to having continuous acne breakouts every now and then and it really took a hit on my confidence level. After using this serum, i am having less pimple on face and my skin is also healing good."
+            }
+          },
+          "2da81cf2-7d1b-46ea-acfb-3165c50478b6": {
+            "type": "before_after_sec",
+            "settings": {
+              "customer_image": "shopify:\/\/shop_images\/Group_2989.jpg",
+              "bag_title": "Niacinamide Face Serum With 2% Zinc",
+              "bag_sub_title": "Reduce acne & blemishes",
+              "bag_skin_type": "Combination skin type",
+              "bag_skin_concern": "Acne marks & scars",
+              "bag_skin_duration": "8 weeks",
+              "bag_skin_content": "Been using niacinamide serum for my puberty acne scars which never went off. After 2 months of use and continuous expert consultation with Refresh, my acne scars are finally gone from my face."
+            }
+          },
+          "57468642-f07d-4a5d-964a-51dfbcccf104": {
+            "type": "before_after_sec",
+            "disabled": true,
+            "settings": {
+              "bag_title": "",
+              "bag_sub_title": "",
+              "bag_skin_type": "",
+              "bag_skin_concern": "",
+              "bag_skin_duration": "",
+              "bag_skin_content": ""
+            }
+          }
+        },
+        "block_order": [
+          "393fddff-d476-404d-b564-59b0d3f1284f",
+          "b819c966-97f0-4fdf-bcdb-3a53d33b1474",
+          "2da81cf2-7d1b-46ea-acfb-3165c50478b6",
+          "57468642-f07d-4a5d-964a-51dfbcccf104"
+        ],
+        "settings": {
+          "before_after_gal": ""
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "16789939927838974014": {
+        "type": "shopify:\/\/apps\/rivyo-product-reviews-qa\/blocks\/app-embed\/f1860e84-309f-40ca-a2df-188435a622f3",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "12314280791104830742": {
+        "type": "shopify:\/\/apps\/webengage\/blocks\/webengage-embed\/1d458caf-1d70-4697-a570-55048d495614",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "12715122073293913128": {
+        "type": "shopify:\/\/apps\/refreshskinscience_simpl_chkt\/blocks\/widgetScript\/a2b04530-79df-49e6-9f1b-8b9e693e8118",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+    }
+  }
+}

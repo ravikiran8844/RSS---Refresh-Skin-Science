@@ -1,0 +1,81 @@
+<div class="container">
+  {% for collection in collections %}
+    {% unless collection.handle == 'frontpage' %}
+      {% capture collection_title %}
+        {{ collection.title | escape }}
+      {% endcapture %}
+      <a href="{{ collection.url }}" class="d-block text-dark text-decoration-none pb-3">
+        <h2 class="fs-2 text-center">{{ collection_title }}
+        </h2>
+      </a>
+      <div class="row">
+        {% for product in collection.products limit:6 %}
+          <div class="col-lg-3 col-md-4">
+            <div class="produt_li_shop mb-5  similar_pd text-center position-relative">
+              <a href="{{ product.url | within: collection }}">
+              <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" class="w-100">
+            </a>
+            <a href="{{ product.url | within: collection }}" class="d-block mt-4 product_title fw-bolder fs-6 fw-bold">{{ product.title }}
+            </a>
+            <div class="mb-3 mt-3">
+              <span class="rfss-grey rfss_sub_title">{{ product.description }}</span>
+
+              <div class="wc_product_review_badge mb-2" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+
+
+              {% if product.compare_at_price == blank %}
+                <span class="pe-2">MRP :</span>
+                <span class="fs-5 fw-bolder me-3">{{ product.price | money}}
+                {% else %}
+                <span class="pe-2">MRP :</span>
+                  {% if product.compare_at_price != blank %}
+                    <span class="dashed fs-6 position-relative">{{ product.compare_at_price | money }}</span>
+                  {% endif %}
+                  <span class="fs-5 fw-bolder ms-3">{{ product.price | money }}</span>
+                {% endif %}
+
+              </div>
+              {% unless product.available %}
+                <strong class="sold_out">sold out</strong>
+              {% endunless %}
+
+              {% if product.available %}
+                <form method="post" action="/cart/add" class="ac_form position-relative">
+                  <input name="id" value="{{ product.variants.first.id }}" type="hidden"/>
+                  <input name="add" id="AddToCart" value="Buy Now" type="submit" class="w-100"/>
+                  <div class="rotates">
+                    <span class="spin"></span>
+                  </div>
+                  <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/t/6/assets/right-arrow-thin.svg?v=25521640411634951531663145304" class="bn_right_arrow">
+
+                </form>
+              {% else %}
+                <form method="post" class="ac_form position-relative">
+                  <input name="id" value="{{ product.variants.first.id }}" type="hidden"/>
+                  <input name="add" value="Sold Out" type="submit" class="w-100" disabled/>
+                  <div class="rotates">
+                    <span class="spin"></span>
+                  </div>
+                  <img src="//cdn.shopify.com/s/files/1/0577/7129/4793/t/6/assets/right-arrow-thin.svg?v=25521640411634951531663145304" class="bn_right_arrow">
+
+                </form>
+              {% endif %}
+
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="similar_pd text-center mb-5 ">
+        <a href="{{ collection.url }}">
+          <button class="btn m-auto w-25">Load More</button>
+        </a>
+
+      </div>
+    {% endunless %}
+  {% endfor %}
+</div>
+<style>
+  .wc_product_review_badge .wc_review_badge_inner .wc_product_review_title {   
+    margin-top: 10px;
+}
+</style>

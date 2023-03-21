@@ -1,0 +1,365 @@
+{
+  "sections": {
+    "product-meta-kit": {
+      "type": "product-meta-rfss-kit",
+      "blocks": {
+        "8fa5f07e-1de0-4f6c-a9bb-073290d7eb73": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Brightens Your Complexion.",
+            "product_contains_price": ""
+          }
+        },
+        "031a1eb3-d646-40c4-a81f-7fda15121e93": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Fights Free Radical Damage.",
+            "product_contains_price": ""
+          }
+        },
+        "39dfbe52-b00c-488d-ad0f-b7d84650431b": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Prevents Fine Lines And Wrinkles.",
+            "product_contains_price": ""
+          }
+        },
+        "d91008f6-36e1-4dc3-be76-709b5ed26b1d": {
+          "type": "today-offer-for-kit",
+          "settings": {
+            "today-offer-title": "Today’s Offers",
+            "whats_the_offer-one": "FLAT 25% OFF + FREE HYALURONIC ACID SERUM ON ORDERS ABOVE RS.599\/-",
+            "whats_the_offer-two": "FREE SHIPPING ON ALL PREPAID ORDERS",
+            "whats_the_offer-three": "Get Flat 25% Off On Gift Sets"
+          }
+        }
+      },
+      "block_order": [
+        "8fa5f07e-1de0-4f6c-a9bb-073290d7eb73",
+        "031a1eb3-d646-40c4-a81f-7fda15121e93",
+        "39dfbe52-b00c-488d-ad0f-b7d84650431b",
+        "d91008f6-36e1-4dc3-be76-709b5ed26b1d"
+      ],
+      "settings": {
+        "product_title": "",
+        "product_subtitle": "Foaming Cleanser + Vitamin C Face Serum",
+        "product_det": ""
+      }
+    },
+    "product-kit-ingredients-featured-in": {
+      "type": "product-kit-ingredients-featured-in",
+      "blocks": {
+        "eba9c691-7b77-47b2-91f4-05ed72aebf21": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/vogue.png",
+            "featured_in_detail": "Potato extract is rich in Vitamin C, and can combat dark spots, blemishes or acne scars. Its skin-tightening properties are perfect to diminish puffiness and dark circles."
+          }
+        },
+        "c2a4299b-6c4a-49fe-bef5-46c1005c67f7": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/healthline.png",
+            "featured_in_detail": "Topical vitamin C reduces wrinkles, and helps in treating dryness of the skin. It also has antioxidant properties, which result in a better skin-aging appearance."
+          }
+        },
+        "f63b704d-ada6-4223-b90a-8b4b88f81a3d": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/webmd.png",
+            "featured_in_detail": "Topical vitamin C is a science-backed, dermatologist-favourite ingredient that may help slow early skin aging, prevent sun damage, and improve the appearance of wrinkles, dark spots, and acne."
+          }
+        }
+      },
+      "block_order": [
+        "eba9c691-7b77-47b2-91f4-05ed72aebf21",
+        "c2a4299b-6c4a-49fe-bef5-46c1005c67f7",
+        "f63b704d-ada6-4223-b90a-8b4b88f81a3d"
+      ],
+      "settings": {
+        "Title_featured": "Ingredients Featured In"
+      }
+    },
+    "kit-complete-skincare-regime": {
+      "type": "kit-complete-skincare-regime",
+      "settings": {
+      }
+    },
+    "kit-whats-inside": {
+      "type": "kit-whats-inside",
+      "blocks": {
+        "e5f127a2-d512-470c-b05f-2953d3346900": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Foaming Cleanser With Purslane Extract",
+            "product_image": "shopify:\/\/shop_images\/skin-brigting-kit-sec.jpg",
+            "item_dec": "Introducing India’s 1st Foaming cleanser with Purslane extract. Remove even the hardest to remove makeup, mildly exfoliate your skin and get the rejuvenation your skin needs with our foaming cleanser.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_one": "Minimises  dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/even-skin-tone.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/reduce-scares.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        },
+        "b9407f1e-8f33-4981-82bb-40f58ae7cdd4": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Vitamin C Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Vitamin_c.png",
+            "item_dec": "Radiant, glowing skin with 100% Guaranteed results. Being India’s first 20% Vitamin C serum to help brighten your complexion and fight against free radical damage! A glow-boosting serum to reduce sun damage and dark spots.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/vitaminc-icon1.png",
+            "what_it_does_text_one": "Hydrates & rejuvenates the skin",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_two": "Restores the skin’s pH level",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/vitaminc-icon3.png",
+            "what_it_does_text_three": "Minimises pore size & unclogs them"
+          }
+        }
+      },
+      "block_order": [
+        "e5f127a2-d512-470c-b05f-2953d3346900",
+        "b9407f1e-8f33-4981-82bb-40f58ae7cdd4"
+      ],
+      "settings": {
+        "whats_inside_title": ""
+      }
+    },
+    "kit-key-ingredients": {
+      "type": "kit-key-ingredients",
+      "blocks": {
+        "648adb5d-6cef-4d73-937a-0e27e94cd01d": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Berry",
+            "ki_image": "shopify:\/\/shop_images\/cranberry.png"
+          }
+        },
+        "ed2ca26a-3064-47e4-bfae-c164c1c69cbc": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Orange",
+            "ki_image": "shopify:\/\/shop_images\/orange.png"
+          }
+        },
+        "b4702b3e-9516-4ad5-919f-18396aaefb95": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Avocado",
+            "ki_image": "shopify:\/\/shop_images\/avocado.png"
+          }
+        },
+        "5e20f438-e708-4251-bdc6-bf35cb99f3c6": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Strawberry",
+            "ki_image": "shopify:\/\/shop_images\/strawberry.png"
+          }
+        },
+        "0df56463-72b5-4d36-b7e7-45f140241705": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Olive Squalane",
+            "ki_image": "shopify:\/\/shop_images\/olive.png"
+          }
+        },
+        "eedd5463-233b-4d78-8074-f9f21e8d5f57": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Potato",
+            "ki_image": "shopify:\/\/shop_images\/potato.png"
+          }
+        }
+      },
+      "block_order": [
+        "648adb5d-6cef-4d73-937a-0e27e94cd01d",
+        "ed2ca26a-3064-47e4-bfae-c164c1c69cbc",
+        "b4702b3e-9516-4ad5-919f-18396aaefb95",
+        "5e20f438-e708-4251-bdc6-bf35cb99f3c6",
+        "0df56463-72b5-4d36-b7e7-45f140241705",
+        "eedd5463-233b-4d78-8074-f9f21e8d5f57"
+      ],
+      "settings": {
+        "ki_title": "Key Ingredients"
+      }
+    },
+    "kit-what-to-expect": {
+      "type": "kit-what-to-expect",
+      "blocks": {
+        "a4b8f6cb-75df-47ea-a953-895a55424a3f": {
+          "type": "routine_blocks",
+          "settings": {
+            "Am_routine": "<ul>\n<li>Foaming Cleanser<\/li>\n<li>Vitamin C<\/li>\n<\/ul>",
+            "Pm_rountine": "<ul>\n<li>Foaming Cleanser<\/li>\n<\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "a4b8f6cb-75df-47ea-a953-895a55424a3f"
+      ],
+      "settings": {
+        "title_what_expect": "What to expect?",
+        "subtitle_what_expect": "Makes the skin – Radiant, Soft, Dewey, Naturally Glowing"
+      }
+    },
+    "collapsible-section": {
+      "type": "collapsible-section",
+      "settings": {
+      }
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "5bfe738c-5aa5-45f1-a6ca-4ec5c000fe87": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Will the cleanser help me with removing makeup?",
+            "faq_answers": "We recommend using a makeup remover to remove makeup and using the cleanser to remove any makeup residue left on the skin."
+          }
+        },
+        "0ea6a8f6-6d1e-4fef-8b95-1baba690298a": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Is it necessary to do a patch test before applying?",
+            "faq_answers": "Yes, it is recommended to do a patch test before applying serum, irrespective of the skin type."
+          }
+        },
+        "babdad3c-341f-4efa-9d35-6a9286a716b7": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Will my skin feel Oily after application?",
+            "faq_answers": "Our lightweight, oil-free formula ensures your skin feels light and supple post-application without leaving a sticky residue on the face."
+          }
+        },
+        "518c66b4-83b4-4d6b-a8d7-e3fc8414bc4f": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Can Vitamin C be paired with Retinol?",
+            "faq_answers": "It's best to apply Vitamin C before Retinol, as Vitamin C has a lower pH than Retinol. Once your skin absorbs the Vitamin C serum, your skin will return to its regular pH levels after 30 minutes or so."
+          }
+        },
+        "970ee7f5-e8c9-4d06-ac26-6195001586d6": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Are the products comedogenic?",
+            "faq_answers": "No, All our products are non-comedogenic and are safe to use for people of all skin types."
+          }
+        }
+      },
+      "block_order": [
+        "5bfe738c-5aa5-45f1-a6ca-4ec5c000fe87",
+        "0ea6a8f6-6d1e-4fef-8b95-1baba690298a",
+        "babdad3c-341f-4efa-9d35-6a9286a716b7",
+        "518c66b4-83b4-4d6b-a8d7-e3fc8414bc4f",
+        "970ee7f5-e8c9-4d06-ac26-6195001586d6"
+      ],
+      "settings": {
+        "FAQ_title": "FAQs",
+        "Faq_image": "shopify:\/\/shop_images\/faq_sec_image.jpg"
+      }
+    },
+    "rfss-promise": {
+      "type": "rfss-promise",
+      "settings": {
+      }
+    },
+    "product-similar": {
+      "type": "product-similar",
+      "blocks": {
+        "dfb925fb-a12e-4643-893e-baa56a292200": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-niacinamide"
+          }
+        },
+        "c7806ae1-1669-4a8d-a7b4-966710f08c40": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "salicylic-acid-niacinamide"
+          }
+        },
+        "cbbaf2de-8e67-4f0e-9b35-4cffc9763e04": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-face-toner"
+          }
+        }
+      },
+      "block_order": [
+        "dfb925fb-a12e-4643-893e-baa56a292200",
+        "c7806ae1-1669-4a8d-a7b4-966710f08c40",
+        "cbbaf2de-8e67-4f0e-9b35-4cffc9763e04"
+      ],
+      "settings": {
+        "show_related_products": true,
+        "related_title": "Other fine products"
+      }
+    },
+    "product-our-heros": {
+      "type": "product-our-heros",
+      "blocks": {
+        "ca411107-5421-4481-bc82-6eec01d5c0d2": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d7fbaa3c56564d57b0484ef19bee1591.mp4"
+          }
+        },
+        "aa02ec40-dfde-4283-af01-0af9cc0321a7": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b66b8cc98add489ca6664d97b81864d0.mp4"
+          }
+        },
+        "42789cbf-cdb4-405b-b181-eca93e723f33": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2286c78b5761411ca8014520330bd8ac.mp4"
+          }
+        },
+        "bf14c392-6990-48e2-9fdb-d8fc79035984": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/114babfbcdcd452792515230538bb7d3.mp4"
+          }
+        },
+        "6306e9f7-16dc-4089-9f14-8385e134f010": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e43ac7d77e4a421ebc90b4205c42cf26.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "ca411107-5421-4481-bc82-6eec01d5c0d2",
+        "aa02ec40-dfde-4283-af01-0af9cc0321a7",
+        "42789cbf-cdb4-405b-b181-eca93e723f33",
+        "bf14c392-6990-48e2-9fdb-d8fc79035984",
+        "6306e9f7-16dc-4089-9f14-8385e134f010"
+      ],
+      "settings": {
+        "influncer_video_text": "Influncer Video"
+      }
+    }
+  },
+  "order": [
+    "product-meta-kit",
+    "product-kit-ingredients-featured-in",
+    "kit-complete-skincare-regime",
+    "kit-whats-inside",
+    "kit-key-ingredients",
+    "kit-what-to-expect",
+    "collapsible-section",
+    "product-review",
+    "product-faq",
+    "rfss-promise",
+    "product-similar",
+    "product-our-heros"
+  ]
+}

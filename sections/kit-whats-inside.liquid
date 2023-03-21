@@ -1,0 +1,162 @@
+<div class="container">
+  <h2 class="fw-bolder mb-5 fs-1 text-center text-uppercase">What's Inside?</h2>
+  <div id="whats_inside" class="owl-carousel owl-theme bg-light p-2 p-md-5">
+    {% for block in section.blocks %}
+      <div class="item">
+        <div class="whats-inside">
+          <div class="row">
+            <div class="col-md-6 order-1 order-md-0">
+              <h2 class="fs-1 fw-bold mb-4 w-75">{{ block.settings.Name_of_item }}
+              </h2>
+              <p class="fs-5 rfss-grey w-75">{{ block.settings.item_dec }}
+              </p>
+              <div class="what_it_does_to_skin">
+                <h4 class="fs-3 fw-bold mb-5 mt-4">{{ block.settings.what_it_does_title }}
+                </h4>
+                <div class="d-flex">
+                  {% if block.settings.what_it_does_text_one != "" %}
+                    <div class="text-center me-4">
+                      <img src="{{ block.settings.what_it_does_image_one | img_url : "thumb" }}">
+                      <span class="mt-3 rfss-grey d-block">{{ block.settings.what_it_does_text_one }}
+                      </span>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.what_it_does_text_two != "" %}
+                    <div class="text-center me-4">
+                      <img src="{{ block.settings.what_it_does_image_two | img_url : "thumb" }}">
+                      <span class="mt-3 rfss-grey d-block">{{ block.settings.what_it_does_text_two }}
+                      </span>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.what_it_does_text_three != "" %}
+                    <div class="text-center ">
+                      <img src="{{ block.settings.what_it_does_image_three | img_url : "thumb" }}">
+                      <span class="mt-3 rfss-grey d-block">{{ block.settings.what_it_does_text_three }}
+                      </span>
+                    </div>
+                  {% endif %}
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-6 order-0 order-md-1">
+              <img src="{{ block.settings.product_image | img_url: 'grande' }}" class="whats-does_ban mb-5 mb-md-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+{% schema %}
+  {
+    "name": "whats-inside",
+    "class": "whats-inside mb-5 mt-0 mt-md-5 mt-lg-5",
+    "settings": [
+      {
+        "type": "text",
+        "id": "whats_inside_title",
+        "label": "whats inside title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "whats_inside_sec",
+        "type": "whats_inside_sec",
+        "settings": [
+          {
+            "type": "text",
+            "id": "Name_of_item",
+            "label": "Name of the product"
+          },
+          {
+            "type": "image_picker",
+            "id": "product_image",
+            "label": "Product Image or other image"
+          },
+          {
+            "type": "textarea",
+            "id": "item_dec",
+            "label": "That product description"
+          },
+          {
+            "type": "text",
+            "id": "what_it_does_title",
+            "label": "what it does title"
+          }, {
+            "type": "image_picker",
+            "id": "what_it_does_image_one",
+            "label": "what it does image"
+          }, {
+            "type": "text",
+            "id": "what_it_does_text_one",
+            "label": "what it does text"
+          }, {
+            "type": "image_picker",
+            "id": "what_it_does_image_two",
+            "label": "what it does image"
+          }, {
+            "type": "text",
+            "id": "what_it_does_text_two",
+            "label": "what it does text"
+          }, {
+            "type": "image_picker",
+            "id": "what_it_does_image_three",
+            "label": "what it does image"
+          }, {
+            "type": "text",
+            "id": "what_it_does_text_three",
+            "label": "what it does text"
+          }
+
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  div#whats_inside .owl-nav button {
+    margin: 10px;
+  }
+  div#whats_inside .owl-nav {
+    position: absolute;
+    bottom: 16%;
+  }
+  button.owl-prev.disabled img,
+  button.owl-next.disabled img {
+    opacity: 0.5;
+  }
+  div#whats_inside .owl-nav button:hover {
+    background-color: transparent;
+  }
+  div#whats_inside .owl-dots {
+    display: none;
+  }
+  div#whats_inside .owl-nav button:hover {
+    background-color: transparent;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  $('#whats_inside').owlCarousel({
+    loop: false,
+    margin: 10,
+    nav: true,
+    navText: [
+      "<img src='https://cdn.shopify.com/s/files/1/0577/7129/4793/files/rfss-arrow-right.png?v=1665390600'>", "<img src='https://cdn.shopify.com/s/files/1/0577/7129/4793/files/rfss-arrow-left.png?v=1665390600'>"
+    ],
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+{% endjavascript %}

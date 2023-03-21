@@ -1,0 +1,398 @@
+<link href="{{'blog.css'|asset_url}}" rel="stylesheet" type="text/css" media="all"/>
+<div class="blgg container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-9 blog-main">
+      {% assign number_of_comments = article.comments_count %}
+      {% if comment and comment.created_at %}
+        {% assign number_of_comments = article.comments_count %}
+      {% endif %}
+      <div class="blog-cont">
+        <div></div>
+        <h1 class="text-center article_title" >{{ article.title }}</h1>
+        <p class="text-center art_author" >
+          <time datetime="{{ article.created_at | date: "%B %d, %Y" }}">by {{article.author }} - {{ article.created_at | date: "%B %d, %Y" }}</time>
+        </p>
+        <div><img  class="blog-inner-img" src="{{ article.image.src | img_url: '1299x410' }}"></div>
+        <div  class="art_content">{{ article.content}}</div>
+        <hr>
+        <div class="small--text-center medium--text-center">
+          <ul class="no-bullets inline-list blog_sharer ps-0">
+            <li>
+              <a href="https://www.facebook.com/sharer.php?u={{shop.url}}{{article.url}}" class="face_sh">
+                <span>
+                  <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px">
+                    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/share?url={{shop.url}}{{article.url}}" class="twt_sh">
+                <span>
+                  <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px">
+                    <path d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M36.237,20.524 c0.01,0.236,0.016,0.476,0.016,0.717C36.253,28.559,30.68,37,20.491,37c-3.128,0-6.041-0.917-8.491-2.489 c0.433,0.052,0.872,0.077,1.321,0.077c2.596,0,4.985-0.884,6.879-2.37c-2.424-0.044-4.468-1.649-5.175-3.847 c0.339,0.065,0.686,0.1,1.044,0.1c0.505,0,0.995-0.067,1.458-0.195c-2.532-0.511-4.441-2.747-4.441-5.432c0-0.024,0-0.047,0-0.07 c0.747,0.415,1.6,0.665,2.509,0.694c-1.488-0.995-2.464-2.689-2.464-4.611c0-1.015,0.272-1.966,0.749-2.786 c2.733,3.351,6.815,5.556,11.418,5.788c-0.095-0.406-0.145-0.828-0.145-1.262c0-3.059,2.48-5.539,5.54-5.539 c1.593,0,3.032,0.672,4.042,1.749c1.261-0.248,2.448-0.709,3.518-1.343c-0.413,1.292-1.292,2.378-2.437,3.064 c1.122-0.136,2.188-0.432,3.183-0.873C38.257,18.766,37.318,19.743,36.237,20.524z"/></svg>
+                </span>
+
+              </a>
+            </li>
+            <li>
+              <a href="https://pinterest.com/pin/create/button/?url={{shop.url}}{{article.url}}" class="twt_sh">
+                <span>
+                  <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px"><path d="M25,2C12.3178711,2,2,12.3178711,2,25c0,9.8841553,6.2675781,18.3302612,15.036377,21.5769653	c-0.2525635-2.2515869-0.2129517-5.9390259,0.2037964-7.7243652c0.3902588-1.677002,2.5212402-10.6871338,2.5212402-10.6871338	s-0.6433105-1.2883301-0.6433105-3.1911011c0-2.9901733,1.7324219-5.2211914,3.8898315-5.2211914	c1.8349609,0,2.7197876,1.3776245,2.7197876,3.0281982c0,1.8457031-1.1734619,4.6026611-1.78125,7.1578369	c-0.506897,2.1409302,1.0733643,3.8865356,3.1836548,3.8865356c3.821228,0,6.7584839-4.0296021,6.7584839-9.8453369	c0-5.147583-3.697998-8.7471924-8.9795532-8.7471924c-6.1167603,0-9.7072754,4.588562-9.7072754,9.3309937	c0,1.8473511,0.7111816,3.8286743,1.6000977,4.9069824c0.175293,0.2133179,0.2009277,0.3994141,0.1488647,0.6160278	c-0.1629028,0.678894-0.5250854,2.1392822-0.5970459,2.4385986c-0.0934448,0.3944702-0.3117676,0.4763184-0.7186279,0.2869263	c-2.685791-1.2503052-4.364502-5.1756592-4.364502-8.3295898c0-6.7815552,4.9268188-13.0108032,14.206543-13.0108032	c7.4588623,0,13.2547607,5.3138428,13.2547607,12.4179077c0,7.4100342-4.6729126,13.3729858-11.1568604,13.3729858	c-2.178894,0-4.2263794-1.132019-4.9267578-2.4691772c0,0-1.0783081,4.1048584-1.3404541,5.1112061	c-0.4524536,1.7404175-2.3892822,5.3460083-3.3615723,6.9837036C20.1704712,47.6074829,22.5397949,48,25,48	c12.6826172,0,23-10.3173828,23-23C48,12.3178711,37.6826172,2,25,2z"/></svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url={{shop.url}}{{article.url}}" class="twt_sh">
+                <span>
+                  <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="35px" height="35px">
+                    <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M10.496,8.403 c0.842,0,1.403,0.561,1.403,1.309c0,0.748-0.561,1.309-1.496,1.309C9.561,11.022,9,10.46,9,9.712C9,8.964,9.561,8.403,10.496,8.403z M12,20H9v-8h3V20z M22,20h-2.824v-4.372c0-1.209-0.753-1.488-1.035-1.488s-1.224,0.186-1.224,1.488c0,0.186,0,4.372,0,4.372H14v-8 h2.918v1.116C17.294,12.465,18.047,12,19.459,12C20.871,12,22,13.116,22,15.628V20z"/></svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a class="btn blocg_act" href="{{blog.url}}">Back to the Blogs</a>
+      </div>
+      {% if blog.comments_enabled? %}
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="cmnt-cnt">{{ number_of_comments }} Comments</h3>
+            {% paginate article.comments by 5 %}
+              {% for comment in article.comments %}
+                <div class="align-content-center com-sec p-3">
+                  <div class="cmnt-auth-av">
+                    <img src="{{ 'default_user_icon.png'|asset_url }}" class="w-50">
+                  </div>
+                  <div class="com-box">
+                    <h5 class="com-auth fs-5 fw-bold">{{ comment.author }}
+                    </h5>
+                    <div>{{ comment.content }}</div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% if paginate.pages > 1 %}
+            {{ paginate | default_pagination }}
+          {% endif %}
+        {% endpaginate %}
+        <div class="blg-cmnt col-lg-12">
+          <div class="blog-cmnt">
+
+            <div class="row">
+              <h3 class="text-center">LEAVE A COMMENT</h3>
+              {% form 'new_comment', article %}
+                {{ form.errors | default_errors }}
+                <div class="col-lg-12">
+                  <label for="CommentAuthor">Name</label>
+                  <input type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                </div>
+                <div class="col-lg-12">
+                  <label for="CommentEmail">Email</label>
+                  <input type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+                </div>
+                <div class="col-12">
+                  <label for="CommentBody">Message</label>
+                  <textarea name="comment[body]" id="CommentBody">{{ form.body }}</textarea>
+                </div>
+                <div class="col-12">
+                  <input type="submit" value="Submit Your Comment" class="rev-btn">
+                </div>
+              {% endform %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<style>
+
+  h5 {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+
+
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+  form#comment_form input,
+  form#comment_form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .rev-btn {
+    background: #000;
+    color: #ffffff;
+  }
+  .rev-btn:hover {
+    background: #000000;
+  }
+  .com-auth {
+    text-transform: capitalize;
+    margin: 0;
+    color: #000
+  }
+  .com-date {
+    font-size: 14px;
+    color: #959595;
+  }
+  .com-sec {
+    border-bottom: 1px solid #e8e4e4;
+    margin-bottom: 22px;
+    display: flex;
+    gap: 15px;
+  }
+  .cmnt-auth-av {
+    width: 90px;
+  }
+  .blg-cmnt {
+    background: #e2e2e273;
+    padding: 30px;
+  }
+  .blog-inner-img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .blgg.wrapper {
+    padding-top: 40px !important;
+  }
+  .btn.blocg_act {
+    background: #000;
+    color: #ffffff;
+    font-weight: 900;
+    padding: 15px 30px;
+    margin: 26px;
+  }
+  .widget .latest-blog-posts-list {
+    margin: 0;
+    list-style: none;
+  }
+  .widget .latest-blog-posts-list li {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: dotted 1px #CCC;
+    background: none;
+    word-wrap: break-word;
+    line-height: 1.3em;
+    list-style: none;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+  }
+  .widget .latest-blog-posts-list li img {
+    width: 100px;
+    height: 80px;
+  }
+  .cpasec {
+    margin-bottom: 30px;
+}
+  .drop__profession {
+    font-size: 12px;
+  }
+  .cpasec {
+    margin: 5% 0%;
+}
+  .blog-cont a {
+    color: #0a58ca;
+    font-style: normal;
+}
+/*   .blog-sid-bar,
+  .blog-cont {
+    padding: 15px;
+    box-shadow: 0 0 27px #8d8d8d40;
+  } */
+  .article_title {
+    font-size: 30px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    font-weight: 600;
+  } 
+  .blog-sid-bar.tag {
+    margin-top: 20px;
+  }
+
+  .blog-sid-bar.tag ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .blog-sid-bar.tag ul li a:hover {
+    background: transparent;
+    color: #000;
+  }
+  .blog-sid-bar.tag ul li a {
+    background: #583d36;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid;
+  }
+
+  .blog-sid-bar.tag ul li {
+    padding: 6px;
+  }
+  .blog_sharer {
+    text-align: center;
+  }
+  .blog-sid-bar.social ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  .blog-sid-bar.social {
+    margin-top: 20px;
+  }
+  .blog-sid-bar.social ul li {
+    margin-right: 12px;
+  }
+  .blog-sid-bar.social ul li img {
+    width: 40px;
+    box-shadow: rgb(50 50 93 / 25%) 0 6px 12px -2px, rgb(0 0 0 / 30%) 0 3px 7px -3px;
+  }
+  ul {
+    list-style: disc;
+  }
+  .header-menu {
+    list-style: none;
+  }
+
+  .aa-cta-btn {
+    font-size: 18px;
+    border-radius: 60px;
+    padding: 15px 100px;
+    background: #373737;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  .aa-cta-btn-customer {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .drop__card {
+    width: 76%;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+    background-color: #f8f8fc;
+    box-shadow: 4px 4px 16px #e1e1e1, -2px -2px 16px #fff;
+    border-radius: 1rem;
+    margin: auto;
+  }
+  .drop__card,
+  .drop__data {
+    display: flex;
+    align-items: center;
+  }
+  .drop__img {
+    width: 85px;
+    height: 85px;
+    border-radius: 1rem;
+    margin-right: 1rem;
+  }
+  .drop__name {
+    font-size: 15px;
+    color: #272a3a;
+    font-weight: 500;
+  }
+  .blog-buy-btn {
+    background: #583d36;
+    padding: 10px;
+    color: #fff;
+  }
+  @media(max-width: 768px) {
+    .drop__card,
+    .drop__data {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    .drop__card {
+      width: 99%;
+    }
+  }
+  .cpasec-img {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .cpasec-img img {
+    width: 40% !important;
+  }
+  .shopnow {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .shopnow img {
+    width: 20%;
+  }
+  .shopnow a {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 23px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 22px;
+  }
+  ul li:before {
+    display: none;
+  }
+  .blog_sharer li {
+    display: inline-flex;
+    margin-right: 10px;
+  }
+
+  form#comment_form input {
+    height: 47px;
+  }
+  form#comment_form textarea {
+    height: 100px;
+  }
+  .art_content h2, 
+  .art_content h3 {
+    font-weight: 700;   
+    margin-bottom: 1%;
+  }
+  .art_content a {
+    color: #0d6efd;
+    font-weight: normal;  
+    font-size: 18px;
+  }
+  .faq_sec h2 {
+    margin-bottom: 0px;
+}
+  .faq_sec button.accordion-button {
+    font-weight: 600;   
+}
+  .cpasec a {
+    color: #fff;
+    font-style: inherit;
+    font-size: initial;
+    font-weight: normal;
+  }
+    @media(max-width: 768px) {
+    .blog-inner-img {
+      width: 100%;
+      height: auto;
+    }
+    .cpasec-img img {
+    width: 60% !important;
+}
+  }
+</style>

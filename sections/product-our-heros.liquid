@@ -1,0 +1,48 @@
+<div class="container mb-4">
+     <div class="glide" id="our_hereos">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+    {% for block in section.blocks %}
+     <div class="glide__slide">
+        <video controls class="w-100">
+          <source src="{{ block.settings.influncer_video_url }}" type="video/mp4">
+        </video>
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "influncer_video",
+    "class": "influncer_video pb-4 pt-4 mb-5",
+    "settings": [
+      {
+        "type": "text",
+        "id": "influncer_video_text",
+        "label": "Influncer Video",
+        "default": "Influncer Video"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "our-stars",
+        "type": "our-stars",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "url",
+            "id": "influncer_video_url",
+            "label": "Influncer Video URL"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  if(document.querySelector("#our_hereos")){new Glide("#our_hereos",{type:"slider",perView:5,breakpoints:{0:{perView:1.5},300:{perView:1.5},600:{perView:1.5},800:{perView:4},1000:{perView:5}}}).mount();}
+</script>

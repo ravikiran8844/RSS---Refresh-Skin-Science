@@ -1,0 +1,372 @@
+{
+  "sections": {
+    "product-meta-kit": {
+      "type": "product-meta-rfss-kit",
+      "blocks": {
+        "aecf00d4-c075-429f-bfde-c81087c6fc15": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Fights Against Active Acne And Blackheads.",
+            "product_contains_price": ""
+          }
+        },
+        "b91e778b-c589-4ff3-8adb-f14a6203d7de": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Promotes Clear And Even Skin Tone.",
+            "product_contains_price": ""
+          }
+        },
+        "3978ce5e-b337-4668-908c-d79a0418d69b": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Perfect For Oily And Acne Prone Skin.",
+            "product_contains_price": ""
+          }
+        },
+        "4f3f7a48-7a33-4480-9c5b-50d43204b211": {
+          "type": "Trust-factor-image",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "117c6dca-e384-4642-848e-178f0042587d": {
+          "type": "today-offer-for-kit",
+          "settings": {
+            "today-offer-title": "Today’s Offers",
+            "whats_the_offer-one": "FLAT 25% OFF + FREE HYALURONIC ACID SERUM ON ORDERS ABOVE RS.599\/-",
+            "whats_the_offer-two": "FREE SHIPPING ON ALL PREPAID ORDERS",
+            "whats_the_offer-three": "Get Flat 25% Off On Gift Sets"
+          }
+        }
+      },
+      "block_order": [
+        "aecf00d4-c075-429f-bfde-c81087c6fc15",
+        "b91e778b-c589-4ff3-8adb-f14a6203d7de",
+        "3978ce5e-b337-4668-908c-d79a0418d69b",
+        "4f3f7a48-7a33-4480-9c5b-50d43204b211",
+        "117c6dca-e384-4642-848e-178f0042587d"
+      ],
+      "settings": {
+        "product_title": "",
+        "product_subtitle": "Salicylic Acid + Niacinamide Face Serum",
+        "product_det": "Acne marks and dark spots are a concern for many people. Our clear skin combo helps reduce the appearance of enlarged pores and even skin tone resulting in improved skin texture. Zinc PCA helps normalise sebum production and limit the proliferation of evil acne-causing bacteria."
+      }
+    },
+    "product-kit-ingredients-featured-in": {
+      "type": "product-kit-ingredients-featured-in",
+      "blocks": {
+        "6697fd29-4a86-4329-8e2f-fcdc0be2fcdc": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/vogue.png",
+            "featured_in_detail": "Potato extract is rich in Vitamin C, and can combat dark spots, blemishes or acne scars. Its skin-tightening properties are perfect to diminish puffiness and dark circles."
+          }
+        },
+        "556eb3b0-1358-4749-af07-e7ca6bc60fa5": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/healthline.png",
+            "featured_in_detail": "Topical vitamin C reduces wrinkles, and helps in treating dryness of the skin. It also has antioxidant properties, which result in a better skin-aging appearance."
+          }
+        },
+        "bf67c9a9-a6f4-43a3-a7c1-415ba9338c36": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/webmd.png",
+            "featured_in_detail": "Topical vitamin C is a science-backed, dermatologist-favourite ingredient that may help slow early skin aging, prevent sun damage, and improve the appearance of wrinkles, dark spots, and acne."
+          }
+        }
+      },
+      "block_order": [
+        "6697fd29-4a86-4329-8e2f-fcdc0be2fcdc",
+        "556eb3b0-1358-4749-af07-e7ca6bc60fa5",
+        "bf67c9a9-a6f4-43a3-a7c1-415ba9338c36"
+      ],
+      "settings": {
+        "Title_featured": "Ingredients Featured In"
+      }
+    },
+    "kit-complete-skincare-regime": {
+      "type": "kit-complete-skincare-regime",
+      "settings": {
+      }
+    },
+    "kit-whats-inside": {
+      "type": "kit-whats-inside",
+      "blocks": {
+        "c7599545-fc6e-4128-adce-86a845425cdb": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Salicylic Acid Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Salicylic.png",
+            "item_dec": "The gentlest exfoliant to get rid of active acne & blackheads! Formulated with a combination of 2% Salicylic acid serum & 1.5% Green tea extract perfect for oily skin to deep cleanse extra oil from the pores.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_one": "Minimises dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/even-skin-tone.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/salicy-icon3.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        },
+        "fc824bca-39d9-4418-acfb-867aa014d890": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Niacinamide + Zinc Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Niacinamide-Zinc-Face-Serum.png",
+            "item_dec": "The perfect cure to get rid of your acne marks once and for all! Introducing Refresh’s Niacinamide serum with added Zinc PCA to help clear out all your blemishes & acne marks for clear & even skin tone.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/pha-icon2.png",
+            "what_it_does_text_one": "Minimises dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/niaci-icon3.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/salicy-icon3.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        }
+      },
+      "block_order": [
+        "c7599545-fc6e-4128-adce-86a845425cdb",
+        "fc824bca-39d9-4418-acfb-867aa014d890"
+      ],
+      "settings": {
+        "whats_inside_title": ""
+      }
+    },
+    "kit-key-ingredients": {
+      "type": "kit-key-ingredients",
+      "blocks": {
+        "007dea8b-369d-4e3c-9704-9e66353fa9f0": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Berry",
+            "ki_image": "shopify:\/\/shop_images\/cranberry.png"
+          }
+        },
+        "e5837000-bfc1-4c5c-ae91-53c2c17a0248": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Orange",
+            "ki_image": "shopify:\/\/shop_images\/orange.png"
+          }
+        },
+        "cb1cf47c-7f18-4466-a82f-5b3c0fe735f7": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Avocado",
+            "ki_image": "shopify:\/\/shop_images\/avocado.png"
+          }
+        },
+        "93c007cf-af19-4b95-b985-7502ce3967a3": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Strawberry",
+            "ki_image": "shopify:\/\/shop_images\/strawberry.png"
+          }
+        },
+        "e8b5ceb1-8fb1-4120-9b45-ef368dfc1eb6": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Olive Squalane",
+            "ki_image": "shopify:\/\/shop_images\/olive.png"
+          }
+        },
+        "0038a202-a11b-47ca-b4ad-7a67771b29cd": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Potato",
+            "ki_image": "shopify:\/\/shop_images\/potato.png"
+          }
+        }
+      },
+      "block_order": [
+        "007dea8b-369d-4e3c-9704-9e66353fa9f0",
+        "e5837000-bfc1-4c5c-ae91-53c2c17a0248",
+        "cb1cf47c-7f18-4466-a82f-5b3c0fe735f7",
+        "93c007cf-af19-4b95-b985-7502ce3967a3",
+        "e8b5ceb1-8fb1-4120-9b45-ef368dfc1eb6",
+        "0038a202-a11b-47ca-b4ad-7a67771b29cd"
+      ],
+      "settings": {
+        "ki_title": "Key Ingredients"
+      }
+    },
+    "kit-what-to-expect": {
+      "type": "kit-what-to-expect",
+      "blocks": {
+        "cd524751-b824-4b73-a504-f5a0aaa3061a": {
+          "type": "routine_blocks",
+          "settings": {
+            "Am_routine": "<ul>\n<li>Niacinamide Serum<\/li>\n<\/ul>",
+            "Pm_rountine": "<ul>\n<li>Niacinamide Serum<\/li>\n<li> Salicylic Acid<\/li>\n<\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "cd524751-b824-4b73-a504-f5a0aaa3061a"
+      ],
+      "settings": {
+        "title_what_expect": "What to expect?",
+        "subtitle_what_expect": "Makes the skin – Radiant, Soft, Dewey, Naturally Glowing"
+      }
+    },
+    "collapsible-section": {
+      "type": "collapsible-section",
+      "settings": {
+      }
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "dc214157-7ac2-418e-b312-24fdfa67143d": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Is it necessary to do a patch test before applying?",
+            "faq_answers": "Yes, it is recommended to do a patch test before applying serum, irrespective of the skin type."
+          }
+        },
+        "9d8a1203-a77b-4c87-9856-a059c46fc1a6": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Will my skin feel Oily after application?",
+            "faq_answers": "Our lightweight, oil-free formula ensures your skin feels light and supple post-application without leaving a sticky residue on the face."
+          }
+        },
+        "239f1633-81a0-4611-84fe-fe2785adf23a": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Can I use these along with my Vitamin C serum?",
+            "faq_answers": "If topical Vitamin C is used as a part of the skincare routine, it is always recommended that you use Niacinamide alternatively with Vitamin C."
+          }
+        },
+        "82175e56-52c3-4f57-a058-a818a6b04b41": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Do the products contain SLS\/Paraben?",
+            "faq_answers": "All our products are made with clinically proven ingredients formulated by leading experts. You can be rest assured that if it does not belong on your skin, we will not add it there!"
+          }
+        },
+        "f9f6c8d8-ab13-481a-9821-4e2a6c08019d": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "What is the use of green tea extract and tea oil extract in Salicylic face serum?",
+            "faq_answers": "Both these ingredients have excellent antibacterial and anti-inflammatory properties and help soothe the skin and help minimise ten signs of aging."
+          }
+        }
+      },
+      "block_order": [
+        "dc214157-7ac2-418e-b312-24fdfa67143d",
+        "9d8a1203-a77b-4c87-9856-a059c46fc1a6",
+        "239f1633-81a0-4611-84fe-fe2785adf23a",
+        "82175e56-52c3-4f57-a058-a818a6b04b41",
+        "f9f6c8d8-ab13-481a-9821-4e2a6c08019d"
+      ],
+      "settings": {
+        "FAQ_title": "FAQs",
+        "Faq_image": "shopify:\/\/shop_images\/faq_sec_image.jpg"
+      }
+    },
+    "rfss-promise": {
+      "type": "rfss-promise",
+      "settings": {
+      }
+    },
+    "product-similar": {
+      "type": "product-similar",
+      "blocks": {
+        "bfc3688a-3c1f-4f46-b13a-cc2ddb85e8a2": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-niacinamide"
+          }
+        },
+        "1917837a-5956-4fde-9856-129345916c09": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "foaming-cleanser-salicylic-acid"
+          }
+        },
+        "f4a20282-249b-4393-9b92-a5c676893c65": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "darkcircleremovalbundle"
+          }
+        }
+      },
+      "block_order": [
+        "bfc3688a-3c1f-4f46-b13a-cc2ddb85e8a2",
+        "1917837a-5956-4fde-9856-129345916c09",
+        "f4a20282-249b-4393-9b92-a5c676893c65"
+      ],
+      "settings": {
+        "show_related_products": true,
+        "related_title": "Other fine products"
+      }
+    },
+    "product-our-heros": {
+      "type": "product-our-heros",
+      "blocks": {
+        "bee45e45-0ddd-4321-a230-d44829aa3317": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d7fbaa3c56564d57b0484ef19bee1591.mp4"
+          }
+        },
+        "998d31e6-b2d7-423e-b9c4-a165aeed248c": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b66b8cc98add489ca6664d97b81864d0.mp4"
+          }
+        },
+        "3a05e2af-9843-4030-936f-7ac7a0648ead": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2286c78b5761411ca8014520330bd8ac.mp4"
+          }
+        },
+        "99bca045-d01f-4254-b8d0-abc6b7dcae0e": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/114babfbcdcd452792515230538bb7d3.mp4"
+          }
+        },
+        "d89c96d9-3c66-4dcc-8812-19c7181d4b43": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e43ac7d77e4a421ebc90b4205c42cf26.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "bee45e45-0ddd-4321-a230-d44829aa3317",
+        "998d31e6-b2d7-423e-b9c4-a165aeed248c",
+        "3a05e2af-9843-4030-936f-7ac7a0648ead",
+        "99bca045-d01f-4254-b8d0-abc6b7dcae0e",
+        "d89c96d9-3c66-4dcc-8812-19c7181d4b43"
+      ],
+      "settings": {
+        "influncer_video_text": "Influncer Video"
+      }
+    }
+  },
+  "order": [
+    "product-meta-kit",
+    "product-kit-ingredients-featured-in",
+    "kit-complete-skincare-regime",
+    "kit-whats-inside",
+    "kit-key-ingredients",
+    "kit-what-to-expect",
+    "collapsible-section",
+    "product-review",
+    "product-faq",
+    "rfss-promise",
+    "product-similar",
+    "product-our-heros"
+  ]
+}

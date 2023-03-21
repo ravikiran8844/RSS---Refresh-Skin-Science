@@ -1,0 +1,48 @@
+<section class="search_sec">
+  <div class="container">
+    {% paginate search.results by 10 %}
+      <div class="w-25 m-auto mt-4 mb-5">
+        <h4 class="text-center mb-3">Search Results
+        </h4>
+        <form class="form-inline d-flex" action="/search" method="get" role="search">
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="search" class="form-control" name="q" value="{{ search.terms | escape }}">
+          </div>
+          <button type="submit" class="btn btn-dark mb-2">search</button>
+        </form>
+      </div>
+      <div class="search_results m-auto  w-75">
+        {% if search.performed %}
+          {% for item in search.results %}
+
+            <div class="align-baseline border m-3 p-3 search_item">
+              <div class="row">
+                <div class="col-md-4">
+                  {% if item.featured_image %}
+                    <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}" class="rfss-black">
+                      {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
+                    </a>
+                  {% endif %}
+                </div>
+                <div class="col-md-8">
+                  <h5>{{ item.title | link_to: item.url }}</h5>
+                  <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+                </div>
+              </div>
+            </div>
+          {% else %}
+
+            no results
+
+          {% endfor %}
+        {% endif %}
+
+      </div>
+
+
+
+      {% if paginate.pages > 1 %}
+        {{ paginate | default_pagination }}{% endif %}
+    {% endpaginate %}
+  </div>
+</section>

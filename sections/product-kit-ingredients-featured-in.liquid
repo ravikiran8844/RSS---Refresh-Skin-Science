@@ -1,0 +1,71 @@
+<div class="ingredients_in">
+   <div class="container">
+       <h2 class="fs-1 fw-bolder mb-2 mb-md-5 pb-4 text-center" >{{ section.settings.Title_featured }}</h2>
+       <div id="featured_in" class="owl-carousel owl-theme">
+         {% for block in section.blocks %}
+            <div class="item border-end">
+               <div  class="featured_bx text-center ps-1 pe-3 ps-md-5 pe-md-5">
+                <img  src="{{ block.settings.featured_img | img_url : "medium" }}" class="mb-2 mb-md-5 w-100">
+                <p>{{ block.settings.featured_in_detail }}</p>
+               </div>  
+            </div>
+         {% endfor %}        
+      </div>
+   </div>
+</div>
+{% schema %}
+ {
+   "name" : "featured_in",
+   "class" : "pt-5 mt-5 pb-5 pt-5",
+   "settings" : [
+     {
+       "type" : "text",
+       "id" : "Title_featured",
+       "label" : "Title For Featuerd IN"
+     }    
+   ],
+   "blocks" : [
+     {
+     "name" : "featured_in_det",
+     "type" : "featured_in_det",
+     "settings" : [
+       {
+         "type" : "image_picker",
+         "id" : "featured_img",
+         "label" : "featured in logo"
+       },
+       {
+         "type" : "textarea",
+         "id" : "featured_in_detail",
+         "label" : "featured in details"
+       }
+     ]
+     }
+   ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+  
+{% endstylesheet %}
+
+{% javascript %}
+$('#featured_in').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:1,
+            stagePadding:50
+        },
+        600:{
+          items:1,
+          stagePadding:50
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+{% endjavascript %}

@@ -1,0 +1,117 @@
+    <div class="container pb-3 pt-3 pb-md-3 pt-md-3 pb-lg-5 pt-lg-5">
+        <div class="row">
+            <div class="col-md-6">
+               <small class="fs-5 rfss-grey pe-heading">{{ section.settings.pe-sub-title}}</small>
+               <p class="fs-3 mb-5 mt-3 w-75 pe-sub-heading">{{ section.settings.pe-description }}</p>
+               <hr class="d-md-block d-none">
+               <div class="d-none d-md-block">
+                <div class="d-flex pt-5 pb-5 justify-content-around text-center">
+                  {% for block in section.blocks %}
+                  <div class="preven-effect-pi {{ block.id }}" >
+                      <h2>{{ block.settings.pe-percent}}</h2>
+                      <small class="m-auto">{{ block.settings.pe-percent-det}}</small>
+                    </div>
+                  {% endfor  %}
+                   
+                 </div> 
+                 <span class="fs-5 based_on">*BASED ON A SURVEY WITH 75 PARTICIPANTS</span>
+
+              </div>
+              
+            </div>
+            <div class="col-md-6">
+                  <div class="glide" id="rfss_pe">
+                <div class="glide__track" data-glide-el="track">
+                  <div class="glide__slides">
+                    <div class="glide__slide">  
+                     {%-liquid 
+        assign img_url = section.settings.pe_before_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign ration = section.settings.pe_before_image.aspect_ratio -%}
+        <div class="lazyload__image-wrapper no-js header-logo__image imglazy">
+          <div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div>
+          <noscript>
+            <img itemprop="image" class="lazy js" src="{{ section.settings.pe_before_image | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ section.settings.pe_before_image.alt | default: shop.name | escape }}">
+          </noscript>
+        </div>
+                   </div>
+<!--                      <div class="glide__slide">  
+                      {%-liquid 
+                        assign img_url = section.settings.pe_after_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+                        assign ration = section.settings.pe_after_image.aspect_ratio -%}
+                      <div class="lazyload__image-wrapper no-js header-logo__image imglazy">
+                        <div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div>
+                        <noscript>
+                          <img itemprop="image" class="lazy js" src="{{ section.settings.pe_after_image | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ section.settings.pe_after_image.alt | default: shop.name | escape }}">
+                        </noscript>
+                      </div>
+                    </div> -->
+                </div>
+                </div>
+                  </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex pt-5 pb-5 ">
+                    {% for block in section.blocks %}
+                    <div class="preven-effect-pi {{ block.id }}" >
+                        <h2>{{ block.settings.pe-percent}}</h2>
+                        <small>{{ block.settings.pe-percent-det}}</small>
+                      </div>
+                    {% endfor  %}
+                     
+                   </div> 
+                   <span class="fs-5 based_on">*BASED ON A SURVEY WITH 75 PARTICIPANTS</span>
+                </div>
+              </div>
+        </div>
+    </div>
+{% schema %}
+{
+    "name" : "Proven-effective",
+    "tag" : "section",
+    "class": "proven-effective bg-light pt-5  pb-5",
+    "settings" : [
+      {
+        "type" : "text" ,
+        "id" : "pe-sub-title",
+        "default" : "PROVEN EFFECTIVE",
+        "label" : "User use case & description"
+      },
+      {
+         "type"  : "textarea",
+         "id" : "pe-description",
+         "label" : "User use case & description"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "pe_before_image" ,
+        "label" : "Select Before Image"
+      },
+      {
+        "type" : "image_picker",
+        "id" : "pe_after_image" ,
+        "label" : "Select After Image"
+      }       
+    ],
+    "blocks" : [   
+      {
+        "name" : "pe-percent-details",
+        "type" : "pe-percent-details",
+        "settings" : [
+          {
+            "type" :"text",
+            "id" : "pe-percent",
+            "label" : "pe-percentage"
+          },
+          {
+            "type" : "textarea",
+            "id" : "pe-percent-det",
+            "label" : "pe-percent-det"
+          }
+        ]       
+      }    
+    ],
+    "templates": ["product"]
+}
+{% endschema %}
+<script>
+  if(document.querySelector("#rfss_pe")){new Glide("#rfss_pe",{type:"slider",bound:true,breakpoints:{0:{perView:1},300:{perView:1},600:{perView:1},800:{perView:1},1000:{perView:1}}}).mount();}
+</script>

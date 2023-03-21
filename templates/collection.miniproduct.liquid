@@ -1,0 +1,24 @@
+
+{%-paginate collection.products by 12-%}
+  <div id="similar_cart">
+    {%-for product in collection.products-%}
+              <div class="glide__slide"> 
+              <div class="border item_like m-1 p-2">
+                 <div class=" align-items-center">
+                       <img src="{{ product.featured_image | img_url: '200x200'}}" alt="{{ product.featured_image.alt }}" class="rfss_logo">
+                       <div class="item_det ps-3 pe-3">
+                           <h2 class="fs-6 text-center">{{ product.title }}</h2>
+                           <span class="text-center">{{ product.price | money }}</span>
+                       </div>
+                       <div class="add_cart">
+                         <form method="post" action="/cart/add">
+                           <input name="id" value="{{ product.variants.first.id }}" type="hidden"/>
+                           <input name="add" value="ADD" type="submit" class="add-btn w-100"/>
+                         </form>                            
+                       </div>
+                 </div> 
+              </div>    
+              </div>
+    {%-endfor-%}
+  </div>
+{%-endpaginate-%}

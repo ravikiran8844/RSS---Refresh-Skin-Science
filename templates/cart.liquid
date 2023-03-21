@@ -1,0 +1,163 @@
+<section class="cart_section mb-5 mt-5">
+  <div class="container">
+{% if cart.item_count > 0 %}
+    <form action="/cart" method="post" novalidate>
+      <div class="row">
+        <div class="col-md-8">
+
+          <h4 class="fw-bold mb-2 minicart_header">Your Cart
+            <span>({{ cart.item_count }} Item )</span>
+          </h4>
+          <p class="crt-sub mb-4">Hey! Here’s What You're Getting</p>
+
+          {% for item in cart.items %}
+            <div class="border-bottom border-top item pb-4 pt-4 row position-relative align-items-center w-100">
+              <div class="col-md-3 col-6">
+                <a href="{{ item.url | within: collections.all }}">
+                  <img class="cart-img " src="{{ item | img_url: 'small' }}" alt="{{ item.title | escape }}">
+                </a>
+              </div>
+              <div class="col-md-6 col-6">
+                <div class="cart-cnt-box">
+                  <a class="cart-product-title d-block fs-5 fw-bold mb-2 text-dark text-decoration-none" href="{{ item.url }}">{{ item.product.title }}</a>
+                  <div class="grid__item mb-2 pl-m-6 one-third">
+                    <div class="d-flex justify-content-between mb-4 mb-md-0 me-md-4 qtybox refss-single-product-page-quantity w-63">
+                      <div class="align-items-center cart_qtybox d-flex p-2">
+                        <span id="qtn_minus" style="cursor: pointer;">-</span>
+                        <input id="qty_numer" name="updates[]" value="{{ item.quantity }}" type="number" class="border-0 text-center"/>
+                        <span id="qtn_plus" style="cursor: pointer;">+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__item pl-m-6 two-thirds">
+                    <span class="cart-item-price" data-id="{{item.id}}">
+                      <span class="mrp-prs">
+                        <del>{{ item.variant.compare_at_price | money }}</del>
+                      </span>
+                      {{ item.price | money }}</span>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-6 ps-4 ps-md-0">
+                <span class="cart-item-total-price" data-id="{{item.id}}">
+                  {% if item.original_line_price != item.line_price %}
+                    {{ item.original_line_price | money }}</span>
+                {% endif %}
+                {{ item.line_price | money }}
+                {% for discount in item.discounts %}
+                  {{ discount.title }}{% endfor %}
+              </div>
+              <div class="col-md-1 col-1">
+                <a class="remove" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+                  <img src="{{ 'close-svgr.svg' | asset_url }}" style="width: 35px;">
+                </a>
+              </div>
+            </div>
+
+          {% endfor %}
+          <div class="d-flex">
+          <div class="crt-uc-btn-box mt-4 text-center" style="width:630px;">
+            <button class="action_primary bg-black btn p-2 text-white update-btn " type="submit" name="update" style="width:200px;">Update</button>
+             <div id="simpl-checkout-cart-v2" class="simpl-button-container"></div>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 mt-5 mt-md-0">
+          <div class="grid {% if section.settings.cart_notes_enable %}large--one-half{% endif %}">
+            <h3 class="f-30 odr-sumry mb-4 fw-bold">Order Summary</h3>
+
+            <p class="cart__subtotal-holder mb-3">
+              <span class="cart__subtotal-title">MRP
+              </span>
+              <span class="cart__subtotal float-end">{{cart.total_price | money}}</span>
+            </p>
+            <p class="cart__subtotal-holder mb-3">
+              <span class="cart__subtotal-title">Offer Price</span>
+              <span class="cart__subtotal offer_summary float-end">{{cart.total_price | money}}</span>
+            </p>
+
+            {%-if cart.cart_level_discount_applications.size > 0-%}
+              <div class="grid--full cart_drawer_custom_text">
+                <div class="grid__item one-half">
+                  <p>Discount</p>
+                </div>
+                <div class="grid__item one-half text-right">
+                  {%-assign cart_discount = ''-%}
+                  {%-for discount_allocation in cart.cart_level_discount_applications-%}
+                    <p class="float-end">{{ discount_allocation.total_allocated_amount | money }}</p>
+                    {%-assign cart_discount = discount_allocation.total_allocated_amount | money-%}
+                  {%-endfor-%}
+                </div>
+              </div>
+           
+
+            <p class="cart__subtotal-holder mb-3">
+              <span class="cart__subtotal-title">Shipping
+              </span>
+              <span class="cart__subtotal float-end">Calculated at next step</span>
+            </p>
+            <p class="cart__subtotal-holder ttl border-top border-bottom pt-3 pb-3 fw-bold">
+              <span class="cart__subtotal-title">Order Total
+              </span>
+              <span class="cart__subtotal total_summary float-end">{{ cart.original_total_price | money }}</span>
+            </p>
+          </div>
+          <div class="crt-uc-btn-box">
+            <button class="action_primary btn check-btn fs-4 p-3 w-100 bg-black text-white" type="submit" name="checkout">Checkout <img class="float-end me-3 mt-2" style="filter: brightness(100);" src="//cdn.shopify.com/s/files/1/0614/6844/2781/t/2/assets/rs-arrow-r.svg?v=11496135503943054321656322501"></button>
+          </div>
+        </div>
+      </div>
+    </form>
+     {%-endif-%}
+    {% else %}
+    <div class="empty-cart">
+      <img src="{{ 'empty-cart.png'|file_url}}">
+  <h3>Your Cart is empty</h3>
+    <div class="crt-emty-box">
+      <a href="/collections/all-products" class="emty-btn">SHOP NOW</a>
+    </div>
+</div>
+{% endif %}
+  </div>
+</section>
+<script>
+  $(document).ready(function() {
+    $('#qtn_minus').click(function() {
+      $val = $('#qty_numer').val();
+      $min_val = parseInt($val) - 1;
+      $('#qty_numer').val($min_val);
+    });
+    $('#qtn_plus').click(function() {
+      $val = $('#qty_numer').val();
+      $min_val = parseInt($val) + 1;
+      $('#qty_numer').val($min_val);
+    });
+  });
+</script>
+<style>
+.empty-cart img {
+    width: 200px;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.empty-cart {
+    text-align: center;
+}
+.emty-btn {
+    padding: 12px 30px;
+    background: #000;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #000000;
+}
+.empty-cart h3 {
+    margin-bottom: 24px;
+}
+.emty-btn:hover {
+    background: transparent;
+    color: #000000;
+}
+              </style>

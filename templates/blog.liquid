@@ -1,0 +1,44 @@
+{% paginate blog.articles by 9 %}
+  <div class="blog-grid-page">
+
+    <div class="blog-ban mb-5 mt-5 pb-5">
+      <h1 class="fs-1 fw-bold  text-center">{{ blog.title }}</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        {% capture blog_i %}1{% endcapture %}
+
+        {% for article in blog.articles %}
+
+          <div class="col-lg-4 col-md-6  blog-grid blog_{{ blog_i }}">
+            <div class="blog_bx_shade">
+              <div><img itemprop="image" class="blog-image-grid w-100" src="{{ article.image.src | img_url: '1299x410' }}"></div>
+              <div class="blog title">
+                <a href="{{ article.url }}" class="d-block fs-5 fw-bolder mb-2 mt-3 text-dark text-decoration-none">{{ article.title | strip_html | truncatewords: 10 }}</a>
+              </div>
+              <div>
+                {% if article.excerpt.size > 0 %}
+                  {{ article.excerpt }}
+                {% else %}
+                  <p>{{ article.content | strip_html | truncatewords: 25 }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          {% assign blog_i = blog_i | plus: 1 %}
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="pagination justify-content-center mb-5 mt-4">
+    {% if paginate.pages > 1 %}
+      {{ paginate | default_pagination }}
+    {% endif %}
+  </div>
+
+
+{% endpaginate %}

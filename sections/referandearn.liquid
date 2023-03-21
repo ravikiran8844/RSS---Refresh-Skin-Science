@@ -1,0 +1,189 @@
+<div class="referandearn mb-1 mt-1 mb-md-3 mt-md-3 mb-lg-5 mt-lg-5 pb-1 pt-1 pb-md-3 pt-md-3 pb-lg-5 pt-lg-5 ">
+  <div class="container pb-4 pt-4 ">
+    <h2 class="fs-1 fw-bold mb-5 text-center pb-3">Refer & Earn</h2>
+    <div id="refer-box" class="owl-carousel owl-theme">
+      <div class="item">
+        <a href="/account/login" class="text-dark text-decoration-none">
+          <div class="refer_bx">
+            <picture class="lazyload">
+              <source srcset="{{ 'sign-up.webp' | asset_url }}" type="image/webp">
+              <source srcset="{{ 'sign-up.jpg' | asset_url }}" type="image/jpg">
+              <img src="{{ 'sign-up.jpg' | asset_url }}" alt="" class="lazyload">
+            </picture>
+            <span class="d-block fs-4 fw-bolder mb-3 mt-3">Sign Up</span>
+            <small class="fs-5 rfss-grey">Account creation is completely free!  Set up your account in just a few minutes & join Refresh’s partner program.</small>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="/account/login" class="text-dark text-decoration-none">
+          <div class="refer_bx">
+            <picture>
+              <source srcset="{{ 'recommended.webp' | asset_url }}" type="image/webp">
+              <source srcset="{{ 'recommended.jpg' | asset_url }}" type="image/jpg">
+              <img src="{{ 'recommended.jpg' | asset_url }}" alt="" class="lazyload">
+            </picture>
+            <span class="d-block fs-4 fw-bolder mb-3 mt-3">Recommend</span>
+            <small class="fs-5 rfss-grey">Share your unique link/coupon to your connections anywhere be it website, social media or friends on WhatsApp</small>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="/account/login" class="text-dark text-decoration-none">
+          <div class="refer_bx">
+            <picture>
+              <source srcset="{{ 'earn.webp' | asset_url }}" type="image/webp">
+              <source srcset="{{ 'earn.jpg' | asset_url }}" type="image/jpg">
+              <img src="{{ 'earn.jpg' | asset_url }}" alt="" class="lazyload">
+            </picture>
+            <span class="d-block fs-4 fw-bolder mb-3 mt-3">Earn</span>
+            <small class="fs-5 rfss-grey">For every skincare product ordered through your link/coupon code, you get to earn attractive commissions from us.</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mb-3 mb-md-3  mb-lg-5 our-certificate pb-3 pb-md-3 pb-lg-5 text-center">
+  <div class="container">
+    <h2 class="fs-1 fw-bold mb-5 pb-3 text-center">Our Certification</h2>
+    <div class="d-flex justify-content-center">
+      <div class="me-5 pe-2">
+        {%-liquid 
+        assign img_url = section.settings.image_one | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign ration = section.settings.image_one.aspect_ratio -%}
+        <div class="lazyload__image-wrapper no-js header-logo__image imglazy"><div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div><noscript><img itemprop="image" class="lazy js" src="{{ section.settings.image_one | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ block.settings.image_two.alt | default: shop.name | escape }}"></noscript></div>
+         
+       </div>
+      <div class="me-5 pe-2">
+        {%-liquid 
+        assign img_url = section.settings.image_two | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign ration = section.settings.image_two.aspect_ratio -%}
+        <div class="lazyload__image-wrapper no-js header-logo__image imglazy"><div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div><noscript><img itemprop="image" class="lazy js" src="{{ section.settings.image_two | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ block.settings.image_two.alt | default: shop.name | escape }}"></noscript></div>
+         
+       </div>
+      <div class="me-5 pe-2">
+        {%-liquid 
+        assign img_url = section.settings.image_three | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+        assign ration = section.settings.image_three.aspect_ratio -%}
+        <div class="lazyload__image-wrapper no-js header-logo__image imglazy"><div class="subgallery sub_img" style="padding-top:{{ 1 | divided_by: ration | times: 100}}%;"></div><noscript><img itemprop="image" class="lazy js" src="{{ section.settings.image_three | img_url}}" data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ block.settings.image_three.alt | default: shop.name | escape }}"></noscript></div>
+         
+       </div>
+    </div>
+  </div>
+</div>
+<div class="rfss-what_you_get mb-3 mt-3 mb-md-5 mt-md-5 pt-4 pb-5">
+  <div class="container">
+    <h2 class="fs-1 fw-bolder mb-5 text-center text-capitalize pb-4">When you shop with us you get</h2>
+    <div class="rfss-wyg-det  d-md-flex justify-content-center">
+      <div class="rfss-wyg text-center border-end">
+        <svg class="d-block m-auto mb-4 lazyload" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M28.3483 0C12.7072 0 0 12.7072 0 28.3483C0 43.9964 12.7072 56.7036 28.3483 56.7036C43.9964 56.7036 56.7036 43.9953 56.7036 28.3483C56.7036 12.7072 43.9953 0 28.3483 0ZM28.3483 2.58929C42.5965 2.58929 54.1141 14.1068 54.1141 28.3492C54.1141 42.5974 42.5966 54.115 28.3483 54.115C14.106 54.115 2.58952 42.598 2.58952 28.3492C2.58952 14.1069 14.107 2.58929 28.3483 2.58929Z" fill="#9E9E9E"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M40.1885 10.9652C39.9411 10.9571 39.6967 11.0203 39.484 11.1467L32.2335 15.3288C31.833 15.5605 31.5859 15.9876 31.5859 16.4505C31.5859 16.9129 31.833 17.3406 32.2335 17.5718L38.8026 21.3609L39.4759 21.7556C39.7721 21.934 40.1275 21.9859 40.4626 21.9006C40.7976 21.8152 41.0848 21.5994 41.2596 21.3009C41.4348 21.0028 41.4831 20.647 41.3942 20.3128C41.3052 19.9786 41.0862 19.6941 40.7859 19.5221L40.1126 19.1274C40.1099 19.1252 40.1072 19.1229 40.1045 19.1206L35.4713 16.4482L40.1045 13.7758L40.7778 13.3875V13.3879C41.2858 13.1043 41.5423 12.5168 41.405 11.9514C41.2677 11.3865 40.7701 10.9819 40.1885 10.9634L40.1885 10.9652Z" fill="#9E9E9E"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6053 10.9648C16.007 10.9422 15.4714 11.3328 15.3098 11.909C15.1486 12.4857 15.4028 13.0976 15.9257 13.3894L16.599 13.7777L21.2322 16.4501L16.599 19.1225V19.1221C16.5963 19.1243 16.5936 19.1266 16.5904 19.1288L15.9171 19.5235C15.6173 19.6956 15.3983 19.9801 15.3093 20.3142C15.2204 20.6484 15.2687 21.0043 15.4439 21.3023C15.6186 21.6008 15.9059 21.8166 16.2409 21.902C16.576 21.9873 16.9309 21.9354 17.2276 21.757L17.9009 21.3623L24.47 17.5732C24.8705 17.342 25.1175 16.9144 25.1175 16.4519C25.1175 15.9891 24.8705 15.5619 24.47 15.3302L17.2194 11.1482C17.0334 11.0371 16.822 10.9747 16.6053 10.9666L16.6053 10.9648Z" fill="#9E9E9E"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3185 29.3209C12.9658 29.329 12.6312 29.4807 12.3933 29.7413C12.1548 30.0018 12.0333 30.3482 12.0568 30.7009C12.6132 39.098 19.7237 45.7317 28.3488 45.7317C36.9793 45.7317 44.0837 39.0975 44.6466 30.702V30.7016C44.6774 30.2405 44.4601 29.798 44.0768 29.5406C43.6934 29.2827 43.2016 29.2489 42.7866 29.4516C34.0188 33.7358 24.438 33.6134 13.8256 29.4114H13.826C13.6648 29.3478 13.4928 29.3171 13.3194 29.3211L13.3185 29.3209ZM14.941 32.5916C24.4286 35.9211 33.4434 36.1054 41.7218 32.7596C40.2881 38.7092 34.8642 43.1419 28.3487 43.1419C21.7774 43.1419 16.3098 38.6248 14.9422 32.5917L14.941 32.5916Z" fill="#9E9E9E"/>
+        </svg>
+        <span class="d-block fs-5 m-auto text-capitalize w-75">20000+ Happy Customers</span>
+      </div>
+      <div class="rfss-wyg text-center border-end">
+        <svg class="d-block m-auto mb-4 lazyload" width="72" height="55" viewBox="0 0 72 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M64.4895 27.192H55.9792L53.8516 18.6817C53.6181 18.085 53.0214 17.7347 52.4376 17.8514C51.8408 17.9682 51.4905 18.6817 51.6073 19.2785L53.9684 28.7358C54.0852 29.2028 54.5652 29.5661 55.0322 29.6828H64.4895C65.203 29.6828 65.6701 29.2028 65.6701 28.5023C65.6701 27.7758 65.1901 27.192 64.4895 27.192Z" fill="#9E9E9E"/>
+          <path d="M69.2116 43.745C69.2116 45.0424 68.1478 46.1061 66.8505 46.1061H64.3726C63.6591 42.2013 59.9877 39.7234 56.2126 40.3072C53.2547 40.7872 51.0104 43.1483 50.4137 46.1061H31.2655C30.5519 42.2013 26.8806 39.7234 23.1054 40.3072C20.1476 40.7872 17.9032 43.1483 17.3065 46.1061H12.4675C11.1702 46.1061 10.1065 45.0424 10.1065 43.745V35.4683H44.3942C46.405 35.4683 47.9358 33.9245 47.9358 31.9266V15.373H59.6375C59.9877 15.373 60.4677 15.6066 60.5845 15.9698L68.9781 29.4488C69.2116 29.5655 69.2116 29.799 69.2116 30.0455V43.745ZM57.3931 52.0218C54.7985 52.0218 52.658 49.8943 52.658 47.2867C52.658 44.6921 54.7856 42.5515 57.3931 42.5515C60.0007 42.5515 62.1283 44.6791 62.1283 47.2867C62.1283 49.8813 59.9877 52.0218 57.3931 52.0218ZM24.2989 52.0218C21.7043 52.0218 19.5638 49.8943 19.5638 47.2867C19.5638 44.6921 21.6914 42.5515 24.2989 42.5515C26.9065 42.5515 29.0341 44.6791 29.0341 47.2867C29.0211 49.8813 26.8936 52.0218 24.2989 52.0218ZM70.9889 28.1385L62.5953 14.6595C61.9986 13.5957 60.818 12.999 59.6375 12.999H47.9358V3.54164C47.9358 1.53082 46.392 0 44.3942 0H11.287C9.27618 0 7.74536 1.54379 7.74536 3.54164V9.45734C7.74536 10.1709 8.22536 10.6379 8.92591 10.6379C9.62645 10.6379 10.1065 10.1579 10.1065 9.45734V3.54164C10.1065 2.82812 10.5865 2.36109 11.287 2.36109H44.3942C45.1077 2.36109 45.5747 2.84109 45.5747 3.54164V31.9136C45.5747 32.6272 45.0947 33.0942 44.3942 33.0942H10.1065C8.80915 33.0942 7.74536 34.158 7.74536 35.4553V43.7321C7.74536 46.3267 9.87294 48.4672 12.4805 48.4672H17.3195C18.033 52.3721 21.7043 54.85 25.4795 54.2662C28.4373 53.7862 30.6817 51.4251 31.2784 48.4672H50.4266C51.1401 52.3721 54.8115 54.85 58.5867 54.2662C61.5445 53.7862 63.7888 51.4251 64.3856 48.4672H66.8635C69.4581 48.4672 71.5986 46.3397 71.5986 43.7321V30.0326C71.5856 29.319 71.3521 28.7353 70.9889 28.1385Z" fill="#9E9E9E"/>
+          <path d="M12.4675 28.372C12.4675 29.0855 12.9475 29.5525 13.6481 29.5525H34.9238C35.6374 29.5525 36.1044 29.0725 36.1044 28.372C36.1044 27.6714 35.6244 27.1914 34.9238 27.1914H13.6481C12.9475 27.1914 12.4675 27.6584 12.4675 28.372Z" fill="#9E9E9E"/>
+          <path d="M5.38417 15.3738H26.6599C27.3735 15.3738 27.8405 14.8938 27.8405 14.1932C27.8405 13.4797 27.3605 13.0127 26.6599 13.0127H5.38417C4.67065 13.0127 4.20363 13.4927 4.20363 14.1932C4.19065 14.8938 4.67065 15.3738 5.38417 15.3738Z" fill="#9E9E9E"/>
+          <path d="M18.3833 22.4568C19.0968 22.4568 19.5638 21.9768 19.5638 21.2762C19.5638 20.5627 19.0838 20.0957 18.3833 20.0957H1.82972C1.12917 20.0957 0.64917 20.5757 0.64917 21.2762C0.64917 21.9898 1.12917 22.4568 1.82972 22.4568H18.3833Z" fill="#9E9E9E"/>
+          <path d="M8.92608 28.372C8.92608 27.6584 8.44608 27.1914 7.74553 27.1914H3.01038C2.29686 27.1914 1.82983 27.6714 1.82983 28.372C1.82983 29.0725 2.30984 29.5525 3.01038 29.5525H7.74553C8.44608 29.5525 8.92608 29.0855 8.92608 28.372Z" fill="#9E9E9E"/>
+          <path d="M25.4796 22.4568C26.1931 22.4568 26.6602 21.9768 26.6602 21.2762C26.6602 20.5627 26.1802 20.0957 25.4796 20.0957H23.1185C22.405 20.0957 21.938 20.5757 21.938 21.2762C21.938 21.9898 22.418 22.4568 23.1185 22.4568H25.4796Z" fill="#9E9E9E"/>
+        </svg>
+        <span class="d-block fs-5 m-auto w-75 text-capitalize">Fast & Free Shipping Nationwide</span>
+      </div>
+      <div class="rfss-wyg text-center border-end">
+        <svg class="d-block m-auto mb-4 lazyload" width="50" height="54" viewBox="0 0 50 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37.5301 42.7513C36.5338 42.5409 35.6389 42.1619 34.8783 41.5025C33.5509 40.3523 32.8668 38.881 32.8628 37.1049C32.8529 32.8932 32.8499 28.6815 32.8628 24.4699C32.8708 21.9947 34.3404 19.8975 36.5975 19.0785C38.8049 18.2789 41.228 18.9983 42.7692 20.9105C43.3201 21.5944 43.7168 21.823 44.7012 22.013C44.6415 20.5458 44.4019 19.1182 44.0061 17.72C42.5355 12.5167 39.7833 8.20237 35.4232 5.04336C32.7405 3.10061 29.7426 2.10078 26.4355 2.15159C24.7631 2.17699 23.0777 2.11094 21.4232 2.304C17.9997 2.70332 15.0923 4.31788 12.5996 6.69348C8.66903 10.4388 6.34133 15.0599 5.54389 20.4848C5.46633 21.0142 5.44644 21.5517 5.39573 22.1369C6.04602 21.9093 6.56903 21.7132 6.97273 21.1178C8.29517 19.1649 10.7651 18.3663 13.0142 19.0613C15.2803 19.7613 16.9249 21.8352 16.9507 24.2331C16.9975 28.5962 17.0014 32.9613 16.9527 37.3244C16.9249 39.8778 15.146 42.0288 12.7308 42.6303C10.3097 43.2329 7.79702 42.1365 6.5402 39.955C6.41093 39.7315 6.18025 39.5079 5.94659 39.4175C-0.405124 36.9484 -2.05669 28.5484 2.89204 23.7993C3.12869 23.5727 3.22613 23.3552 3.23707 23.022C3.51945 14.8191 6.8196 8.19017 13.3016 3.30992C16.2577 1.08267 19.6404 -0.0208017 23.3392 0.000536064C24.9789 0.00968082 26.6235 -0.0340108 28.2571 0.0869032C31.5304 0.327715 34.4826 1.5521 37.0787 3.56191C42.6191 7.85182 45.8118 13.5602 46.6868 20.6037C46.7902 21.4399 46.7713 22.2914 46.8459 23.1327C46.8658 23.3573 46.9652 23.6296 47.1204 23.78C52.084 28.5962 50.3777 37.0734 43.9445 39.4835C43.5985 39.6136 43.3698 39.8006 43.1739 40.1237C42.458 41.3013 41.4398 42.1243 40.1392 42.5216C39.7077 42.6537 39.6351 42.8651 39.6311 43.2684C39.6212 44.4329 39.6868 45.6166 39.5078 46.7577C39.0604 49.6017 36.5189 51.7385 33.696 51.767C32.4701 51.7792 31.2431 51.7629 30.0171 51.7771C29.859 51.7792 29.6283 51.833 29.5557 51.9458C28.6837 53.3023 27.3543 53.7941 25.8767 53.9546C24.4588 54.109 23.0936 53.8835 21.8806 53.0615C20.0619 51.829 20.0351 49.6992 21.806 48.4017C23.6236 47.0696 26.7607 47.0544 28.5644 48.4007C28.9173 48.6639 29.1808 49.051 29.4941 49.3721C29.5895 49.4696 29.7138 49.6098 29.8242 49.6088C31.2978 49.6007 32.7823 49.685 34.2399 49.5184C36.1103 49.305 37.4794 47.6163 37.5262 45.702C37.549 44.7265 37.5301 43.747 37.5301 42.7513ZM34.9648 30.8011C34.9648 32.8973 34.9519 34.9935 34.9688 37.0896C34.9857 39.1096 36.4911 40.6805 38.3912 40.6957C40.2983 40.711 41.8584 39.1767 41.8733 37.1567C41.9051 32.9471 41.8972 28.7374 41.8753 24.5288C41.8674 23.091 41.2032 21.9927 39.9384 21.3434C37.6445 20.1657 35.0006 21.8799 34.9688 24.5634C34.9449 26.6412 34.9638 28.7212 34.9648 30.8011ZM7.97599 30.7005C7.975 30.7005 7.974 30.7005 7.97202 30.7005C7.97202 32.7296 7.96903 34.7598 7.975 36.7889C7.97599 37.1425 7.97599 37.5052 8.04858 37.8476C8.43239 39.6441 10.0203 40.7862 11.8439 40.6022C13.5054 40.4346 14.8537 38.9084 14.8597 37.1303C14.8726 32.9024 14.8676 28.6744 14.8577 24.4455C14.8567 24.096 14.801 23.7342 14.7016 23.3999C14.2114 21.764 12.5787 20.6972 10.9768 20.94C9.21193 21.2082 7.99986 22.5637 7.98096 24.3581C7.9581 26.4726 7.97599 28.587 7.97599 30.7005ZM44.0161 37.0398C46.308 36.1508 47.9675 33.1991 47.876 30.2412C47.7985 27.7498 45.9411 24.8519 44.0161 24.2453C44.0161 28.5017 44.0161 32.752 44.0161 37.0398ZM5.77855 24.3479C3.6338 25.2055 2.03394 28.1481 2.13437 31.0246C2.23479 33.893 4.2294 36.289 5.77855 36.9037C5.77855 32.7256 5.77855 28.5566 5.77855 24.3479ZM25.471 51.8716C25.8479 51.7436 26.5887 51.5648 27.2598 51.2386C27.8276 50.9622 27.8057 50.5782 27.3155 50.19C26.2575 49.3517 23.9438 49.3639 22.8997 50.2134C22.4622 50.569 22.4513 50.8352 22.8908 51.1827C23.5361 51.6938 24.3057 51.7995 25.471 51.8716Z" fill="#9E9E9E"/>
+        </svg>
+        <span class="d-block fs-5 m-auto w-75 text-capitalize">24/7 Customer Support</span>
+      </div>
+      <div class="rfss-wyg text-center ">
+        <svg class="d-block m-auto mb-4 lazyload" width="53" height="54" viewBox="0 0 53 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M49.558 33.4226C48.8585 33.4226 48.2652 33.4226 47.6719 33.4226C44.8291 33.4226 41.9848 33.4299 39.142 33.4182C38.1335 33.4138 37.536 32.7534 37.6954 31.871C37.8161 31.2078 38.3433 30.8357 39.2138 30.8342C42.535 30.8298 45.8562 30.8327 49.1774 30.8327C49.4345 30.8327 49.6902 30.8327 49.9847 30.8327C50.18 29.5768 50.4171 28.4047 50.5363 27.2193C50.7403 25.2001 49.1098 23.2897 47.1189 23.1676C46.4049 23.1235 45.6852 23.1456 44.9684 23.1441C39.7826 23.1426 34.5983 23.1441 29.4125 23.1426C26.5841 23.1426 25.1002 21.6087 25.0973 18.6909C25.0944 15.3378 25.1361 11.9847 25.07 8.63306C25.0054 5.37848 22.2473 2.65187 19.087 2.59451C18.0584 2.57539 17.5988 3.02395 17.5973 4.09165C17.5901 7.41976 17.5743 10.7479 17.6016 14.076C17.6189 16.2011 16.9437 17.9968 15.4239 19.4586C14.8321 20.0278 14.2704 20.6307 13.6987 21.2219C12.9574 21.9867 12.5753 22.9044 12.5753 23.9897C12.5782 31.8446 12.5667 39.7008 12.5839 47.5557C12.5882 49.7381 14.1698 51.3411 16.3059 51.3809C17.8818 51.4103 19.4605 51.3853 21.0363 51.3926C22.016 51.397 22.6179 51.9132 22.6007 52.7103C22.5834 53.4839 22.0002 53.9722 21.0579 53.9781C19.505 53.9869 17.9521 53.9898 16.3978 53.9766C14.7344 53.9619 13.2735 53.3765 11.972 52.1853C10.9262 53.7957 9.38054 54.0604 7.68116 53.9898C6.44002 53.9383 5.19601 53.9898 3.95344 53.9766C1.63636 53.9575 0.0145516 52.3324 0.0102421 49.9646C-0.00268636 41.498 -0.00412286 33.0299 0.0102421 24.5633C0.0145516 22.1985 1.64211 20.5749 3.96206 20.5557C5.4201 20.544 6.87815 20.516 8.33476 20.569C9.1076 20.5969 9.87469 20.7793 10.636 20.891C11.7694 19.6675 12.9948 18.3792 14.1784 17.0526C14.8349 16.3188 15.0691 15.4069 15.0662 14.4113C15.0533 11.1817 15.1725 7.94626 15.0303 4.72256C14.8967 1.70035 16.8001 -0.649774 20.5321 0.162032C24.6635 1.05914 27.5882 4.65197 27.6255 9.01249C27.6543 12.2921 27.6298 15.5717 27.6327 18.8498C27.6342 20.1631 28.012 20.5528 29.2947 20.5528C35.0537 20.5557 40.8126 20.544 46.5701 20.5587C49.8654 20.5675 52.4454 22.6808 52.9338 25.934C53.1019 27.0605 52.918 28.2723 52.737 29.4194C51.7214 35.8374 50.6799 42.251 49.6011 48.6587C49.0768 51.7779 46.5672 53.9516 43.4601 53.9722C37.8448 54.0104 32.2295 53.9869 26.6142 53.981C25.6877 53.9795 25.1016 53.4516 25.1102 52.675C25.1188 51.9 25.7021 51.397 26.6401 51.3956C32.0399 51.3912 37.4411 51.3367 42.8395 51.4191C45.2198 51.4559 46.9551 50.1514 47.2639 47.6204C47.4205 46.3394 47.6618 45.0673 47.8788 43.704C47.5742 43.704 47.3171 43.704 47.06 43.704C43.6669 43.704 40.2739 43.7055 36.8809 43.701C36.6209 43.701 36.3508 43.6981 36.1009 43.6334C35.4918 43.4775 35.1614 43.0319 35.16 42.4083C35.16 41.7848 35.4889 41.3362 36.0995 41.1833C36.3724 41.1156 36.6669 41.1156 36.9513 41.1156C40.7006 41.1112 44.4498 41.1127 48.3011 41.1127C48.7134 38.5773 49.1256 36.058 49.558 33.4226ZM2.53848 37.2595C2.53848 41.4406 2.53561 45.6232 2.53992 49.8043C2.54136 50.9691 2.9522 51.3853 4.09709 51.3912C5.57812 51.3985 7.05772 51.4 8.53875 51.3897C9.59745 51.3838 10.0399 50.95 10.0399 49.894C10.0442 41.4818 10.0442 33.0696 10.0399 24.6559C10.0399 23.5853 9.6075 23.1515 8.55455 23.1441C7.09794 23.1338 5.64133 23.1382 4.18471 23.1426C2.91197 23.1456 2.53848 23.5353 2.53848 24.8589C2.53705 28.9929 2.53705 33.127 2.53848 37.2595Z" fill="#9E9E9E"/>
+        </svg>
+        <span class="d-block fs-5 m-auto w-50 text-capitalize">84 days money back guarantee</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-light overflow-hidden mt-3 mt-md-5">
+  <div class="rfss-marquee-highlight pt-4  justify-content-between pb-4 d-flex">
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'free-shipping-ion.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">Free Shipping</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'cs-support.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">Unmatched Customer Support</span>
+    </div>
+    <div class="high-item d-flex align-items-center text-center">
+      <img src="{{ 'secure-payment.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">Secure Payment</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'maony-back.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">84 days money back guarantee</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'problem-solving.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">Problem solving skincare</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'trusted-customers.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">10,000+ trusted customers</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'free-shipping-ion.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">Free Shipping</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'cs-support.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">Unmatched Customer Support</span>
+    </div>
+    <div class="high-item d-flex align-items-center text-center">
+      <img src="{{ 'secure-payment.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">Secure Payment</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'maony-back.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">84 days money back guarantee</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'problem-solving.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">Problem solving skincare</span>
+    </div>
+    <div class="high-item d-flex align-items-center">
+      <img src="{{ 'trusted-customers.svg' | asset_url  }}" alt="" class="lazyload">
+      <span class="ps-3 text-capitalize">10,000+ trusted customers</span>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Refer and earn",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"image_one",
+        "label":"Image One"
+      },
+      {
+        "type":"image_picker",
+        "id":"image_two",
+        "label":"Image Two"
+      },
+      {
+        "type":"image_picker",
+        "id":"image_three",
+        "label":"Image Three"
+      }
+    ]
+  }
+{% endschema %}

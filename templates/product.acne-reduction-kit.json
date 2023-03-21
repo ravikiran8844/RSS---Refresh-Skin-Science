@@ -1,0 +1,518 @@
+{
+  "sections": {
+    "product-meta-kit": {
+      "type": "product-meta-rfss-kit",
+      "blocks": {
+        "8eca4d83-d390-4375-ada6-fa124c0f87fa": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Foaming Cleanser With Purslane Extract",
+            "product_contains_price": "499.00"
+          }
+        },
+        "3e2b0144-85fc-4f2a-869f-a5e9f2886d46": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "3% PHA Alcohol Free Face Toner",
+            "product_contains_price": "499.00"
+          }
+        },
+        "34da4a8a-b2f8-40bd-9405-41ef61bb990a": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "12% Niacinamide + Zinc PCA",
+            "product_contains_price": "999.00"
+          }
+        },
+        "acf4d766-3de2-4545-a35e-196af1bfa722": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "2% Salicylic Acid Serum",
+            "product_contains_price": "999.00"
+          }
+        },
+        "0298f6e3-87ed-47db-8bbc-fc0053728f8b": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "20% Vitamin C Face Serum",
+            "product_contains_price": "999.00"
+          }
+        },
+        "e1fe336e-4025-4baf-8d8c-70978bb1b3db": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Face Moisturiser For All Skin Types",
+            "product_contains_price": "999.00"
+          }
+        },
+        "71e9436b-eb04-4ab9-8550-5adeeb8bec6a": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Sun Drops – Liquid Drop Formulation",
+            "product_contains_price": "999.00"
+          }
+        },
+        "2f0f860b-5830-4bd8-bd4e-901b0f835d4e": {
+          "type": "kit-product-contains",
+          "disabled": true,
+          "settings": {
+            "product_contains": "Hyaluronic Acid + D Panthenol Serum",
+            "product_contains_price": "999.00"
+          }
+        },
+        "cf1944b5-93bb-41ba-bce3-ae3370b1e7a2": {
+          "type": "today-offer-for-kit",
+          "settings": {
+            "today-offer-title": "Today’s Offers",
+            "whats_the_offer-one": "FLAT 25% OFF + FREE HYALURONIC ACID SERUM ON ORDERS ABOVE RS.599\/-",
+            "whats_the_offer-two": "FREE SHIPPING ON ALL PREPAID ORDERS",
+            "whats_the_offer-three": "Get Flat 25% Off On Gift Sets"
+          }
+        },
+        "5d3423eb-ca12-4f7d-9745-e16647a561d9": {
+          "type": "Trust-factor-image",
+          "settings": {
+            "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-4.png",
+            "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-4.webp"
+          }
+        },
+        "b159d2b0-d0c3-4291-b459-aeb0e6abf4f9": {
+          "type": "Trust-factor-image",
+          "settings": {
+            "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-3.png",
+            "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-3.webp"
+          }
+        },
+        "9bd9c7d3-e62e-4800-895d-057cb341854a": {
+          "type": "Trust-factor-image",
+          "settings": {
+            "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-2.png",
+            "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-2.webp"
+          }
+        },
+        "37233beb-ae5b-4206-bf47-0bf87551c441": {
+          "type": "Trust-factor-image",
+          "settings": {
+            "trust_fac_img": "shopify:\/\/shop_images\/trust-factor-1.png",
+            "trust_fac_webp": "shopify:\/\/shop_images\/trust-factor-1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "8eca4d83-d390-4375-ada6-fa124c0f87fa",
+        "3e2b0144-85fc-4f2a-869f-a5e9f2886d46",
+        "34da4a8a-b2f8-40bd-9405-41ef61bb990a",
+        "acf4d766-3de2-4545-a35e-196af1bfa722",
+        "0298f6e3-87ed-47db-8bbc-fc0053728f8b",
+        "e1fe336e-4025-4baf-8d8c-70978bb1b3db",
+        "71e9436b-eb04-4ab9-8550-5adeeb8bec6a",
+        "2f0f860b-5830-4bd8-bd4e-901b0f835d4e",
+        "cf1944b5-93bb-41ba-bce3-ae3370b1e7a2",
+        "5d3423eb-ca12-4f7d-9745-e16647a561d9",
+        "b159d2b0-d0c3-4291-b459-aeb0e6abf4f9",
+        "9bd9c7d3-e62e-4800-895d-057cb341854a",
+        "37233beb-ae5b-4206-bf47-0bf87551c441"
+      ],
+      "settings": {
+        "product_title": "Acne Reduction Kit",
+        "product_subtitle": "Get Rid of Acne and Get Even Skin tone",
+        "product_det": ""
+      }
+    },
+    "product-kit-ingredients-featured-in": {
+      "type": "product-kit-ingredients-featured-in",
+      "blocks": {
+        "63298be2-e532-4399-bfa4-2331762bd1fb": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/vogue.png",
+            "featured_in_detail": "PHAs(Polyhydroxy Acids) are the least well-known\nof the skincare acids. Due to its large molecules,\nthey penetrate the skin less thoroughly, &amp; therefore\nare less likely to induce side effects"
+          }
+        },
+        "82e5783d-bac8-4d9a-bee4-fb548f9a89a7": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/healthline.png",
+            "featured_in_detail": "Hyaluronic acid can help your skin look and feel\nmore supple. When applied to the surface of the\nskin, hyaluronic acid serums can reduce wrinkles,\nredness and dermatitis."
+          }
+        },
+        "8da67952-8eb1-47d4-9e1c-42d5109d9cf4": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/webmd.png",
+            "featured_in_detail": "Niacinamide is a form of vitamin B3, which is required by the body to maintain healthy cells. It usually helps in treating acne marks and prevents aging of the skin."
+          }
+        }
+      },
+      "block_order": [
+        "63298be2-e532-4399-bfa4-2331762bd1fb",
+        "82e5783d-bac8-4d9a-bee4-fb548f9a89a7",
+        "8da67952-8eb1-47d4-9e1c-42d5109d9cf4"
+      ],
+      "settings": {
+        "Title_featured": "Ingredients Featured In"
+      }
+    },
+    "kit-complete-skincare-regime": {
+      "type": "kit-complete-skincare-regime",
+      "settings": {
+      }
+    },
+    "kit-whats-inside": {
+      "type": "kit-whats-inside",
+      "blocks": {
+        "1e5c326b-b939-4618-8305-bfbbaf941c11": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Foaming Cleanser With Purslane Extract",
+            "product_image": "shopify:\/\/shop_images\/skin-brigting-kit-sec.jpg",
+            "item_dec": "Introducing India’s 1st Foaming cleanser with Purslane extract. Remove even the hardest to remove makeup, mildly exfoliate your skin and get the rejuvenation your skin needs with our foaming cleanser.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_one": "Minimises dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/even-skin-tone.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/reduce-scares.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        },
+        "3b4a7151-1ef6-413c-a1b8-8e784b9228fa": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "PHA Alcohol-Free Face Toner",
+            "product_image": "shopify:\/\/shop_images\/Face-Toner-Kit_png.webp",
+            "item_dec": "Say goodbye to clogged pores and hello to smoother and brighter skin. Make exfoliating, pH balancing, pore tightening, and skin moisturizing possible, all with a single toner! 100% Alcohol-free with added PHA to give excellent hydration effects on the skin!",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/pha-icon1.png",
+            "what_it_does_text_one": "Hydrates & rejuvenatesthe skin",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon2.png",
+            "what_it_does_text_two": "Restores the skin’s pH level",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/pha-icon3.png",
+            "what_it_does_text_three": "Minimises pore size & unclogs them"
+          }
+        },
+        "e0a31815-67ef-442c-8d73-8aff91ad1dd8": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Salicylic Acid Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Salicylic.png",
+            "item_dec": "The gentlest exfoliant to get rid of active acne & blackheads! Formulated with a combination of 2% Salicylic acid serum & 1.5% Green tea extract perfect for oily skin to deep cleanse extra oil from the pores.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_one": "Minimises dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon3.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/salicy-icon3.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        },
+        "e852e7f7-dd6a-493b-ad52-c0047dee1060": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Niacinamide + Zinc Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Niacinamide-Zinc-Face-Serum.png",
+            "item_dec": "The perfect cure to get rid of your acne marks once and for all! Introducing Refresh’s Niacinamide serum with added Zinc PCA to help clear out all your blemishes & acne marks for clear & even skin tone.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/reduce-scares.png",
+            "what_it_does_text_one": "Minimises dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon3.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/niaci-icon3.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        },
+        "09a4e25a-7b69-490a-8c55-a0593a16a1ea": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Vitamin C Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Vitamin_c.png",
+            "item_dec": "Radiant, glowing skin with 100% Guaranteed results. Being India’s first 20% Vitamin C serum to help brighten your complexion and fight against free radical damage! A glow-boosting serum to reduce sun damage and dark spots.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/vitaminc-icon1.png",
+            "what_it_does_text_one": "Brightens complexion",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_two": "Treats dark spots",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/vitaminc-icon3.png",
+            "what_it_does_text_three": "Fights free radical damage"
+          }
+        },
+        "4a1a9090-9108-4320-811e-18ae4b31d9b2": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Face Moisturiser",
+            "product_image": "shopify:\/\/shop_images\/Face-Moisturiser.jpg",
+            "item_dec": "Fast absorbing moisturiser for all skin types to keep skin healthy, hydrated and firm throughout the day. With added cucumber and grape seed extract for added freshness!",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/mois-icon1.png",
+            "what_it_does_text_one": "Nourishes the skin",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon3.png",
+            "what_it_does_text_two": "Brightens complexion",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/salicy-icon3.png",
+            "what_it_does_text_three": "Smoother skin texture"
+          }
+        },
+        "68ac8ac2-e3a5-40ad-aef4-0ff296dab444": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Liquid Drop Formulation Sun Drops",
+            "product_image": "shopify:\/\/shop_images\/Sun-Drops-Kit-section.jpg",
+            "item_dec": "Introducing the newest range of sunscreen without the cream – Sundrops! Now available in liquid formulation SPF 50 to blend perfectly into your skin without leaving a smudge mark or greasy residue",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/vitaminc-icon1.png",
+            "what_it_does_text_one": "UV protection",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/sundrop-icon2.png",
+            "what_it_does_text_two": "Protects from sunburn",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/sundrop-icon3.png",
+            "what_it_does_text_three": "Prevents premature ageing"
+          }
+        },
+        "fc80ae81-391f-478c-9723-34efca103988": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Hyaluronic Acid Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Hyaluronic.png",
+            "item_dec": "Get ready for soft, plump and & moisture-rich skin from Refresh’s 2% Hyaluronic acid serum! With the combination of D-Panthenol, the two powerful humectants help give your skin an instant plump look and let your face stay fresh all day long!",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/hyalra-icon1.png",
+            "what_it_does_text_one": "Hydrates the skin",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/hyalra-icon2.png",
+            "what_it_does_text_two": "Minimises the appearance of fine lines & wrinkles",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/hyalra-icon3.png",
+            "what_it_does_text_three": "Maintains skin softness & elasticity"
+          }
+        }
+      },
+      "block_order": [
+        "1e5c326b-b939-4618-8305-bfbbaf941c11",
+        "3b4a7151-1ef6-413c-a1b8-8e784b9228fa",
+        "e0a31815-67ef-442c-8d73-8aff91ad1dd8",
+        "e852e7f7-dd6a-493b-ad52-c0047dee1060",
+        "09a4e25a-7b69-490a-8c55-a0593a16a1ea",
+        "4a1a9090-9108-4320-811e-18ae4b31d9b2",
+        "68ac8ac2-e3a5-40ad-aef4-0ff296dab444",
+        "fc80ae81-391f-478c-9723-34efca103988"
+      ],
+      "settings": {
+        "whats_inside_title": ""
+      }
+    },
+    "kit-key-ingredients": {
+      "type": "kit-key-ingredients",
+      "blocks": {
+        "d747d9a6-a941-4fe3-a193-774b00010d2d": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Berry",
+            "ki_image": "shopify:\/\/shop_images\/cranberry.png"
+          }
+        },
+        "85b9715c-53f1-4d9c-9617-1269b89625a3": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Orange",
+            "ki_image": "shopify:\/\/shop_images\/orange.png"
+          }
+        },
+        "3154eb4b-6041-4889-a449-2e6937a785cc": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Avocado",
+            "ki_image": "shopify:\/\/shop_images\/avocado.png"
+          }
+        },
+        "b4529518-4412-4517-b289-4dc525a16d6f": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Strawberry",
+            "ki_image": "shopify:\/\/shop_images\/strawberry.png"
+          }
+        },
+        "da2391b5-cb25-4e8f-be03-9bf29d7f9a8f": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Olive Squalane",
+            "ki_image": "shopify:\/\/shop_images\/olive.png"
+          }
+        },
+        "f232c08d-144b-4049-aae6-95c5bfc799f1": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Potato",
+            "ki_image": "shopify:\/\/shop_images\/potato.png"
+          }
+        }
+      },
+      "block_order": [
+        "d747d9a6-a941-4fe3-a193-774b00010d2d",
+        "85b9715c-53f1-4d9c-9617-1269b89625a3",
+        "3154eb4b-6041-4889-a449-2e6937a785cc",
+        "b4529518-4412-4517-b289-4dc525a16d6f",
+        "da2391b5-cb25-4e8f-be03-9bf29d7f9a8f",
+        "f232c08d-144b-4049-aae6-95c5bfc799f1"
+      ],
+      "settings": {
+        "ki_title": "Key Ingredients"
+      }
+    },
+    "kit-what-to-expect": {
+      "type": "kit-what-to-expect",
+      "blocks": {
+        "1285b4ca-6bb6-4bbc-b13e-9e494e57a41e": {
+          "type": "routine_blocks",
+          "settings": {
+            "Am_routine": "<ul>\n<li>Cleanser<\/li>\n<li>Toner<\/li>\n<li>Vitamin C<\/li>\n<li>Sundrops<\/li>\n<\/ul>",
+            "Pm_rountine": "<ul>\n<li>Cleanser<\/li>\n<li>Toner<\/li>\n<li>Salicylic acid<\/li>\n<li>Niacinamide<\/li>\n<li>Moisturiser<\/li>\n<\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "1285b4ca-6bb6-4bbc-b13e-9e494e57a41e"
+      ],
+      "settings": {
+        "title_what_expect": "What to expect?",
+        "subtitle_what_expect": "Makes the skin – Radiant, Soft, Dewey, Naturally Glowing"
+      }
+    },
+    "collapsible-section": {
+      "type": "collapsible-section",
+      "settings": {
+      }
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "a95ccca4-b528-4e5a-aeae-171afabaf7dd": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Should I stop wearing makeup after using the serums?",
+            "faq_answers": "You don’t have to stop wearing makeup when using the serums. The serums form a good base to clear up your skin and get you ready for your everyday makeup."
+          }
+        },
+        "196c8564-1cbf-426c-9b17-4d95fa07cea9": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "What serum is best for acne marks?",
+            "faq_answers": "Our Niacinamide solution is the best when it comes to clearing out your acne marks. When used as a set regimen along with our cleanser, toner and salicylic, The regimen works for the best optimum results."
+          }
+        },
+        "8ac1cae1-4caa-4490-8899-e09c35db810d": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "How often should I use this regimen?",
+            "faq_answers": "It is recommended that you stick to this regimen everyday during both your AM and PM routines."
+          }
+        }
+      },
+      "block_order": [
+        "a95ccca4-b528-4e5a-aeae-171afabaf7dd",
+        "196c8564-1cbf-426c-9b17-4d95fa07cea9",
+        "8ac1cae1-4caa-4490-8899-e09c35db810d"
+      ],
+      "settings": {
+        "FAQ_title": "FAQs",
+        "Faq_image": "shopify:\/\/shop_images\/faq_sec_image.jpg"
+      }
+    },
+    "rfss-promise": {
+      "type": "rfss-promise",
+      "settings": {
+      }
+    },
+    "product-similar": {
+      "type": "product-similar",
+      "blocks": {
+        "c67ab6fa-52ea-43f3-bad4-ebe7ca010911": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "anti-aging-kit"
+          }
+        },
+        "57c4f2d6-a940-4a4d-86b4-da9d055a0a5c": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "skin-brightening-kit"
+          }
+        },
+        "5e646a25-975e-461a-932d-41762b6be532": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "oily-skin-essentials-kit"
+          }
+        }
+      },
+      "block_order": [
+        "c67ab6fa-52ea-43f3-bad4-ebe7ca010911",
+        "57c4f2d6-a940-4a4d-86b4-da9d055a0a5c",
+        "5e646a25-975e-461a-932d-41762b6be532"
+      ],
+      "settings": {
+        "show_related_products": true,
+        "related_title": ""
+      }
+    },
+    "product-our-heros": {
+      "type": "product-our-heros",
+      "blocks": {
+        "0b4a04bb-957d-499b-bdb5-68b9b496ae0b": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d7fbaa3c56564d57b0484ef19bee1591.mp4"
+          }
+        },
+        "2d32ce9a-2a49-43a0-8b4e-570ccaee448b": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b66b8cc98add489ca6664d97b81864d0.mp4"
+          }
+        },
+        "b920512c-7848-447d-ae5a-abbc3c4ee2f5": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2286c78b5761411ca8014520330bd8ac.mp4"
+          }
+        },
+        "f33e5db8-dc97-4ee5-a80e-6d1b798d1cbf": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/114babfbcdcd452792515230538bb7d3.mp4"
+          }
+        },
+        "446d1bfb-9e07-429a-bf29-07a8ad3cc007": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e43ac7d77e4a421ebc90b4205c42cf26.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "0b4a04bb-957d-499b-bdb5-68b9b496ae0b",
+        "2d32ce9a-2a49-43a0-8b4e-570ccaee448b",
+        "b920512c-7848-447d-ae5a-abbc3c4ee2f5",
+        "f33e5db8-dc97-4ee5-a80e-6d1b798d1cbf",
+        "446d1bfb-9e07-429a-bf29-07a8ad3cc007"
+      ],
+      "settings": {
+        "influncer_video_text": "Influncer Video"
+      }
+    }
+  },
+  "order": [
+    "product-meta-kit",
+    "product-kit-ingredients-featured-in",
+    "kit-complete-skincare-regime",
+    "kit-whats-inside",
+    "kit-key-ingredients",
+    "kit-what-to-expect",
+    "collapsible-section",
+    "product-review",
+    "product-faq",
+    "rfss-promise",
+    "product-similar",
+    "product-our-heros"
+  ]
+}

@@ -1,0 +1,53 @@
+<!-- /templates/customers/register.liquid -->
+
+<div class="login_page">
+    <div class="container">
+    <div class="row align-items-center" style="height: 85vh;">
+      <div class="col-md-6">
+         <div id="login_form" class="login_form  col-12 col-md-11  col-lg-9">
+            <h2 class="mb-4 mb-4 pb-3">Create Account</h2>
+             {% form 'create_customer' %}
+    
+            {{ form.errors | default_errors }}
+            <div class="mb-4 row">
+                <label for="first_name" class="col-sm-4 col-form-label p-2">First Name</label>
+             <div class="col-sm-8">
+                <input type="text" value="" name="customer[first_name]" class="w-100 p-2" size="30" />
+             </div>
+             </div>
+             <div class="mb-4 row">
+                <label for="last_name" class="col-sm-4 col-form-label p-2">Last Name</label>
+             <div class="col-sm-8">
+                <input type="text" value="" name="customer[last_name]" class="w-100 p-2" size="30" />
+             </div>
+             </div>
+             <div class="mb-4 row">
+                <label for="email" class="col-sm-4 col-form-label p-2">Email Address</label>
+                <div class="col-sm-8">
+                    <input type="email" value="" name="customer[email]" class="w-100 p-2" size="30" />
+                </div>
+             </div>
+             <div class="mb-4 row">
+                <label for="password" class="col-sm-4 col-form-label p-2">Password</label>
+                <div class="col-sm-8">
+                <input type="password" value="" name="customer[password]" class="w-100 p-2" size="30" />
+                </div>
+             </div>
+           
+            <hr class="mt-2 mb-4"></hr>
+            <input type="submit" value="Create" class="bg-black btn float-end text-white w-50 p-2"/>
+            
+            {% endform %}
+            <div class="clearfix"></div>
+            <div class="text-center ">
+                 <a href="/account/login" class="rfss-black product_a text-decoration-none" > <p class="mt-4">Already have an account? <span class="fw-bold">sign in</span> </p></a>
+               </div>
+         </div>
+      </div>  
+      <div class="col-md-6 text-center">
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  

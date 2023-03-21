@@ -1,0 +1,225 @@
+<div class="nav_bar sticky_bar pt-3 pb-3">
+  <div class="d-flex justify-content-between nav_bar container align-items-center">
+    <div class="div_site_logo" itemscope itemtype="https://schema.org/Organization">
+      <a itemprop="url" href="https://refreshskinscience.com/"><img itemprop="logo" src="{{ 'RefreshSkinScience-Logo.svg' | asset_url }}" alt="{{ settings.rfss_logo.alt }}" class="rfss_logo w-50"></a>
+    </div>
+    <div class="d-lg-block d-md-none d-none rfss-main-menu">
+      <div class="nav-menu-item">
+        <ul class="nav-menu-ul ps-0 mb-0">
+          {% for link in linklists.primary-menu.links %}
+            {% assign child_list_handle = link.title | handleize %}
+            {% if linklists[child_list_handle].links != blank %}
+              <li class="menu-item">
+                <a href="{{ link.url }}" class="menu_item_link">{{ link.title }}
+                </a>
+              </li>
+              <ul class="child_list">
+                {% for childlink in linklists[child_list_handle].links %}
+                  <li>
+                    <a href="{{ childlink.url }}" style="font-size: 24px;" class="menu-item_link">{{ childlink.title | escape }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <li class="menu-item">
+                <a href="{{ link.url }}" class="menu_item_link">{{ link.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="align-items-center d-flex">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" id="collapsesearch" class="d-md-block d-none">
+        <path d="M18.0083 18.8182L13.9925 14.6037M16.2179 8.97129C16.2179 11.0854 15.4163 13.1129 13.9893 14.6078C12.5624 16.1028 10.627 16.9426 8.60896 16.9426C6.59094 16.9426 4.65557 16.1028 3.22861 14.6078C1.80166 13.1129 1 11.0854 1 8.97129C1 6.85717 1.80166 4.82964 3.22861 3.33474C4.65557 1.83983 6.59094 1 8.60896 1C10.627 1 12.5624 1.83983 13.9893 3.33474C15.4163 4.82964 16.2179 6.85717 16.2179 8.97129Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div id="search_ctn" style="display: none ;">
+        <div class="card card-body">
+          <form action="{{ routes.search_url }}">
+            <input type="text" placeholder="Search" name="q" value="{{ search.terms | escape }}"/>
+            <input type="hidden" name="type" value="product,page"/>
+            <input type="hidden" name="options[unavailable_products]" value="hide"/>
+            <input type="hidden" name="options[prefix]" value="last"/>
+            <input type="submit" value="Search"/>
+          </form>
+        </div>
+      </div>
+
+      <div class="position-relative">
+        {% if customer %}
+          <a href="/account">
+          {% else %}
+            <a href="/account/login">
+            {% endif %}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-md-block d-none">
+              <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="black" stroke-width="2"/>
+              <path d="M17.0001 14H17.3521C18.0831 14.0002 18.789 14.2674 19.337 14.7513C19.885 15.2352 20.2374 15.9026 20.3281 16.628L20.7191 19.752C20.7542 20.0334 20.7291 20.3191 20.6455 20.5901C20.5618 20.8611 20.4214 21.1112 20.2337 21.3238C20.046 21.5364 19.8152 21.7066 19.5566 21.8232C19.2981 21.9398 19.0177 22.0001 18.7341 22H5.26606C4.98244 22.0001 4.70206 21.9398 4.44351 21.8232C4.18496 21.7066 3.95416 21.5364 3.76644 21.3238C3.57871 21.1112 3.43835 20.8611 3.35467 20.5901C3.27098 20.3191 3.24589 20.0334 3.28106 19.752L3.67106 16.628C3.76176 15.9022 4.11448 15.2346 4.66289 14.7506C5.21131 14.2667 5.91764 13.9997 6.64906 14H7.00006" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="cart_count">
+            <span data-ajax-cart-bind-state="cart.item_count">
+              {{ cart.item_count }}
+            </span>
+          </div>
+        </div>
+        <svg width="25" height="25" viewBox="0 0 25 25" id="cart_det"  data-ajax-cart-toggle-class-button="rfss-cart-open" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-md-block d-block">
+          <path d="M5.76465 7.08678H19.7256C20.0085 7.08679 20.2882 7.14607 20.5468 7.26081C20.8054 7.37555 21.037 7.5432 21.2268 7.75295C21.4166 7.9627 21.5604 8.20989 21.6488 8.4786C21.7373 8.7473 21.7684 9.03156 21.7403 9.31304L21.1328 15.3874C21.0829 15.887 20.8491 16.3503 20.4768 16.6872C20.1045 17.0241 19.6203 17.2107 19.1182 17.2107H9.44977C8.98151 17.2109 8.52766 17.0488 8.16549 16.752C7.80332 16.4552 7.55523 16.042 7.46345 15.5828L5.76465 7.08678Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M5.76473 7.08678L4.94469 3.80358C4.88984 3.58465 4.76342 3.39033 4.5855 3.25147C4.40757 3.11262 4.18836 3.0372 3.96266 3.03719H2.72754M8.80192 21.2603H10.8267M16.9011 21.2603H18.9259" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div id="rfss-menu-icon" class="menu-icon">
+          <span class="icon-dash"></span>
+          <span class="icon-dash"></span>
+          <span class="icon-dash"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rfss_nav"></div>
+
+  <div class="rfss_nav_ctn position-absolute w-100 close">
+    <div class="container">
+      <div class="cont-rfss-menu">
+
+        <div class="d-flex d-block d-lg-none align-items-center justify-content-between">
+          <div>
+            <a href="/"><img src="{{ 'RefreshSkinScience-Logo.svg' | asset_url }}" alt="{{ settings.rfss_logo.alt }}" class="rfss_logo w-50"></a>
+          </a>
+        </div>
+        <div class="close-icon">
+          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.6709 1.0451L21.0361 20.4103" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1.04846 21L20.4136 1.63481" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="close-icon menu-right-ani d-none d-md-none d-lg-block">
+        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.6709 1.0451L21.0361 20.4103" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          <path d="M1.04846 21L20.4136 1.63481" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="rfss-menu-ctn">
+        <div class="row">
+          <div class="col-md-12 col-lg-6 ps-0">
+
+            <div class="d-lg-none d-md-block d-block nav-menu-item">
+              <ul class="nav-menu-ul nav-menu-ul-mb  ps-0">
+                {% for link in linklists.mobile-menu.links %}
+                  {% assign child_list_handle = link.title | handleize %}
+                  {% if linklists[child_list_handle].links != blank %}
+                    <li class="nav-item menu-item dropdown">
+                      <a class="nav-link dropdown-toggle menu_item_link" href="{{ link.url }}" id="{{ link.title | remove:" " }}DropdownMenuLink" role="button" data-bs-toggle="collapse" data-bs-target="#{{ link.title | remove:" "  }}" aria-expanded="false">
+                        {{ link.title }}
+                      </a>
+                      <ul id="{{ link.title | remove:" " }}" class="child_list collapse" aria-labelledby="navbarDropdownMenuLink">
+                        {% for childlink in linklists[child_list_handle].links %}
+                          <li>
+                            <a class="p-2" href="{{ childlink.url }}">{{ childlink.title | escape }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </li>
+                  {% else %}
+                    <li class="menu-item">
+                      <a href="{{ link.url }}" class="menu_item_link">{{ link.title }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+
+            <div class="d-lg-block d-md-none d-none nav-menu-item">
+              <ul class="nav-menu-ul ps-0">
+                {% for link in linklists.main-menu.links %}
+                  {% assign child_list_handle = link.title | handleize %}
+                  {% if linklists[child_list_handle].links != blank %}
+                    <li class="menu-item">
+                      <a href="{{ link.url }}" class="menu_item_link">{{ link.title }}
+                      </a>
+                    </li>
+                    <ul class="child_list">
+                      {% for childlink in linklists[child_list_handle].links %}
+                        <li>
+                          <a href="{{ childlink.url }}" style="font-size: 24px;" class="menu-item_link">{{ childlink.title | escape }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% else %}
+                    <li class="menu-item">
+                      <a href="{{ link.url }}" class="menu_item_link">{{ link.title }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+
+          </div>
+          <div class="col-md-12 col-lg-6">
+            {%-liquid 
+               assign im_mtag = "rfss-model-1.png"
+                 assign img_url = im_mtag | file_img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+                 assign ration = im_mtag.aspect_ratio
+                 -%}
+  <div class="lazyload__image-wrapper no-js header-logo__image imglazy"><div class="d-lg-block d-md-none d-none menu-right-ani sub_img subgallery w-75" style="padding-top:{{ 1 | divided_by: '100.0' | times: 100}}%;"></div><noscript><img itemprop="image" style=" width: fit-content; " class="d-lg-block d-md-none d-none menu-right-ani w-75" src="{{ im_mtag | file_img_url }}" data-src="{{ img_url }}" data-widths="[180, 360, 540]" data-aspectratio="{{ ration }}" data-sizes="auto" alt="{{ im_mtag.alt | default: shop.name | escape }}" ></noscript></div>
+           
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="menu-ftr">
+              <div class="d-flex mb-4 mt-4">
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100086442758033/">
+                  <svg width="32" class="me-3" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.7394 0.521118C7.04668 0.521118 0 7.5678 0 16.2606C0 24.9533 7.04668 32 15.7394 32C24.4322 32 31.4789 24.9533 31.4789 16.2606C31.4789 7.5678 24.4322 0.521118 15.7394 0.521118ZM19.4677 11.3977H17.1019C16.8215 11.3977 16.51 11.7666 16.51 12.2568V13.9652H19.4694L19.0218 16.4016H16.51V23.7155H13.7179V16.4016H11.1848V13.9652H13.7179V12.5323C13.7179 10.4763 15.1443 8.80564 17.1019 8.80564H19.4677V11.3977Z" fill="white"/>
+                  </svg>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/refresh_skinscience/">
+                  <svg width="33" class="me-3" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.4958 11.0118C13.6057 11.0118 11.2472 13.3704 11.2472 16.2606C11.2472 19.1507 13.6057 21.5093 16.4958 21.5093C19.3859 21.5093 21.7444 19.1507 21.7444 16.2606C21.7444 13.3704 19.3859 11.0118 16.4958 11.0118ZM32.2377 16.2606C32.2377 14.087 32.2574 11.9332 32.1354 9.76365C32.0133 7.24364 31.4384 5.00712 29.5957 3.16436C27.7491 1.31767 25.5165 0.746728 22.9965 0.624665C20.8231 0.502602 18.6693 0.522289 16.4998 0.522289C14.3263 0.522289 12.1725 0.502602 10.003 0.624665C7.48301 0.746728 5.24654 1.32161 3.40382 3.16436C1.55716 5.01106 0.986226 7.24364 0.864165 9.76365C0.742104 11.9372 0.761791 14.091 0.761791 16.2606C0.761791 18.4301 0.742104 20.5879 0.864165 22.7575C0.986226 25.2775 1.56109 27.514 3.40382 29.3567C5.25048 31.2034 7.48301 31.7744 10.003 31.8964C12.1764 32.0185 14.3302 31.9988 16.4998 31.9988C18.6732 31.9988 20.827 32.0185 22.9965 31.8964C25.5165 31.7744 27.753 31.1995 29.5957 29.3567C31.4424 27.51 32.0133 25.2775 32.1354 22.7575C32.2614 20.5879 32.2377 18.4341 32.2377 16.2606ZM16.4958 24.3364C12.0268 24.3364 8.42012 20.7296 8.42012 16.2606C8.42012 11.7915 12.0268 8.1847 16.4958 8.1847C20.9648 8.1847 24.5715 11.7915 24.5715 16.2606C24.5715 20.7296 20.9648 24.3364 16.4958 24.3364ZM24.9023 9.74002C23.8589 9.74002 23.0162 8.89739 23.0162 7.85395C23.0162 6.81051 23.8589 5.96788 24.9023 5.96788C25.9457 5.96788 26.7883 6.81051 26.7883 7.85395C26.7886 8.10172 26.7401 8.34712 26.6454 8.57609C26.5507 8.80506 26.4118 9.0131 26.2366 9.1883C26.0614 9.3635 25.8534 9.50241 25.6244 9.59709C25.3954 9.69176 25.15 9.74033 24.9023 9.74002Z" fill="white"/>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/science_refresh" target="_blank">
+                  <svg width="32" class="me-3" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.2606 0.521118C7.56873 0.521118 0.521118 7.56873 0.521118 16.2606C0.521118 24.9524 7.56873 32 16.2606 32C24.9524 32 32 24.9524 32 16.2606C32 7.56873 24.9524 0.521118 16.2606 0.521118ZM23.8246 12.3854C23.8352 12.5505 23.8352 12.7227 23.8352 12.8913C23.8352 18.0488 19.9073 23.9897 12.7297 23.9897C10.5164 23.9897 8.46462 23.3468 6.73609 22.2401C7.05228 22.2753 7.35442 22.2893 7.67764 22.2893C9.50454 22.2893 11.1839 21.671 12.5224 20.624C10.808 20.5889 9.36753 19.4647 8.87567 17.9188C9.47644 18.0066 10.0175 18.0066 10.6358 17.8486C9.75302 17.6692 8.95955 17.1898 8.39019 16.4917C7.82084 15.7936 7.51072 14.9199 7.51252 14.0191V13.9699C8.02897 14.2615 8.63677 14.4407 9.27267 14.4653C8.7381 14.109 8.2997 13.6263 7.99634 13.0601C7.69298 12.4938 7.53403 11.8614 7.5336 11.219C7.5336 10.4918 7.72332 9.82776 8.0641 9.25159C9.04396 10.4578 10.2667 11.4444 11.6528 12.1471C13.0389 12.8498 14.5574 13.253 16.1095 13.3305C15.5579 10.678 17.5394 8.53137 19.9214 8.53137C21.0456 8.53137 22.0574 9.00215 22.7706 9.76101C23.6525 9.59589 24.4957 9.26564 25.2475 8.82297C24.9559 9.72588 24.3446 10.4883 23.533 10.9696C24.32 10.8853 25.0789 10.6674 25.7815 10.3618C25.251 11.1417 24.587 11.8338 23.8246 12.3854Z" fill="white"/>
+                  </svg>
+                </a>
+              </div>
+              <span class="d-block fs-5 me-5 pe-5" style="color: #8D8D8D;"></span>
+            </div>
+
+          </div>
+          <div class="col-md-6 menu-right-ani mt-4">
+            <div class="d-flex ms-0 ms-md-0 ms-lg-5 ps-0 ps-md-0 ps-lg-4 mb-3 menu-contact-info  fs-6">
+              <div style="width: 40px;">
+                <svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.75001 3.5C6.75001 2.57174 7.10559 1.6815 7.73852 1.02513C8.37146 0.368749 9.2299 0 10.125 0H16.875C17.7701 0 18.6285 0.368749 19.2615 1.02513C19.8944 1.6815 20.25 2.57174 20.25 3.5V17.5C20.25 18.4283 19.8944 19.3185 19.2615 19.9749C18.6285 20.6313 17.7701 21 16.875 21H10.125C9.2299 21 8.37146 20.6313 7.73852 19.9749C7.10559 19.3185 6.75001 18.4283 6.75001 17.5V3.5ZM15.1875 15.75C15.1875 15.2859 15.0097 14.8408 14.6932 14.5126C14.3768 14.1844 13.9476 14 13.5 14C13.0524 14 12.6232 14.1844 12.3068 14.5126C11.9903 14.8408 11.8125 15.2859 11.8125 15.75C11.8125 16.2141 11.9903 16.6592 12.3068 16.9874C12.6232 17.3156 13.0524 17.5 13.5 17.5C13.9476 17.5 14.3768 17.3156 14.6932 16.9874C15.0097 16.6592 15.1875 16.2141 15.1875 15.75ZM3.04932 4.7845C3.15405 4.57936 3.17591 4.33947 3.11008 4.11761C3.04426 3.89576 2.89614 3.71011 2.69832 3.6015C2.50051 3.49289 2.26919 3.47023 2.05525 3.53849C1.84132 3.60676 1.6623 3.76035 1.55758 3.9655C0.531552 5.97905 -0.00321944 8.2226 1.45814e-05 10.5C1.45814e-05 12.8573 0.563639 15.0815 1.55758 17.0345C1.60943 17.1361 1.68007 17.2261 1.76546 17.2993C1.85086 17.3726 1.94933 17.4277 2.05525 17.4615C2.16118 17.4953 2.27249 17.5071 2.38283 17.4963C2.49317 17.4855 2.60037 17.4523 2.69832 17.3985C2.79627 17.3447 2.88305 17.2715 2.9537 17.1829C3.02435 17.0944 3.07749 16.9922 3.11008 16.8824C3.14267 16.7725 3.15408 16.6571 3.14366 16.5427C3.13323 16.4283 3.10118 16.3171 3.04932 16.2155C2.15199 14.4543 1.68442 12.4919 1.68751 10.5C1.68751 8.435 2.18026 6.489 3.04932 4.7845ZM25.4424 3.9655C25.3377 3.76035 25.1587 3.60676 24.9447 3.53849C24.7308 3.47023 24.4995 3.49289 24.3017 3.6015C24.1039 3.71011 23.9557 3.89576 23.8899 4.11761C23.8241 4.33947 23.8459 4.57936 23.9507 4.7845C24.8197 6.489 25.3125 8.43325 25.3125 10.5C25.3125 12.565 24.8197 14.511 23.9507 16.2155C23.8459 16.4206 23.8241 16.6605 23.8899 16.8824C23.9557 17.1042 24.1039 17.2899 24.3017 17.3985C24.4995 17.5071 24.7308 17.5298 24.9447 17.4615C25.1587 17.3932 25.3377 17.2396 25.4424 17.0345C26.4684 15.0209 27.0032 12.7774 27 10.5C27.0032 8.2226 26.4684 5.97905 25.4424 3.9655ZM5.63626 7.3185C5.68335 7.21035 5.70873 7.09339 5.71087 6.97475C5.713 6.8561 5.69184 6.73824 5.64868 6.62834C5.60551 6.51845 5.54124 6.4188 5.45977 6.33547C5.37831 6.25214 5.28135 6.18686 5.17479 6.14361C5.06823 6.10036 4.95431 6.08004 4.83994 6.08388C4.72557 6.08772 4.61315 6.11565 4.50952 6.16597C4.40588 6.21628 4.3132 6.28793 4.23711 6.37655C4.16101 6.46518 4.1031 6.56893 4.06688 6.6815C3.60867 7.89846 3.37401 9.19356 3.37501 10.5C3.37501 11.8457 3.6197 13.1337 4.06688 14.3185C4.1031 14.4311 4.16101 14.5348 4.23711 14.6234C4.3132 14.7121 4.40588 14.7837 4.50952 14.834C4.61315 14.8843 4.72557 14.9123 4.83994 14.9161C4.95431 14.92 5.06823 14.8996 5.17479 14.8564C5.28135 14.8131 5.37831 14.7479 5.45977 14.6645C5.54124 14.5812 5.60551 14.4816 5.64868 14.3717C5.69184 14.2618 5.713 14.1439 5.71087 14.0253C5.70873 13.9066 5.68335 13.7897 5.63626 13.6815C5.25535 12.6674 5.06076 11.5883 5.06251 10.5C5.06251 9.3765 5.26501 8.30375 5.63626 7.3185ZM22.9331 6.6815C22.8441 6.47704 22.6827 6.31585 22.4824 6.23123C22.2821 6.1466 22.058 6.145 21.8566 6.22677C21.6552 6.30853 21.4917 6.46741 21.4 6.67058C21.3082 6.87375 21.2953 7.1057 21.3637 7.3185C21.735 8.30375 21.9375 9.3765 21.9375 10.5C21.9375 11.6235 21.735 12.6962 21.3637 13.6815C21.2953 13.8943 21.3082 14.1262 21.4 14.3294C21.4917 14.5326 21.6552 14.6915 21.8566 14.7732C22.058 14.855 22.2821 14.8534 22.4824 14.7688C22.6827 14.6841 22.8441 14.523 22.9331 14.3185C23.382 13.1337 23.625 11.8457 23.625 10.5C23.625 9.15425 23.3803 7.86625 22.9331 6.6815Z" fill="white"/>
+                </svg>
+              </div>
+              +91 8565992992
+            </div>
+            <div class="d-flex ms-0 ms-md-0 ms-lg-5 ps-0 ps-md-0 ps-lg-4  menu-contact-info fs-6">
+              <div style="width: 40px;">
+                <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.5 0C2.57174 0 1.6815 0.358213 1.02513 0.995837C0.368749 1.63346 0 2.49826 0 3.4V3.7417L10.5 9.2344L21 3.7434V3.4C21 2.49826 20.6313 1.63346 19.9749 0.995837C19.3185 0.358213 18.4283 0 17.5 0H3.5ZM21 5.6729L10.9148 10.948C10.7873 11.0147 10.6448 11.0496 10.5 11.0496C10.3552 11.0496 10.2127 11.0147 10.0852 10.948L0 5.6729V13.6C0 14.5017 0.368749 15.3665 1.02513 16.0042C1.6815 16.6418 2.57174 17 3.5 17H17.5C18.4283 17 19.3185 16.6418 19.9749 16.0042C20.6313 15.3665 21 14.5017 21 13.6V5.6729Z" fill="#F8F8F8"/>
+                </svg>
+              </div>
+
+              support@refreshskinscience.com
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

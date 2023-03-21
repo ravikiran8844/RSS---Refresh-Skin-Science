@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "product-meta-kit": {
+      "type": "product-meta-rfss-kit",
+      "blocks": {
+        "89ac407a-57de-4b2f-a05c-40de89f6c387": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Foaming Cleanser With Purslane Extract",
+            "product_contains_price": ""
+          }
+        },
+        "88d29200-9a82-4f80-9ab4-adfc34aad1c0": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "3% PHA Alcohol Free Face Toner",
+            "product_contains_price": ""
+          }
+        },
+        "7de57caf-2747-4f19-a29b-03bc1cb3ad52": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "12% Niacinamide + Zinc PCA",
+            "product_contains_price": ""
+          }
+        }
+      },
+      "block_order": [
+        "89ac407a-57de-4b2f-a05c-40de89f6c387",
+        "88d29200-9a82-4f80-9ab4-adfc34aad1c0",
+        "7de57caf-2747-4f19-a29b-03bc1cb3ad52"
+      ],
+      "settings": {
+        "product_title": "",
+        "product_subtitle": "",
+        "product_det": ""
+      }
+    },
+    "product-kit-ingredients-featured-in": {
+      "type": "product-kit-ingredients-featured-in",
+      "settings": {
+        "Title_featured": ""
+      }
+    },
+    "kit-complete-skincare-regime": {
+      "type": "kit-complete-skincare-regime",
+      "settings": {
+      }
+    },
+    "kit-whats-inside": {
+      "type": "kit-whats-inside",
+      "settings": {
+        "whats_inside_title": ""
+      }
+    },
+    "kit-key-ingredients": {
+      "type": "kit-key-ingredients",
+      "settings": {
+        "ki_title": ""
+      }
+    },
+    "kit-what-to-expect": {
+      "type": "kit-what-to-expect",
+      "settings": {
+        "title_what_expect": "",
+        "subtitle_what_expect": ""
+      }
+    },
+    "collapsible-section": {
+      "type": "collapsible-section",
+      "settings": {
+      }
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "settings": {
+        "FAQ_title": ""
+      }
+    },
+    "rfss-promise": {
+      "type": "rfss-promise",
+      "settings": {
+      }
+    },
+    "product-similar": {
+      "type": "product-similar",
+      "settings": {
+        "show_related_products": false,
+        "related_title": "Other fine products"
+      }
+    },
+    "product-our-heros": {
+      "type": "product-our-heros",
+      "settings": {
+        "influncer_video_text": "Influncer Video"
+      }
+    }
+  },
+  "order": [
+    "product-meta-kit",
+    "product-kit-ingredients-featured-in",
+    "kit-complete-skincare-regime",
+    "kit-whats-inside",
+    "kit-key-ingredients",
+    "kit-what-to-expect",
+    "collapsible-section",
+    "product-review",
+    "product-faq",
+    "rfss-promise",
+    "product-similar",
+    "product-our-heros"
+  ]
+}

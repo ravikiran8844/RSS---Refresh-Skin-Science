@@ -1,0 +1,453 @@
+{
+  "sections": {
+    "product-meta-kit": {
+      "type": "product-meta-rfss-kit",
+      "blocks": {
+        "326730e7-d45e-4312-bb08-3639638da914": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Foaming Cleanser With Purslane Extract",
+            "product_contains_price": "499.00"
+          }
+        },
+        "5999e26a-cb41-4c0f-8d39-0d505455c336": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "3% PHA Alcohol Free Face Toner",
+            "product_contains_price": "499.00"
+          }
+        },
+        "91663777-11ce-4708-a86e-e942c49f02c7": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "20% Vitamin C Face Serum",
+            "product_contains_price": "999.00"
+          }
+        },
+        "62eb94d4-a30f-4df9-8ee0-ffc7340ba252": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Face Moisturiser For All Skin Types",
+            "product_contains_price": "999.00"
+          }
+        },
+        "c0e325c7-9efd-46d1-937c-5622c181a150": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Sun Drops – Liquid Drop Formulation",
+            "product_contains_price": "999.00"
+          }
+        },
+        "0cfb7387-6c96-4801-8d6d-a9d28785bf7d": {
+          "type": "kit-product-contains",
+          "settings": {
+            "product_contains": "Under Eye Roll-On",
+            "product_contains_price": "999.00"
+          }
+        },
+        "08094991-ed94-4b4f-afe3-d125f1b1b32a": {
+          "type": "today-offer-for-kit",
+          "settings": {
+            "today-offer-title": "Today’s Offers",
+            "whats_the_offer-one": "FLAT 25% OFF + FREE HYALURONIC ACID SERUM ON ORDERS ABOVE RS.599\/-",
+            "whats_the_offer-two": "FREE SHIPPING ON ALL PREPAID ORDERS",
+            "whats_the_offer-three": "Get Flat 25% Off On Gift Sets"
+          }
+        }
+      },
+      "block_order": [
+        "326730e7-d45e-4312-bb08-3639638da914",
+        "5999e26a-cb41-4c0f-8d39-0d505455c336",
+        "91663777-11ce-4708-a86e-e942c49f02c7",
+        "62eb94d4-a30f-4df9-8ee0-ffc7340ba252",
+        "c0e325c7-9efd-46d1-937c-5622c181a150",
+        "0cfb7387-6c96-4801-8d6d-a9d28785bf7d",
+        "08094991-ed94-4b4f-afe3-d125f1b1b32a"
+      ],
+      "settings": {
+        "product_title": "",
+        "product_subtitle": "Reduce Dark Circles & Brighten Your Skin",
+        "product_det": ""
+      }
+    },
+    "product-kit-ingredients-featured-in": {
+      "type": "product-kit-ingredients-featured-in",
+      "blocks": {
+        "6e31bde2-c407-41b2-9812-3cf26aab77f7": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/vogue.png",
+            "featured_in_detail": "When it comes to defense against fine lines & maintaining a healthy glow, Retinol is the most lauded ingredient. It is a derivative of vitamin A, which helps in skin renewal."
+          }
+        },
+        "8603e5f3-ac4e-451b-95ec-e864e95491ed": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/healthline.png",
+            "featured_in_detail": "Hyaluronic acid can help your skin look and feel more supple. When applied to the surface of the skin, hyaluronic acid serums can reduce wrinkles, redness and dermatitis."
+          }
+        },
+        "d61c1ac4-c8dd-45ca-a205-1230b4fea3bf": {
+          "type": "featured_in_det",
+          "settings": {
+            "featured_img": "shopify:\/\/shop_images\/webmd.png",
+            "featured_in_detail": "Higher vitamin C intake reduces wrinkles, and helps in treating dryness of the skin. It also has antioxidant properties, which result in a better skin-aging appearance."
+          }
+        }
+      },
+      "block_order": [
+        "6e31bde2-c407-41b2-9812-3cf26aab77f7",
+        "8603e5f3-ac4e-451b-95ec-e864e95491ed",
+        "d61c1ac4-c8dd-45ca-a205-1230b4fea3bf"
+      ],
+      "settings": {
+        "Title_featured": "Ingredients Featured In"
+      }
+    },
+    "kit-complete-skincare-regime": {
+      "type": "kit-complete-skincare-regime",
+      "settings": {
+      }
+    },
+    "kit-whats-inside": {
+      "type": "kit-whats-inside",
+      "blocks": {
+        "fc65406e-8e36-4b05-95e8-10339ca6d477": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Foaming Cleanser With Purslane Extract",
+            "product_image": "shopify:\/\/shop_images\/skin-brigting-kit-sec.jpg",
+            "item_dec": "Introducing India’s 1st Foaming cleanser with Purslane extract. Remove even the hardest to remove makeup, mildly exfoliate your skin and get the rejuvenation your skin needs with our foaming cleanser.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_one": "Minimises dark spots",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/even-skin-tone.png",
+            "what_it_does_text_two": "Even skin tone",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/reduce-scares.png",
+            "what_it_does_text_three": "Reduces acne scars"
+          }
+        },
+        "e071736d-4fde-4fde-bf2a-baac2676a581": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "PHA Alcohol-Free Face Toner",
+            "product_image": "shopify:\/\/shop_images\/Face-Toner-Kit_png.webp",
+            "item_dec": "Say goodbye to clogged pores and hello to smoother and brighter skin. Make exfoliating, pH balancing, pore tightening, and skin moisturizing possible, all with a single toner! 100% Alcohol-free with added PHA to give excellent hydration effects on the skin!",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/pha-icon1.png",
+            "what_it_does_text_one": "Hydrates & rejuvenatesthe skin",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon2.png",
+            "what_it_does_text_two": "Restores the skin’s pH level",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/pha-icon3.png",
+            "what_it_does_text_three": "Restores the skin’s pH level"
+          }
+        },
+        "9d01c8eb-4956-455c-98f8-56fffabfc6d8": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Vitamin C Face Serum",
+            "product_image": "shopify:\/\/shop_images\/Vitamin_c.png",
+            "item_dec": "Radiant, glowing skin with 100% Guaranteed results. Being India’s first 20% Vitamin C serum to help brighten your complexion and fight against free radical damage! A glow-boosting serum to reduce sun damage and dark spots.",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/vitaminc-icon1.png",
+            "what_it_does_text_one": "Brightens complexion",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/dark-spot_min.png",
+            "what_it_does_text_two": "Treats dark spots",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/vitaminc-icon3.png",
+            "what_it_does_text_three": "Fights free radical damage"
+          }
+        },
+        "fb2081c8-e09d-483c-af9f-fca163e96f9a": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Face Moisturiser",
+            "product_image": "shopify:\/\/shop_images\/Face-Moisturiser.jpg",
+            "item_dec": "Fast absorbing moisturiser for all skin types to keep skin healthy, hydrated and firm throughout the day. With added cucumber and grape seed extract for added freshness!",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/mois-icon1.png",
+            "what_it_does_text_one": "Nourishes the skin",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon3.png",
+            "what_it_does_text_two": "Brightens complexion",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/salicy-icon3.png",
+            "what_it_does_text_three": "Smoother skin texture"
+          }
+        },
+        "9fa56918-f7b3-40b4-bbb1-d9ff11c93887": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Liquid Drop Formulation Sun Drops",
+            "product_image": "shopify:\/\/shop_images\/Sun-Drops-Kit-section.jpg",
+            "item_dec": "Introducing the newest range of sunscreen without the cream – Sundrops! Now available in liquid formulation SPF 50 to blend perfectly into your skin without leaving a smudge mark or greasy residue",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/vitaminc-icon1.png",
+            "what_it_does_text_one": "UV protection",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/sundrop-icon2.png",
+            "what_it_does_text_two": "Protects from sunburn",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/sundrop-icon3.png",
+            "what_it_does_text_three": "Prevents premature ageing"
+          }
+        },
+        "c5a2ca0a-ae77-4c41-910b-6215bce8c07d": {
+          "type": "whats_inside_sec",
+          "settings": {
+            "Name_of_item": "Under Eye Roll-On",
+            "product_image": "shopify:\/\/shop_images\/Under-Eye.jpg",
+            "item_dec": "Time to say goodbye to dark circles under your eyes! With a mix of multi peptides, Hyaluronic acid and the good ceramides working together, make your under eye skin glow and younger in 84 days!",
+            "what_it_does_title": "What does it do to your skin?",
+            "what_it_does_image_one": "shopify:\/\/shop_images\/mois-icon1.png",
+            "what_it_does_text_one": "Reduces Dark Circles",
+            "what_it_does_image_two": "shopify:\/\/shop_images\/pha-icon3.png",
+            "what_it_does_text_two": "Prevents Fine Lines & Wrinkles under the eyes",
+            "what_it_does_image_three": "shopify:\/\/shop_images\/salicy-icon3.png",
+            "what_it_does_text_three": "Fights Free Radical Damage"
+          }
+        }
+      },
+      "block_order": [
+        "fc65406e-8e36-4b05-95e8-10339ca6d477",
+        "e071736d-4fde-4fde-bf2a-baac2676a581",
+        "9d01c8eb-4956-455c-98f8-56fffabfc6d8",
+        "fb2081c8-e09d-483c-af9f-fca163e96f9a",
+        "9fa56918-f7b3-40b4-bbb1-d9ff11c93887",
+        "c5a2ca0a-ae77-4c41-910b-6215bce8c07d"
+      ],
+      "settings": {
+        "whats_inside_title": ""
+      }
+    },
+    "kit-key-ingredients": {
+      "type": "kit-key-ingredients",
+      "blocks": {
+        "78b8f1cb-8848-4e5c-89fe-6118ebb75491": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Berry",
+            "ki_image": "shopify:\/\/shop_images\/cranberry.png"
+          }
+        },
+        "226a3867-c52b-4b0d-9481-f2501738867b": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Orange",
+            "ki_image": "shopify:\/\/shop_images\/orange.png"
+          }
+        },
+        "ee8fff2e-7e35-46c2-bb66-ed5df89d298f": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Avocado",
+            "ki_image": "shopify:\/\/shop_images\/avocado.png"
+          }
+        },
+        "2a7af566-c37d-435f-809d-e0364b240acd": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Strawberry",
+            "ki_image": "shopify:\/\/shop_images\/strawberry.png"
+          }
+        },
+        "1eec244d-fbb7-4ca5-9c8c-195edb329115": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Olive Squalane",
+            "ki_image": "shopify:\/\/shop_images\/olive.png"
+          }
+        },
+        "d9285cf1-d70f-41e3-9803-11c3031417e1": {
+          "type": "key_ingredient_sec",
+          "settings": {
+            "ki_title": "Potato",
+            "ki_image": "shopify:\/\/shop_images\/potato.png"
+          }
+        }
+      },
+      "block_order": [
+        "78b8f1cb-8848-4e5c-89fe-6118ebb75491",
+        "226a3867-c52b-4b0d-9481-f2501738867b",
+        "ee8fff2e-7e35-46c2-bb66-ed5df89d298f",
+        "2a7af566-c37d-435f-809d-e0364b240acd",
+        "1eec244d-fbb7-4ca5-9c8c-195edb329115",
+        "d9285cf1-d70f-41e3-9803-11c3031417e1"
+      ],
+      "settings": {
+        "ki_title": "Key Ingredients"
+      }
+    },
+    "kit-what-to-expect": {
+      "type": "kit-what-to-expect",
+      "blocks": {
+        "4b0d166f-b638-426e-88cd-ff1e61067b22": {
+          "type": "routine_blocks",
+          "settings": {
+            "Am_routine": "<ul>\n<li>Cleanser<\/li>\n<li>Toner<\/li>\n<li>Vitamin C<\/li>\n<li>Moisturiser<\/li>\n<li>Sundrops<\/li>\n<\/ul>",
+            "Pm_rountine": "<ul>\n<li>Cleanser<\/li>\n<li>Toner<\/li>\n<li>Under Eye Cream<\/li>\n<li>Moisturiser<\/li>\n<\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "4b0d166f-b638-426e-88cd-ff1e61067b22"
+      ],
+      "settings": {
+        "title_what_expect": "What to expect?",
+        "subtitle_what_expect": "Makes the skin – Radiant, Soft, Dewey, Naturally Glowing"
+      }
+    },
+    "collapsible-section": {
+      "type": "collapsible-section",
+      "settings": {
+      }
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "ef1debd4-2b84-4f2d-8525-42f64e82f94e": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Why peptides for dark circles?",
+            "faq_answers": "Peptides are the building blocks of collagen, which helps keep your skin firm and smooth. As you age, the rate of collagen your skin produces slows down, so using our under eye roll on with peptides helps stimulate their growth."
+          }
+        },
+        "3735a20f-bc39-43b0-a779-611d98307c5c": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Will the kit help with other parts of my face as well?",
+            "faq_answers": "Yes, Our kit comes with 20% Vitamin C Serum and Moisturiser with ceramides to work on your skin and provide it a healthy glow."
+          }
+        },
+        "5f3ca5ea-ed3e-4bef-805b-a8be5fff3fab": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "How often should I use the kit?",
+            "faq_answers": "You can follow the regimen given below the kit for effective results. You can also customise your regimen according to your skin type & needs."
+          }
+        },
+        "d5062d9d-3a6e-4e27-8b6a-1879e86346cc": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Which skin type is the regime suitable for?",
+            "faq_answers": "Our kit is suitable for all skin types as each product is designed specifically to target an issue rather than work in general on your skin"
+          }
+        },
+        "7ac3a2e1-3c5b-4edb-a4a6-c889a5d03c6e": {
+          "type": "faq-sec-accordion",
+          "settings": {
+            "faq_question": "Is it free from harmful chemicals?",
+            "faq_answers": "Our products do not contain any substances that might harm your skin. All our ingredients are clinically tested and studies show that 99% of the people do not experience any side effects."
+          }
+        }
+      },
+      "block_order": [
+        "ef1debd4-2b84-4f2d-8525-42f64e82f94e",
+        "3735a20f-bc39-43b0-a779-611d98307c5c",
+        "5f3ca5ea-ed3e-4bef-805b-a8be5fff3fab",
+        "d5062d9d-3a6e-4e27-8b6a-1879e86346cc",
+        "7ac3a2e1-3c5b-4edb-a4a6-c889a5d03c6e"
+      ],
+      "settings": {
+        "FAQ_title": "FAQs",
+        "Faq_image": "shopify:\/\/shop_images\/faq_sec_image.jpg"
+      }
+    },
+    "rfss-promise": {
+      "type": "rfss-promise",
+      "settings": {
+      }
+    },
+    "product-similar": {
+      "type": "product-similar",
+      "blocks": {
+        "755b3203-7e77-4137-943e-c725d6359349": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "dark-circle-removal-kit"
+          }
+        },
+        "9dbff028-154a-4150-9bca-374ea0ae5c63": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "anti-aging-kit"
+          }
+        },
+        "9defe89b-f4c3-46fc-8424-b3ef3813ec24": {
+          "type": "similar-products",
+          "settings": {
+            "similar_products": "skin-brightening-kit"
+          }
+        }
+      },
+      "block_order": [
+        "755b3203-7e77-4137-943e-c725d6359349",
+        "9dbff028-154a-4150-9bca-374ea0ae5c63",
+        "9defe89b-f4c3-46fc-8424-b3ef3813ec24"
+      ],
+      "settings": {
+        "show_related_products": true,
+        "related_title": "Other fine products"
+      }
+    },
+    "product-our-heros": {
+      "type": "product-our-heros",
+      "blocks": {
+        "6adb1031-f208-4428-931a-cf3d26da293d": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d7fbaa3c56564d57b0484ef19bee1591.mp4"
+          }
+        },
+        "a4575e02-ebd9-4285-9235-e3041486c472": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b66b8cc98add489ca6664d97b81864d0.mp4"
+          }
+        },
+        "c0d3c4fd-9b8e-4a1a-90fc-47849cc6b70e": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2286c78b5761411ca8014520330bd8ac.mp4"
+          }
+        },
+        "d178e544-50c6-4ec4-8074-de9c5c6bdde5": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/114babfbcdcd452792515230538bb7d3.mp4"
+          }
+        },
+        "99598d2e-7c01-4935-92d3-dd44a8fd28ec": {
+          "type": "our-stars",
+          "settings": {
+            "influncer_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e43ac7d77e4a421ebc90b4205c42cf26.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "6adb1031-f208-4428-931a-cf3d26da293d",
+        "a4575e02-ebd9-4285-9235-e3041486c472",
+        "c0d3c4fd-9b8e-4a1a-90fc-47849cc6b70e",
+        "d178e544-50c6-4ec4-8074-de9c5c6bdde5",
+        "99598d2e-7c01-4935-92d3-dd44a8fd28ec"
+      ],
+      "settings": {
+        "influncer_video_text": "Influncer Video"
+      }
+    }
+  },
+  "order": [
+    "product-meta-kit",
+    "product-kit-ingredients-featured-in",
+    "kit-complete-skincare-regime",
+    "kit-whats-inside",
+    "kit-key-ingredients",
+    "kit-what-to-expect",
+    "collapsible-section",
+    "product-review",
+    "product-faq",
+    "rfss-promise",
+    "product-similar",
+    "product-our-heros"
+  ]
+}

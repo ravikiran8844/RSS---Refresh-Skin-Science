@@ -1,0 +1,56 @@
+<div class="glide" id="home-slider">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+       {%- for block in section.blocks -%}
+          <div class="glide__slide">          
+           <a href="{{ block.settings.image_link }}"> <picture class="lazyload">
+                <source media="(max-width:649px)" srcset="{{ block.settings.slide_img_mobile_jpg | img_url: 'master' }}">
+                <source media="(min-width:650px)" srcset="{{ block.settings.slide_img_jpg | img_url: 'master' }}"> 
+                <img src="{{ block.settings.slide_img_jpg | img_url: 'master' }}" alt="{{ block.slide_img_jpg | alt}}" style="width:100%"> 
+           </picture></a>
+        </div>
+    {% endfor %}    
+      </div>
+    </div>
+</div>
+<script>
+   if(document.querySelector("#home-slider")){
+  new Glide('#home-slider',{type: 'slider',autoplay: 3000,focusAt: 'center',perView: 1}).mount();  
+}
+</script>
+{%-schema-%}
+  {  
+    "name" : "slideshow",
+    "settings" : [
+    {
+       "type": "text",
+       "id": "slide_title",
+       "label" : "Slide Title"     
+    }
+    ],
+   "max_blocks": 4,
+   "blocks" : [
+    {
+        "name" :"slide",
+        "type" : "slide",
+        "settings" : [ 
+            {
+                "type" : "image_picker",
+                "id" : "slide_img_jpg",
+                "label" : "Slide Image Jpg"        
+            },
+            {
+                "type" : "image_picker",
+                "id" : "slide_img_mobile_jpg",
+                "label" : "Slide Image mobile Jpg"        
+            },
+            {
+                "type" : "url",
+                "id" : "image_link",
+                "label" : "Image Link"
+            }        
+        ]
+    }     
+   ]
+}
+{%-endschema-%}

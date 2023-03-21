@@ -1,0 +1,171 @@
+<div class="border-bottom border-top collection_fillters d-md-flex justify-content-between mb-5 pb-3 pt-3">
+  <form class="filter-form d-none d-md-flex  ">
+    <div class="d-flex fillter_input justify-content-around mb-4 mb-md-0">
+    {%- for filter in collection.filters -%}
+      <details class="filter-group position-relative {{ filter.label }}">
+        <summary class="filter-group-summary">
+          <div class="d-flex me-4">
+            <span>{{ filter.label }} </span>
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret ms-2" viewBox="0 0 10 6" width="15">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+            </path></svg>
+            {%- if filter.active_values.size > 0 -%}
+              <span class="count-selected">{{ filter.active_values.size }}</span>
+            {%- endif -%}
+          </div>
+        </summary>
+
+        <div class="filter-group-display position-absolute">
+          <div class="border-bottom filter-group-display__header d-md-flex justify-content-between mb-4 pb-3">
+            <small class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</small>
+
+            {%- if filter.active_values.size > 0 -%}
+              <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset text-decoration-none text-white">Reset</a>
+            {%- endif -%}
+          </div>
+
+          {%- case filter.type -%}
+            {%- when 'boolean' or 'list' -%}
+              <ul class="filter-group-display__list">
+                {%- for filter_value in filter.values -%}
+                  <li class="filter-group-display__list-item">
+                    <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                      <input type="radio" class="me-2" name="{{ filter_value.param_name }}" value="{{ filter_value.value }}" id="Filter-{{ filter.param_name }}-{{ forloop.index }}" {% if filter_value.active -%}checked{%- endif %} {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>{{ filter_value.label }}</label>
+                  </li>
+                {%- endfor -%}
+              </ul>
+
+              <div class="filter-group-display__submit text-end">
+                <input type="submit" value="Apply">
+              </div>
+            {%- when 'price_range' -%}
+              <div class="filter-group-display__price-range">
+                <div class="filter-group-display__price-range-from">
+                  <span>{{ cart.currency.symbol }}</span>
+
+                  <input name="{{ filter.min_value.param_name }}"  id="Filter-{{ filter.min_value.param_name }}" {% if filter.min_value.value -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number" placeholder="0" min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+                  <label for="Filter-{{ filter.min_value.param_name }}">From</label>
+                </div>
+                <div class="filter-group-display__price-range-to">
+                  <span>{{ cart.currency.symbol }}</span>
+
+                  <input name="{{ filter.max_value.param_name }}"   id="Filter-{{ filter.max_value.param_name }}" {% if filter.max_value.value -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number" placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}" min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+                  <label for="Filter-{{ filter.max_value.param_name }}">To</label>
+                </div>
+              </div>
+
+              <div class="filter-group-display__submit">
+                <input type="submit" value="Apply" class="bg-white btn fs-6 pb-1 pt-0 pt-1">
+              </div>
+          {%- endcase -%}
+        </div>
+      </details>
+    {%- endfor -%}
+    </div>
+    <div class="active-filters d-flex d-md-inline justify-content-around mb-2 mb-md-0">
+      <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">Clear all <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px"
+        viewBox="0 0 252 252" style="width: 26px;height: 14px;margin-top: -3px;" xml:space="preserve">
+     <g>
+       <path d="M126,0C56.523,0,0,56.523,0,126s56.523,126,126,126s126-56.523,126-126S195.477,0,126,0z M126,234
+         c-59.551,0-108-48.449-108-108S66.449,18,126,18s108,48.449,108,108S185.551,234,126,234z"/>
+       <path d="M164.612,87.388c-3.515-3.515-9.213-3.515-12.728,0L126,113.272l-25.885-25.885c-3.515-3.515-9.213-3.515-12.728,0
+         c-3.515,3.515-3.515,9.213,0,12.728L113.272,126l-25.885,25.885c-3.515,3.515-3.515,9.213,0,12.728
+         c1.757,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636L126,138.728l25.885,25.885c1.757,1.757,4.061,2.636,6.364,2.636
+         s4.606-0.879,6.364-2.636c3.515-3.515,3.515-9.213,0-12.728L138.728,126l25.885-25.885
+         C168.127,96.601,168.127,90.902,164.612,87.388z"/>
+     </g>
+     </svg></a>
+
+      {%- for filter in collection.filters -%}
+        {%- if filter.type == "price_range" -%}
+          {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+            <a class="active-filters__remove-filter" href="{{ filter.url_to_remove }}">
+              {%- assign min_value = filter.min_value.value | default: 0 -%}
+              {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
+              {{ min_value | money }} - {{ max_value | money }}  
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px"
+                viewBox="0 0 252 252" style="width: 26px;height: 14px;margin-top: -3px;" xml:space="preserve">
+             <g>
+               <path d="M126,0C56.523,0,0,56.523,0,126s56.523,126,126,126s126-56.523,126-126S195.477,0,126,0z M126,234
+                 c-59.551,0-108-48.449-108-108S66.449,18,126,18s108,48.449,108,108S185.551,234,126,234z"/>
+               <path d="M164.612,87.388c-3.515-3.515-9.213-3.515-12.728,0L126,113.272l-25.885-25.885c-3.515-3.515-9.213-3.515-12.728,0
+                 c-3.515,3.515-3.515,9.213,0,12.728L113.272,126l-25.885,25.885c-3.515,3.515-3.515,9.213,0,12.728
+                 c1.757,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636L126,138.728l25.885,25.885c1.757,1.757,4.061,2.636,6.364,2.636
+                 s4.606-0.879,6.364-2.636c3.515-3.515,3.515-9.213,0-12.728L138.728,126l25.885-25.885
+                 C168.127,96.601,168.127,90.902,164.612,87.388z"/>
+             </g>
+             </svg>
+            </a>
+          {%- endif -%}
+        {%- else -%}
+          {%- for filter_value in filter.active_values -%}
+            <a class="active-filters__remove-filter" href="{{ filter_value.url_to_remove }}">
+              {{ filter.label }}: {{ filter_value.label }} 
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px"
+                viewBox="0 0 252 252" style="width: 26px;height: 14px;margin-top: -3px;" xml:space="preserve">
+             <g>
+               <path d="M126,0C56.523,0,0,56.523,0,126s56.523,126,126,126s126-56.523,126-126S195.477,0,126,0z M126,234
+                 c-59.551,0-108-48.449-108-108S66.449,18,126,18s108,48.449,108,108S185.551,234,126,234z"/>
+               <path d="M164.612,87.388c-3.515-3.515-9.213-3.515-12.728,0L126,113.272l-25.885-25.885c-3.515-3.515-9.213-3.515-12.728,0
+                 c-3.515,3.515-3.515,9.213,0,12.728L113.272,126l-25.885,25.885c-3.515,3.515-3.515,9.213,0,12.728
+                 c1.757,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636L126,138.728l25.885,25.885c1.757,1.757,4.061,2.636,6.364,2.636
+                 s4.606-0.879,6.364-2.636c3.515-3.515,3.515-9.213,0-12.728L138.728,126l25.885-25.885
+                 C168.127,96.601,168.127,90.902,164.612,87.388z"/>
+             </g>
+             </svg>
+            </a>
+          {%- endfor -%}
+        {%- endif- %}
+      {%- endfor -%}
+    </div>
+  </form>
+  <select id="sort-by">
+    {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+    {% for option in collection.sort_options %}
+      <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+        {{ option.name }}
+      </option>
+    {% endfor %}
+  </select>
+</div>
+<script>
+  Shopify.queryParams = {};
+
+// Preserve existing query parameters
+  if (location.search.length) {
+    var params = location.search.substr(1).split('&');
+
+    for (var i = 0; i < params.length; i++) {
+      var keyValue = params[i].split('=');
+
+      if (keyValue.length) {
+        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+      }
+    }
+  }
+
+  const details = document.querySelectorAll("details");
+
+  // Add the onclick listeners.
+  details.forEach((targetDetail) => {
+    targetDetail.addEventListener("click", () => {
+      // Close all the details that are not targetDetail.
+      details.forEach((detail) => {
+        if (detail !== targetDetail) {
+          detail.removeAttribute("open");
+        }
+      });
+    });
+  });
+  
+// Update sort_by query parameter on select change
+  document.querySelector('#sort-by').addEventListener('change', function(e) {
+    var value = e.target.value;
+
+    Shopify.queryParams.sort_by = value;
+    location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
+</script>
